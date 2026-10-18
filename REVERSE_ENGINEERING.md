@@ -11,7 +11,7 @@ Technical reference and reverse-engineering findings for the **M-VAVE FM1** synt
 ### 1.1. Target Device & Processor
 * **Target Device:** **M-VAVE FM1** (FM Synthesizer / MIDI Controller).
 * **Processor SoC:** **JieLi AC791N Series** (WL82 family, dual-core 32-bit `pi32v2` RISC core with FPU, DC–320 MHz, integrated Wi-Fi 802.11b/g/n and Bluetooth 2.1+EDR / BLE 5.3).
-* **Exact IC Model on PCB:** **JieLi AC7911B** (marking `JL C156211-11A-B` on PCB, package **QFN-48**, 6 × 6 mm, 0.4 mm pitch, 12 pins per side = 48 pins + center exposed ground pad `VSS`, internal 4M×16-bit / 8 MB SDRAM in `AC7911BB` or 2 MB in `AC7911BA`, external SPI NOR Flash).
+* **Exact IC Model on PCB:** **JieLi AC7911B** (marking `JL C156211-11A-B` on PCB, package **QFN-48**, 6 × 6 mm, 0.4 mm pitch, 12 pins per side = 48 pins + center exposed ground pad `VSS`, internal 4M×16-bit / 8 MB SDRAM in `AC7911BB` or 2 MB in `AC7911BA`, and internal SiP-packaged 1 MB / 8 Mbit SPI NOR Flash — Puya P25Q80H, JEDEC `0x856014`, routed via the SFC controller on `PD0`–`PD6`).
 * **Official Development Board:** **JL_AC79_DevKit V1.0** (AC791N evaluation kit).
   * [JL_AC79_DevKit V1.0 Official Documentation](https://doc.zh-jieli.com/AC79/zh-cn/release_v1.0.3/board_description/board_overview/index.html)
   * Note: In retail/marketplace listings, this devboard has been found available for purchase primarily on **Taobao**.
@@ -107,7 +107,8 @@ Because the AC7911B in QFN-48 has limited GPIO lines, the FM-1 board uses an **1
 * **Pin 16 (`DACVDD`):** DAC 3.3V Power supply.
 * **Pin 17 (`AHVDD`):** Analog Audio 3.3V Power supply.
 
-#### 4. External SPI Flash Memory (SFC / SPI0)
+#### 4. SPI Flash Memory (SFC / SPI0 — Internal SiP Co-Packaged Flash)
+The FM-1 does **not** feature an external 8-pin SOIC Flash chip on the PCB. Instead, the 1 MB (8 Mbit) SPI NOR Flash die (**Puya P25Q80H**, JEDEC ID `0x856014`) is co-packaged directly inside the **AC7911B** QFN-48 SoC (System-in-Package) and routed internally via the JieLi hardware Serial Flash Controller (SFC / XIP):
 * **Pin 37 (`PD5`):** SPI NOR Flash Data Out (`DO` / MOSI — `SPI0_DOA` / `SFC_DOA`).
 * **Pin 38 (`PD4`):** SPI NOR Flash Clock (`CLK` — `SPI0_CLKA` / `SFC_CLKA`).
 * **Pin 39 (`PD6`):** SPI NOR Flash Power Gate (`SFGAT` / Flash power control).
