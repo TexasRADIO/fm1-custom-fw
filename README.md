@@ -211,7 +211,7 @@ Firmwares built upon or directly forked from the foundational open-source multi-
       * **Custom Ambient UI & Reverb:** Expansive long-decay `AMBI` reverb engine, custom ghost splash screen, and high-visibility neon "ECTO" color theme.
     * **Installation:** In-browser WebAssembly simulation and WebMIDI installer via Claude artifact, or build from the [Gadlele/Pelucco repository](https://github.com/Gadlele/Pelucco).
 
- 20. **[Skiff by illuminus5](https://github.com/illuminus5/skiff) ([Web Installer](https://illuminus5.github.io/skiff/webapp/installer/) | [Web Editor](https://illuminus5.github.io/skiff/webapp/editor/)):**
+ 20. **[Skiff by illuminus5](https://github.com/illuminus5/skiff) ([Web Installer](https://illuminus5.github.io/skiff/webapp/installer/) | [Web Editor](https://illuminus5.github.io/skiff/webapp/editor/) | [Learn / 19-Chapter Manual](https://illuminus5.github.io/skiff/learn/)):**
     * **License:** Open Source (GPL-3.0). Fork of Felucca by Leo Kuroshita / Hügelton Instruments.
     * **Polyphony:** 6 polyphonic tracks with up to 12 shared voices on dual-core CPU.
     * **Concept:** 6-track groovebox firmware for the FM-1 with 14 synthesis engines and deep parameter-locking sequencer.
