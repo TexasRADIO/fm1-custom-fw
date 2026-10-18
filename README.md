@@ -250,7 +250,7 @@ Firmwares built upon or directly forked from the foundational open-source multi-
       * **Performance & Display Polish:** Pattern chaining, saved startup pattern combinations, and six selectable LCD color schemes.
     * **Installation:** Browser WebMIDI installer via USB directly from the project website or flashing prebuilt `v1.0.0` releases.
 
-27. **[DUB-1 by sbegueria](https://github.com/sbegueria/fm1-dub) ([Web Installer](https://sbegueria.github.io/fm1-dub/install/) | [Web Emulator](https://sbegueria.github.io/fm1-dub/emu/) | [Manual](https://sbegueria.github.io/fm1-dub/manual/)):**
+27. **[DUB-1 by sbegueria](https://github.com/sbegueria/fm1-dub) ([Homepage](https://sbegueria.github.io/fm1-dub/) | [Web Installer](https://sbegueria.github.io/fm1-dub/install/) | [Web Emulator](https://sbegueria.github.io/fm1-dub/emu/) | [Manual](https://sbegueria.github.io/fm1-dub/manual/)):**
     * **License:** Open Source (GPL-3.0). Fork of AMB-1 by Charles Vestal (built on Felucca by Hügelton Instruments).
     * **Concept:** Berlin-style generative dub techno machine ("4 AM in Berlin"): power on and it immediately self-generates deep, evolving dub techno arrangements.
     * **Features:**
@@ -418,7 +418,7 @@ Firmwares centered around the **SLOOP** 4-track live groovebox workflow and its 
        * **Interactive Cockpit & Camera Zoom:** KNOB 3 cycles 4 camera perspectives: wide orbit, near flyby, close-up chase, and internal cockpit cabin view.
        * **Live Soundtrack Engine:** Integrated SLOOP 2.7.1 groovebox core allows live sequencing, synth solos, and beat jamming simultaneously while piloting the spacecraft.
        * **Web 3D Simulator & Installer:** Includes an interactive in-browser 3D model simulator running the firmware via WebAssembly with sound output, plus one-click browser WebMIDI installation directly from the project site.
-     * **Installation:** One-click WebMIDI installer via USB directly on the website or flashing `nomanskyfm-0.4.fwsc`.
+     * **Installation:** One-click WebMIDI installer via USB directly on the website or flashing prebuilt release packages (`.fwsc`).
 
  15. **[MYCELIUM by Mandalars](https://github.com/megagott/mycelium-fm1) ([Website](https://www.mandalars.org/mandalars/fm1/) | [Releases](https://github.com/megagott/mycelium-fm1/releases)):**
      * **License:** Open Source (GPL-3.0). Built upon Felucca and SLOOP.
@@ -759,6 +759,16 @@ Firmwares featuring original sound engines, written-from-scratch architectures, 
       * **Ten Systems:** Ten preset solar systems, an eclipse hold, and an orbit view that takes over the screen when left untouched.
       * **DAW Integration:** MIDI clock in drives the steps and the orbits; MIDI out sends each planet's notes on its own channel, the drums on another, and the system's signals as CCs; the browser emulator outputs eight channels, each voice apart.
     * **Installation:** Browser WebMIDI installer via USB directly from the project site, in-browser WebAssembly emulator, or flashing the prebuilt release package (`grav1-latest.fwsc`).
+
+41. **[MD-One by d0pe1](https://github.com/d0pe1/md-one):**
+    * **License:** Open Source (GPL-3.0-only for firmware, inherited from Dinghy; standalone `dsp/` library is MIT).
+    * **Concept:** Mutable Instruments-derived drone machine ("Mutable Droner") for the M-VAVE FM-1.
+    * **Features:**
+      * **Braids Oscillator Port:** Full port of all 48 synthesis models from Mutable Instruments Braids compiled for the JieLi `pi32v2` CPU core at 44.1 kHz.
+      * **Drone Synthesis Engine:** Four always-on Braids voices with detune, tuned comb filters, slow spectral evolution, drift, and key latching to hold notes in and out.
+      * **Lightweight DSP Footprint:** Highly optimized fixed-point integer DSP engine consuming ~14.5% of the AC791N audio processing budget.
+      * **DAW Integration:** Designed to deliver multichannel drone soundscapes into a DAW over USB audio.
+    * **Status & Installation:** Firmware core verified in desktop testing harnesses and the `fm1-emu` emulator; physical hardware release in active development.
 
 ### 1.2. Modular Firmware Platforms & Builders
 
