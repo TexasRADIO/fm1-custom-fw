@@ -12,6 +12,7 @@ A curated directory and reference hub for the **M-VAVE FM1** synthesizer (powere
 >   * **License:** Open Source (GPL-3.0 for Snoop37 firmware port; CC BY-NC 4.0 for hardware guide & documentation).
 >   * **Hardware Relationship:** Both devices share the identical **JieLi AC791N (WL82)** processor, second-stage bootloader, update loader, and chip key, differing primarily in panel wiring (keyboard matrix, 16 RGB pads, 8 encoders, 4 faders, pitch/mod wheels, display pins, and flash partition map).
 >   * **Features:** Board Port Patch Series (`smk37-board`), Snoop37 reference port of SLOOP 2.5 on SMK-37 Pro, porting compatibility matrix, and critical flash safety documentation on preserving unique SPI flash regions (`0xC1000` USRTRIM factory calibration `trimdat`, `0xC0000` BTIF, `0xFF000` chip key/MAC).
+> * **[Erik37 by genkigenki](https://github.com/genkigenki/erik37):** Acoustic concert grand piano firmware natively supporting both SMK-37 (Pro, Elite, MKE-P37) and FM-1 (`erik37-fm1.fwsc`).
 
 > [!IMPORTANT]
 > **Official Open Source Firmware & SDK (M-VAVE):**  
@@ -222,20 +223,13 @@ Firmwares built upon or directly forked from the foundational open-source multi-
     * **Installation:** One-click browser WebMIDI installer (`v0.1.0`), in-browser WebAssembly emulator, or flashing prebuilt `lcd4-0.1.0.fwsc`.
 
 23. **[PIGEON by The Shrimp Blimp](https://github.com/TheShrimpBlimp/pigeon) ([Website](http://theshrimpblimp.com/pigeon) | [Web Installer](http://theshrimpblimp.com/webapp/installer/) | [Web Sample Tool](http://theshrimpblimp.com/webapp/pigeon/) | [Web Emulator](http://theshrimpblimp.com/webapp/emu/)):**
-    * **License:** Open Source (GPL-3.0-only). Built upon Felucca (Leo Kuroshita / Hügelton Instruments) with update safeguards and recovery boot stub adapted from ChoralRoot FM-1 (Quixotic7).
-    * **Concept:** Old-school hip-hop, boom-bap, and house sampling groovebox inspired by the Roland SP-404 and Teenage Engineering Pocket Operator PO-33, featuring in-browser sample slicing, chop queues, and scratch decks.
-    * **Architecture & Memory Model:**
-      * **Shared Audio Bank:** 496 KiB flash allocation shared between two song sample tracks (indexed mono MP3, libmad decoder) and a 16-pad drum kit (ADPCM one-shots).
-      * **Polyphony:** 8 playback voices shared between Song 1 and Song 2, plus 4 dedicated voices reserved for drum pads (12 voices total).
+    * **License:** Open Source (GPL-3.0-only). Built upon Felucca by Hügelton Instruments with update recovery safeguards adapted from ChoralRoot FM-1.
+    * **Concept:** Old-school hip-hop and house sampling groovebox inspired by the Roland SP-404 and PO-33, featuring in-browser slicing, chop queues, and scratch decks.
     * **Features:**
-      * **Transient Slicing & Chop Shaping:** Up to 32 chops per song sample with automatic transient detection, editable start/end boundaries, waveform zoom, pitch, envelopes, hold loops, and latching; two independent chop layouts can share the same audio.
-      * **FIFO Chop Queue:** Queue mode (`EDIT → ARP`) allows queuing up to 64 waiting chops with live queue manipulation while the current slice plays.
-      * **Scratch & Cue Deck:** Dedicated turntable deck (`EDIT → FX`) with jog, brake, reverse playback, level cuts, return-to-cue, and fine cent tuning per song.
-      * **Dual-View Sequencer:** Step grid and piano roll views (1–64 steps per track, 4 notes per step, 4 pattern banks, song arrangement sections) with per-note nudge/timing, microtiming, swing, hit probability, repeats, pitch locks, conditional hits, and Euclidean rhythm generation.
-      * **Effects Chain:** Resonant filter, tempo-synced tape delay, chorus, reverb, distortion, and independent master compressor.
-      * **Accessibility & MIDI:** Built-in screen-reader support across hardware and browser emulator; per-track discrete MIDI channels with incoming-note track selection and MIDI screen wake.
-    * **Update Safeguards & Recovery Boot Stub:** Includes installer compatibility checks and recovery boot stub adapted from ChoralRoot FM-1. An interrupted write can safely resume: holding `OCT-` alone on power-on re-enters update mode. Seamlessly interoperates with [TransitFM1](https://quixotic7.github.io/TransitFM1/) as a safe bridge when migrating from other custom firmwares.
-    * **Web Tools & Simulation:** Companion web studio for importing, trimming, previewing, and encoding audio banks (`webapp/pigeon/`), alongside a full in-browser WebAssembly hardware emulator (`webapp/emu/`).
+      * **Sample Memory & Voices:** 496 KiB flash audio memory shared between two song tracks (mono MP3) and 16 drum pads (ADPCM); 12-voice polyphony (8 melodic/chops + 4 drums).
+      * **Transient Chops & Turntable Deck:** Up to 32 chops per song with auto-transient detection; 64-slot FIFO chop queue (`EDIT → ARP`); scratch/cue turntable deck (`EDIT → FX`) with jog, brake, and reverse.
+      * **Sequencer & Effects:** Step grid and piano roll (1–64 steps, 4 notes/step) with per-note timing nudge, microtiming, swing, probability, and Euclidean rhythms; filter, tape delay, chorus, reverb, distortion, and master compressor.
+      * **Update Safeguards & Web Tools:** Crash-guarded boot stub with `OCT-` recovery mode; companion browser sample editor and WebAssembly emulator.
     * **Installation:** Browser WebMIDI installer via USB directly from the web installer or flashing prebuilt `.fwsc` firmware packages.
 
 24. **[NOIZ DEMONS by SPIKE the Percussionist](https://github.com/SPIKE-the-Percussionist/noiz_demons) ([Releases](https://github.com/SPIKE-the-Percussionist/noiz_demons/releases)):**
@@ -781,6 +775,17 @@ Firmwares featuring original sound engines, written-from-scratch architectures, 
       * **DAW Integration:** Designed to deliver multichannel drone soundscapes into a DAW over USB audio.
     * **Status & Installation:** Firmware core verified in desktop testing harnesses and the `fm1-emu` emulator; physical hardware release in active development.
 
+42. **[Erik37 by genkigenki](https://github.com/genkigenki/erik37) ([Web Installer](https://genkigenki.github.io/smk37/#fw-erik37) | [Video Demo](https://youtu.be/5yUCB1-OJNE) | [Reddit Announcement](https://www.reddit.com/r/MVaveFM1/comments/1x8qggc/erik37_a_grand_piano_firmware_for_the_mvave_smk37/)):**
+    * **License:** Open Source (MPL-2.0; piano samples are Salamander Grand Piano V3 by Alexander Holm, CC BY 3.0). Built upon `fm1-base` (Charles Vestal) and `felucca-bsp` (Leo Kuroshita).
+    * **Concept:** Acoustic concert grand piano firmware featuring dedicated dual-target builds for both the M-VAVE FM-1 (`erik37-fm1.fwsc`) and SMK-37 (Pro, Elite, MKE-P37).
+    * **Sampling & Sound Engine:**
+      * **Multi-Velocity Sampling:** Yamaha C5 concert grand samples (Salamander Grand Piano V3) with 18 key zones in 3 velocity layers, crossfaded in the attack and looped (~380 KB block-ADPCM at 22.05–32 kHz).
+      * **20-Voice Polyphony & Key Decay:** Key-by-key decay modeled from real acoustic recordings (faster in the treble, undamped top keys), dynamic velocity-linked brightness, and mechanical damper noise on key release.
+      * **Sympathetic Resonance & Three Pedals:** True undamped string resonance ringing along with held notes; sustain (with continuous half-pedal support), sostenuto, and una corda (soft pedal with adjustable tone depth).
+      * **Four Tones & Four Rooms:** Tonal profiles (CONCERT, STUDIO, VINTAGE, JAZZ) paired with an 8-line Feedback Delay Network (FDN) reverb simulating dry, chamber, hall, and church acoustics with room size and stereo width controls.
+    * **FM-1 Panel Integration:** Mapped for the FM-1's 27 keys (F3–G5 with velocity), Knobs 1–4 for page parameters, SELECT for page navigation, ALGORITHM for piano tones, PRESETS for 12 user preset slots, and REC/ENV/SEL acting as sustain, sostenuto, and una corda pedals.
+    * **Installation:** Browser WebMIDI installer via USB directly from the web installer or compile from source.
+
 ### 1.2. Modular Firmware Platforms & Builders
 
  1. **[fm1-rocket-os by cmlarsen](https://github.com/cmlarsen/fm1-rocket-os):**
@@ -893,7 +898,7 @@ Firmwares featuring original sound engines, written-from-scratch architectures, 
 
 > [!TIP]
 > **Community Flashing Experience & Safe Upgrade Practice:**  
-> While not an absolute hard rule, there is a prominent community recommendation to avoid flashing one custom firmware directly over another. To minimize bricking risks, developers recommend either rolling back to the official stock firmware (V15) via M-VAVE's official updater first, or using **[TransitFM1](https://quixotic7.github.io/TransitFM1/)** — a dedicated lightweight bridge firmware by Quixotic7 designed with crash-guarded boot stubs and stock V15 identity emulation to safely transition between custom builds.
+> While not an absolute hard rule, there is a prominent community recommendation to avoid flashing one custom firmware directly over another. To minimize bricking risks, some users suggest rolling back to the official stock firmware (v15) via M-VAVE's official updater first, and only then flashing the next custom firmware build. Alternatively, you can use **[TransitFM1](https://quixotic7.github.io/TransitFM1/)** — a dedicated lightweight bridge firmware by Quixotic7 designed with crash-guarded boot stubs and stock V15 identity emulation to safely transition between custom builds.
 
 ---
 
