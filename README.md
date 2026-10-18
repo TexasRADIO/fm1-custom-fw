@@ -708,11 +708,15 @@ Firmwares featuring original sound engines, written-from-scratch architectures, 
       * **Live Performance FX Keys:** Hardware keys map to tape stop, backspin, record skip, half-time, stutter, mufflers, and throws.
     * **Installation:** In-browser WebAssembly emulator and WebMIDI installer directly from the project site or flashing prebuilt `lof1-0.0.41.fwsc`.
 
-36. **[ECO-1 by RedtailWorks](https://github.com/RustyPawz/fm1-HYP1) ([Website & Web Installer](https://rustypawz.github.io/fm1-HYP1/eco/) | [Web Emulator](https://rustypawz.github.io/fm1-HYP1/eco/emu/)):**
-    * **License:** Open Source (GPL-3.0). Fork of AMB-1.
+36. **[ECO-1 by RedtailWorks](https://github.com/RustyPawz/fm1-HYP1/tree/main/eco1) ([Website & Web Installer](https://rustypawz.github.io/fm1-HYP1/eco/) | [Web Emulator](https://rustypawz.github.io/fm1-HYP1/eco/emu/) | [Manual](https://rustypawz.github.io/fm1-HYP1/eco/manual/)):**
+    * **License:** Open Source (GPL-3.0). Fork of AMB-1 by Charles Vestal (built on Felucca by Hügelton Instruments). Experimental: tested in the simulator and browser emulator, not yet on a real FM-1.
     * **Concept:** Generative botanical ambient synthesizer turning the FM-1 into an algorithmic musical plant.
-    * **Features:** Three virtual leaves each accumulating charge from ambient light and rainfall; full leaves discharge melodic notes over a continuous stem drone, reacting dynamically to changing weather, time of day, and wind conditions.
-    * **Installation:** Browser WebMIDI installer via USB directly from the project site or flashing prebuilt `eco1-0.0.41.fwsc`.
+    * **Features:**
+      * **Leaves & Stem:** Three virtual leaves each accumulate charge from light and water and fire a note when full (8 FM voices: Glass, Wood, Pluck, Chime, Reed, Flute, Swell, Kalimba); firings run down the stem and the other leaves answer. A stem drone underneath (Hum, Organ, Reed, Choir) on the root and a chosen interval.
+      * **Sky & Weather:** Day/night cycle (30 s to 30 min) or a fixed Night or Day sky; night mellows the plant rather than silencing it. Rain showers with a synthesized rain track, wind that shakes the leaves, sings a rising whistle and opens the reverb; drought wilts the plant.
+      * **Eight Plants:** Fern, Orchid, Moss, Cactus, Willow, Lotus, Ivy and Bamboo, each drawn in its own scene (forest floor, windowsill, desert, pond...) and each reacting to the weather in its own way.
+      * **DAW Integration:** MIDI clock in (the day counts in bars, leaves can fire on a 1/4 to 1/16 grid), MIDI out with each leaf and the stem on its own channel plus the plant's signals (charge, water, soil, light, rain, wind) as CCs; the browser emulator outputs eight channels, each voice apart.
+    * **Installation:** Browser WebMIDI installer via USB directly from the project site, in-browser WebAssembly emulator, or flashing the prebuilt release package (`eco1-latest.fwsc`).
 
 37. **[P6 by Jonbenderr](https://github.com/Jonbenderr/fm1-p6) ([Web Installer](https://jonbenderr.github.io/fm1-p6/install/) | [Web Emulator](https://jonbenderr.github.io/fm1-p6/emu/) | [Releases](https://github.com/Jonbenderr/fm1-p6/releases)):**
     * **License:** Open Source (GPL-3.0). Built on Dinghy by Charles Vestal.
@@ -745,6 +749,16 @@ Firmwares featuring original sound engines, written-from-scratch architectures, 
       * **Vintage FX & Sequencer:** Vibrato, Leslie rotary speaker, tape echo delay, spring/hall reverb, 2-band EQ, note HOLD latch, integrated arpeggiator, and 16-step pattern sequencer.
       * **Custom Display Art:** Features custom animated tape transport graphics and screen artwork drawn by Javi.
     * **Installation:** Browser WebMIDI installer via USB directly from the project site, in-browser WebAssembly emulator, or flashing prebuilt release packages (`.fwsc`).
+
+40. **[GRAV-1 by RedtailWorks](https://github.com/RustyPawz/fm1-HYP1/tree/main/grav1) ([Website & Web Installer](https://rustypawz.github.io/fm1-HYP1/grav/) | [Web Emulator](https://rustypawz.github.io/fm1-HYP1/grav/emu/) | [Manual](https://rustypawz.github.io/fm1-HYP1/grav/manual/)):**
+    * **License:** Open Source (GPL-3.0). Built on AMB-1 by Charles Vestal and Felucca by Hügelton Instruments. Experimental: tested in the simulator and browser emulator, not yet on a real FM-1.
+    * **Concept:** Generative dark, spacey ambient firmware that turns the FM-1 into a small solar system: a star and its planets play the music.
+    * **Features:**
+      * **Star & Planets:** A central star hissing and roaring in eight colours of noise, with up to six orbiting planets, each a voice (16 instruments) playing a short phrase around its orbit, warm and dry near the star, cold and wet far out.
+      * **Gravity & Orbits:** A drum sequencer sets each planet's year (and, by Kepler's law, how close it orbits); larger planets swell smaller ones as they pass, and dust clouds, asteroids and comets drift through.
+      * **Ten Systems:** Ten preset solar systems, an eclipse hold, and an orbit view that takes over the screen when left untouched.
+      * **DAW Integration:** MIDI clock in drives the steps and the orbits; MIDI out sends each planet's notes on its own channel, the drums on another, and the system's signals as CCs; the browser emulator outputs eight channels, each voice apart.
+    * **Installation:** Browser WebMIDI installer via USB directly from the project site, in-browser WebAssembly emulator, or flashing the prebuilt release package (`grav1-latest.fwsc`).
 
 ### 1.2. Modular Firmware Platforms & Builders
 
