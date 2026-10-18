@@ -10,12 +10,28 @@ Technical reference and reverse-engineering findings for the **M-VAVE FM1** synt
 
 ### 1.1. Target Device & Processor
 * **Target Device:** **M-VAVE FM1** (FM Synthesizer / MIDI Controller).
-* **Processor SoC:** **JieLi AC791N** (WL82 series, 32-bit RISC core).
+* **Processor SoC:** **JieLi AC791N Series** (WL82 family, dual-core 32-bit `pi32v2` RISC core with FPU, DC–320 MHz, integrated Wi-Fi 802.11b/g/n and Bluetooth 2.1+EDR / BLE 5.3).
+* **Exact IC Model on PCB:** **JieLi AC7912AB** (marking code `C156211-11A-B` on PCB, package **QFN-68**, 7 × 7 mm, 68 pins, internal 4M×16-bit / 8 MB SDRAM, external SPI NOR Flash).
 * **Official Development Board:** **JL_AC79_DevKit V1.0** (AC791N evaluation kit).
   * [JL_AC79_DevKit V1.0 Official Documentation](https://doc.zh-jieli.com/AC79/zh-cn/release_v1.0.3/board_description/board_overview/index.html)
   * Note: In retail/marketplace listings, this devboard has been found available for purchase primarily on **Taobao**.
   
   ![JL_AC79_DevKit V1.0](photos/devboard.webp)
+
+* **Datasheets & Reference Schematics:**
+  * Official repository upstream: [amitv87/fw-AC79_AIoT_SDK doc/datasheet](https://github.com/amitv87/fw-AC79_AIoT_SDK/tree/release/AC79NN_SDK_V1.2.0/doc/datasheet)
+  * Reference schematics: [AC791N Schematics (GitHub)](https://github.com/amitv87/fw-AC79_AIoT_SDK/tree/release/AC79NN_SDK_V1.2.0/doc/datasheet/AC791N%E8%A7%84%E6%A0%BC%E4%B9%A6/schematic)
+    * `AC7912AB智能WiFi摄像头（IPC）V1.0_20220606.pdf` (Direct schematic reference for AC7912AB QFN68)
+    * `JL_AC79_DevKitBoard V1.0原理图.pdf` & `JL_AC79_WIFI V1.0原理图.pdf`
+    * `AC7916A_四声道+推屏+DVP摄像头+麦+SD卡参考原理图V1.0-20230323.pdf`
+    * `AC7911BA_WIFI音箱参考原理图(双MIC)-V1.2-20220429.pdf`
+  * Chip Selection Guide & Datasheets:
+    * `AC791N选型表231122.xlsx` (Complete chip comparison and feature matrix)
+    * `AC7912A_Datasheet_V1.2_20230303.pdf` (AC7912AB QFN-68 7×7 mm datasheet)
+    * `AC7916A_Datasheet_V2.1_20230418.pdf` (AC7916A QFN-76 9×9 mm datasheet)
+    * `AC7915A_Datasheet_V1.2_20230303.pdf` / `AC7915B6A_Datasheet_V1.2_20230303.pdf` (QFN-52)
+    * `AC7911B_Datasheet_V1.3_20230303.pdf` (QFN-48)
+    * `AC7913A0_Datasheet_V1.2_20230303.pdf` / `AC7913A6` / `AC7913B8` (QFN-40)
 
 * **Synthesizer Product Page:** [Cuvave / M-VAVE FM-1 Product Page](http://www.cuvave.com/product?id=fm-1)
 * **Latest Available Synthesizer Firmware:** [FM-1.fwsc (v15 2026-07-30)](https://yms-file-store.oss-cn-hongkong.aliyuncs.com/software/firmware/FM-1.fwsc)
@@ -25,7 +41,103 @@ Technical reference and reverse-engineering findings for the **M-VAVE FM1** synt
 
 * **M-VAVE Ecosystem:** Many other M-VAVE audio products (MIDI foot controllers, audio interfaces, and digital pedals) use the same JieLi AC791N / AC69xx processor platform and share similar OTA firmware architectures. Notably, the **M-VAVE SMK-37 Pro** keyboard controller uses the identical AC791N (WL82) SoC, second-stage bootloader, update loader, and chip key, making FM-1 custom firmwares portable to it via board HAL adaptors (see [fm1-to-smk37](https://github.com/genkigenki/fm1-to-smk37) and [Snoop37](https://github.com/genkigenki/Snoop37)). Note: SMK-37 Pro flash contains unique factory key/pad calibration (`0xC1000` USRTRIM `trimdat`) that must never be overwritten.
 
-### 1.2. Hardware PCB Characteristics & Recovery Vector
+### 1.2. Complete Hardware Pinout Mapping & Free GPIOs (AC7912AB QFN-68)
+
+Verified from SLOOP/Felucca hardware HAL drivers (`fm1_gpio.h`, `fm1_lcd_hw.h`, `fm1_input.h`, `fm1_audio.h`, `fm1_adc.h`, `fm1_uart.h`, `fm1_usb.h`), high-resolution PCB teardown photography, and the official `AC7912A_Datasheet_V1.2` specification:
+
+#### 1. Display (Color TFT LCD 240 × 240)
+* **SPI Controller:** Hardware SPI1 master interface.
+* **Pin 5 (`PC10`):** SPI1 MOSI (`DO`) — LCD serial data out.
+* **Pin 6 (`PC9`):** SPI1 SCK (`CLK`) — LCD serial clock.
+* **Pin 7 (`PC8`):** GPIO OUT — LCD Data/Command select (`D/C`: Low = Command, High = Data).
+* **Pin 8 (`PC7`):** GPIO OUT — LCD Chip Select (`CS`, active low).
+* **Pin 47 (`PA2`):** GPIO OUT — LCD Backlight power control (`BL`, active low / low = ON).
+
+#### 2. Key Matrix, Rotary Encoders & LEDs
+* **Matrix Architecture:** 11-column × 6-row diode-isolated matrix driven by a cascaded dual shift register chain:
+  * **Shift Registers:** Two 74HC595 ICs (U2 and U3 on PCB) driving 11 active column lines.
+  * **Pin 45 (`PA4`):** 74HC595 Serial Data Input (`SER`).
+  * **Pin 46 (`PA3`):** 74HC595 Shift Clock (`SRCLK`).
+  * **Pin 48 (`PA1`):** 74HC595 Storage Latch Clock (`RCLK`).
+* **Matrix Input Rows (Inputs with internal Pull-Up, active low):**
+  * **Pin 49 (`PA0`):** Row 0 — Rotary Encoders 0 to 5 (Knobs 1–4, ALGORITHM, etc.).
+  * **Pin 44 (`PA5`):** Row 1 — Button Matrix row.
+  * **Pin 43 (`PA6`):** Row 2 — Button & Key Matrix row.
+  * **Pin 42 (`PA7`):** Row 3 — Note Key Matrix row.
+  * **Pin 41 (`PA8`):** Row 4 — Note Key Matrix row.
+  * **Pin 16 (`PB7`):** Row 5 — Rotary Encoder 6.
+* **Matrix Column LED Drivers (High-Drive Push-Pull Outputs):**
+  * **Pin 40 (`PA9`):** LED Row 1 driver (lights LEDs across active columns matching row PA5).
+  * **Pin 39 (`PA10`):** LED Row 2 driver (lights LEDs across active columns matching row PA6).
+  * **Pin 58 (`PH6`):** LED Row 3 driver (lights LEDs across active columns matching row PA7).
+  * **Pin 55 (`PH9`):** LED Row 4 driver (lights LEDs across active columns matching row PA8).
+
+#### 3. Audio & External DAC/Codec
+* **Audio Bus:** JieLi `ALNK0` I2S / Left-Justified 24-bit DMA engine running into an external audio codec / headphone amp.
+* **Pin 15 (`PC0`):** Codec Control Line (`MCLK` / configuration line).
+* **Pin 14 (`PC1`):** Codec Control Line (`BCLK` / bit clock).
+* **Pin 13 (`PC2`):** Codec Control Line (`LRCK` / word select).
+* **Pin 9 (`PC6`):** Codec Power & Reset control line (active high).
+* **Pin 50 (`DACFL`):** On-chip 16-bit analog DAC Left channel output (auxiliary line).
+
+#### 4. Analog Inputs (10-bit SAR ADC)
+* **Pin 17 (`PB6` / `ADC4`):** MASTER Volume Potentiometer analog wiper voltage (`ch 4`).
+* **Pin 27 (`PB1` / `ADC3`):** Li-Po Battery Voltage divider input (`ch 3`).
+
+#### 5. Communications & USB
+* **Pin 56 (`PH8`):** UART1 RX input mapped via IOMAP crossbar for **3.5 mm TRS MIDI IN** (31,250 baud, DMA ring buffer).
+* **Pin 36 (`FUSBDM`):** USB Full-Speed D- (connected to USB-C port).
+* **Pin 37 (`FUSBDP`):** USB Full-Speed D+ (connected to USB-C port, with software 1.5 kΩ pull-up attach).
+* **Pin 68 (`WFRF`):** 2.4 GHz RF Antenna pin (soldered directly to the internal insulated red wire antenna on PCB marked `天线`).
+
+#### 6. Power & System Pins
+* **Pin 33 (`VBAT`):** Battery power input.
+* **Pin 34 (`SW`):** DC-DC switching node connected to external inductor `L2` (10 µH, marked `100`).
+* **Pin 35 (`PGND`):** Power Ground.
+* **Pin 32 (`DCVDD14`):** DC-DC 1.4V Core Power supply.
+* **Pin 21 (`DVDD`):** Digital Core 1.2V LDO supply.
+* **Pin 4, 38, 45 (`IOVDD`):** 3.3V Digital I/O Power supply rails.
+* **Pin 51 (`DACVDD`):** DAC 3.3V supply.
+* **Pin 54 (`AHVDD`):** Analog 3.3V supply.
+* **Pin 52 (`VCM`):** Audio common mode bias voltage filter capacitor.
+* **Pin 53 (`HPVSS`):** Headphone/Audio Ground.
+* **Pin 2, 3 (`XOSCI`, `XOSCO`):** 24.000 MHz system crystal oscillator (Y1).
+* **Pin 30, 31 (`PR1`, `PR0`):** Power management / RTC pins.
+* **Pin 1, 66 (`WFVDD14`), Pin 67 (`WFVDD33A`), Pin 65 (`WFVSS`):** Wi-Fi/Bluetooth RF power and ground pins.
+
+#### 7. Free / Unused Pins Available for Hardware Mods
+Out of 68 physical pins on the AC7912AB SoC, **18 GPIO lines** and **2 High-Speed USB differential lines** are currently unused and free for expansion:
+
+| Pin No. | Pin Name | Peripheral Capabilities | Mod Potential / Recommended Usage |
+|:---:|:---:|:---|:---|
+| **10** | `PC5` | GPIO / ALNK0_DAT2A / SPI1_DOA / UART0_TXA | Extra digital I/O, UART debug TX, extra SPI |
+| **11** | `PC4` | GPIO / ALNK0_DAT1A / SPI1_CLKA / UART0_RXA | Extra digital I/O, UART debug RX, extra SPI |
+| **12** | `PC3` | GPIO / ALNK0_DAT0A / SPI1_DIA | Extra digital I/O, secondary I2S audio data in/out |
+| **18** | `PB5` | GPIO / SPI1_DOB / UART2_TXC | Additional serial comms or SPI peripheral |
+| **19** | `PB3` | GPIO / UART1_TXC / SPI1_DIB | **UART1 TX (Hardware MIDI OUT)** mod pin |
+| **20** | `PB2` | GPIO / UART1_RXC / PWM output | Extra PWM or digital control line |
+| **22** | `PD5` | GPIO / SD0_DAT3A / SPI2_DO | SD card interface (DAT3) / SPI2 |
+| **23** | `PD4` | GPIO / SD0_DAT2A / SPI2_CLK | SD card interface (DAT2) / SPI2 |
+| **24** | `PD6` | GPIO / SD0_DAT1A / SFGAT | SD card interface (DAT1) |
+| **25** | `PD1` | GPIO / SD0_DAT0A / I2C SDA | **MicroSD Card Mod** (DAT0) or hardware I2C SDA |
+| **26** | `PD0` | GPIO / SD0_CLK / I2C SCL | **MicroSD Card Mod** (CLK) or hardware I2C SCL |
+| **28** | `HUSBDM` | USB 2.0 High-Speed D- | High-speed USB host / PHY expansion |
+| **29** | `HUSBDP` | USB 2.0 High-Speed D+ | High-speed USB host / PHY expansion |
+| **57** | `PH7` | GPIO / PAP_D7 / ADC ch 7 | Extra ADC channel / analog input mod |
+| **59** | `PH5` | GPIO / EMI_D21 / ADC ch 6 | Extra ADC channel / analog sensor mod |
+| **60** | `PH4` | GPIO / EMI_D20 / ADC ch 5 | Extra ADC channel / analog sensor mod |
+| **61** | `PH3` | GPIO / PAP_D3 / PWM | Extra PWM timer output |
+| **62** | `PH2` | GPIO / PAP_D2 / Timer capture | General Purpose Digital I/O |
+| **63** | `PH1` | GPIO / PAP_D1 / Timer capture | General Purpose Digital I/O |
+| **64** | `PH0` | GPIO / PAP_D0 / Touch input | Capacitive touch pad expansion or Digital I/O |
+
+> [!TIP]
+> **Key Hardware Modding Opportunities:**
+> * **Hardware MIDI OUT (`PB3`):** The FM-1 possesses physical 3.5 mm TRS MIDI IN (driven via `PH8` / UART1 RX), but lacks a hardware MIDI OUT jack. Pin 19 (`PB3`) can be configured as UART1 TX to drive a standard MIDI OUT / THRU circuit.
+> * **MicroSD Card Slot (`PD0`, `PD1`, `PD4`, `PD5`, `PD6`):** The JieLi SD0 hardware controller is fully routed to Port D pins (`PD0`–`PD6`). Adding a MicroSD card breakout would allow reading GBs of samples, soundfonts, and tracker songs directly.
+> * **I2C Bus Expansion (`PD0`/`PD1`):** Can be used to interface external OLED displays, sensors, or I2C expanders without interfering with the internal LCD and 74HC595 shift registers.
+
+### 1.3. Hardware PCB Characteristics & Recovery Vector
 * **No Debug Ports / Jumpers:** The M-VAVE FM1 PCB contains **no exposed debug headers** (JTAG, SWD, or UART debug pads).
 * **No Recovery Buttons:** There are **no hidden jumper pins or physical recovery buttons** on the board for forcing bootloader / DFU mode.
 * **Firmware Update & Recovery Vectors:**
@@ -47,7 +159,7 @@ Technical reference and reverse-engineering findings for the **M-VAVE FM1** synt
     * The dongle pulses the JieLi hardware boot key (`0x16EF` at ~50 kHz) over USB D+/D- lines during power-up, allowing SPI flash recovery and unbricking through the external USB-C port without opening the enclosure.
     * A practical community wiring guide using a Seeed Studio XIAO RP2040 or Raspberry Pi Pico (Green to D6, White to D7, Black to GND; red disconnected) is documented on [Reddit: Unbricking after a hard brick using a RP2040 and the FM-1 Transporter](https://www.reddit.com/r/MVaveFM1/comments/1x5lifu/mvave_fm1_unbricking_after_a_hard_brick_using_a/).
 
-### 1.3. Device Disassembly & Case Opening Instructions
+### 1.4. Device Disassembly & Case Opening Instructions
 To open the physical enclosure of the M-VAVE FM1:
 1. **Remove Bottom Screws:** Unscrew **6 self-tapping screws** from the bottom casing.
    * **Hidden Screw:** 5 screws are visible on the bottom surface; **1 screw is hidden in the center under the product sticker**.
