@@ -46,36 +46,26 @@ Technical reference and reverse-engineering findings for the **M-VAVE FM1** synt
 Verified from bare-metal SLOOP/Felucca HAL drivers (`fm1_gpio.h`, `fm1_lcd_hw.h`, `fm1_input.h`, `fm1_audio.h`, `fm1_adc.h`, `fm1_uart.h`, `fm1_usb.h`), high-resolution PCB photography, the official `AC7911B_Datasheet_V1.3` specification, and JieLi reference schematics:
 
 ```
-                          AC7911B (QFN48)
-                           Top View
-                     +-------------------+
-             IOVDD --| 1  (Left)      48 |-- FUSBDP (USB D+)
-              PA10 --| 2              47 |-- FUSBDM (USB D-)
-               PA9 --| 3              46 |-- PGND
-               PA8 --| 4              45 |-- SW (DC-DC Inductor L2)
-               PA7 --| 5              44 |-- VBAT
-               PA6 --| 6              43 |-- DCVDD14
-               PA5 --| 7              42 |-- PB1 (Battery ADC3)
-               PA4 --| 8              41 |-- PD0 (Flash CS)
-               PA3 --| 9              40 |-- PD1 (Flash DI)
-               PA2 --| 10             39 |-- PD6 (Flash Power SFGAT)
-               PA1 --| 11             38 |-- PD4 (Flash CLK)
-               PA0 --| 12             37 |-- PD5 (Flash DO)
-                     |   (Bottom)  (Right)|
-              DACL --| 13             36 |-- PB8/PC0 (I2S MCLK)
-               VCM --| 14             35 |-- PC1 (I2S BCLK)
-             HPVSS --| 15             34 |-- PC5/PC2 (I2S LRCK)
-            DACVDD --| 16             33 |-- PC6 (Codec Power/Reset)
-             AHVDD --| 17             32 |-- PC7 (LCD CS)
-               PH9 --| 18             31 |-- PC8 (LCD D/C)
-           PH8/PH7 --| 19             30 |-- PC9 (LCD CLK)
-           PH6/PH4 --| 20             29 |-- PC10 (LCD MOSI)
-              DVDD --| 21             28 |-- IOVDD
-           WFVDD14 --| 22             27 |-- XOSCO (24 MHz Crystal Out)
-          WFVDD33A --| 23             26 |-- XOSCI (24 MHz Crystal In)
-              WFRF --| 24             25 |-- WFVDD14
-                     +-------------------+
-                          PAD: VSS (GND)
+                                            TOP (Pins 48..37)
+           FUSBDP FUSBDM  PGND   SW   VBAT DCVDD14 PB1   PD0   PD1   PD6   PD4   PD5
+             48     47     46    45    44    43     42    41    40    39    38    37
+          +--------------------------------------------------------------------------+
+ IOVDD  1 | [dot]                                                                    | 36  PB8/PC0 (I2S MCLK)
+  PA10  2 |                                                                          | 35  PC1 (I2S BCLK)
+   PA9  3 |                                                                          | 34  PC5/PC2 (I2S LRCK)
+   PA8  4 |                                                                          | 33  PC6 (Codec RST)
+   PA7  5 |                                 AC7911B                                  | 32  PC7 (LCD CS)
+   PA6  6 |                                 (QFN-48)                                 | 31  PC8 (LCD D/C)
+   PA5  7 |                                                                          | 30  PC9 (LCD CLK)
+   PA4  8 |                                Center Pad:                               | 29  PC10 (LCD MOSI)
+   PA3  9 |                                 PAD = VSS                                | 28  IOVDD
+   PA2 10 |                                                                          | 27  XOSCO (24 MHz)
+   PA1 11 |                                                                          | 26  XOSCI (24 MHz)
+   PA0 12 |                                                                          | 25  WFVDD14
+          +--------------------------------------------------------------------------+
+             13     14     15    16    17    18     19    20    21    22    23    24
+            DACL   VCM   HPVSS DACVDD AHVDD  PH9  PH8/PH7 PH6/4 DVDD WF14 WF33A WFRF
+                                       BOTTOM (Pins 13..24)
 ```
 
 #### 1. Display Interface (Color TFT LCD 240 × 240)
@@ -129,9 +119,9 @@ Because the AC7911B in QFN-48 has limited GPIO lines, the FM-1 board uses an **1
 * **Master Volume Potentiometer:** Read via SAR ADC channel 4 (`ch 4` / `PB6`).
 
 #### 6. Communications, USB & RF
-* **Pin 19 (`PH8` / `PH7`):** UART1 RX input mapped via IOMAP crossbar for **3.5 mm TRS MIDI IN** (31,250 baud, DMA ring buffer). `PH7` carries `UART1_TXA`.
-* **Pin 47 (`FUSBDM`):** USB Full-Speed D- (connected to USB-C port).
-* **Pin 48 (`FUSBDP`):** USB Full-Speed D+ (connected to USB-C port, with software 1.5 kΩ pull-up attach).
+* **Pin 19 (`PH8` / `PH7`):** UART1 RX input mapped via IOMAP crossbar for **3.5 mm TRS MIDI IN** (31,250 baud, DMA ring buffer). `PH7` carries `UART1_TXA` on the die.
+* **Pin 47 (`FUSBDM`):** USB Full-Speed D- (connected to USB-C port; also supports alternate `UART1_RXD`).
+* **Pin 48 (`FUSBDP`):** USB Full-Speed D+ (connected to USB-C port, with software 1.5 kΩ pull-up attach; also supports alternate `UART1_TXD`).
 * **Pin 24 (`WFRF`):** 2.4 GHz RF Antenna pin (soldered directly to the internal insulated red wire antenna on PCB marked `天线`).
 
 #### 7. Power & System Pins
@@ -160,12 +150,14 @@ In the compact **QFN-48 package**, the board designers achieved maximum utilizat
 * 1 Battery Monitor ADC line (`PB1` / Pin 42).
 
 > [!NOTE]
-> Because there are **no unconnected floating GPIO pins** on the AC7911B package, hardware modders cannot simply tap an unrouted pin on the PCB. However, multiple clean expansion channels exist:
+> Because there are **no unconnected floating GPIO pins** on the AC7911B package, hardware modders cannot simply solder onto an unused pad. However, multiple clean expansion and routing channels exist:
 >
 > 1. **5 Spare Digital Outputs on the 74HC595 Chain:**
->    The dual 74HC595 shift registers (U2 & U3) offer 16 output bits, but the matrix uses only 11 columns (0..10). The remaining 5 outputs (pins Q4–Q7 of U3) are uncommitted and can be driven by firmware for external digital control, gate/trigger outputs, or extra LEDs.
-> 2. **Hardware MIDI OUT (`PH7` / Output Channel):**
->    Pin 19 is dual-bonded/muxed to `PH8` (UART1 RX for MIDI IN) and `PH7` (`UART1_TXA`). Using the JieLi IOMAP output channel crossbar or repurposing the pin allows adding a physical 3.5 mm TRS MIDI OUT port.
+>    The dual 74HC595 shift registers (U2 & U3) provide 16 output bits, but the matrix uses only 11 columns (0..10). The remaining 5 outputs (pins Q4–Q7 of U3) are uncommitted on the board and can be driven by firmware for external digital control, gate/trigger outputs, or extra LEDs.
+> 2. **Hardware MIDI OUT Reality & Solutions:**
+>    * *Pin 19 constraint:* On the silicon die, Pin 19 connects both `PH8` (UART1 RX) and `PH7` (UART1 TX). However, on the FM-1 PCB, the 3.5 mm jack is wired through an input optocoupler/buffer circuit that only passes incoming signals inwards to `PH8`. Driving `PH7` as a TX output directly onto the jack without bypassing the optocoupler will not transmit data to external gear and will conflict with incoming MIDI data.
+>    * *Physical MIDI OUT via USB D+/D-:* When the FM-1 is powered by a power bank or battery (without a USB host computer attached), Pin 48 (`FUSBDP`) can be configured via the JieLi IOMAP as `UART1_TXD` (and Pin 47 as `UART1_RXD`). A simple USB-C to 3.5 mm TRS adapter can therefore output standard 31,250 baud MIDI serial data!
+>    * *Output Channel Remap:* JieLi's `OUTPUT_CHANNEL` hardware crossbar can route `UART1_TX` to any GPIO pin. Modders willing to sacrifice an unneeded feature (for instance, the auxiliary on-chip DAC pin `DACL` on Pin 13, since sound already flows through the external I2S codec) can route UART1 TX to a dedicated 3.5 mm MIDI OUT jack.
 > 3. **Shared SPI1 Bus (`PC9` / `PC10`):**
 >    The SPI1 clock (`PC9`) and data out (`PC10`) lines can be shared with an external SPI device (e.g., secondary display, SPI DAC, or expander) by adding a multiplexed chip select.
 > 4. **Built-in Wireless Expansion (Wi-Fi & BLE 5.3):**
