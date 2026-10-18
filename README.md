@@ -7,7 +7,7 @@ A curated directory and reference hub for the **M-VAVE FM1** synthesizer (powere
 > This repository strictly curates custom firmwares and tools specifically targeted at the **M-VAVE FM-1** synthesizer.  
 > If you are looking for custom firmwares, ports, community discussions, and tools for the **M-VAVE SMK-37 / SMK-37 Pro** keyboard controller:
 > * **[r/MvaveSmk Subreddit](https://www.reddit.com/r/MvaveSmk/):** Community hub for SMK-37 discussion and mods.
-> * **[M-VAVE SMK-37 Custom Firmware Hub](https://genkigenki.github.io/smk37/):** Firmware hub and guides.
+> * **[M-VAVE SMK-37 Custom Firmware Hub](https://genkigenki.github.io/smk37/):** One page for 20+ SMK-37 firmwares, original ones and FM-1 ports, each installed and played on an SMK-37 before it goes up, with a browser installer (Chrome/Edge over USB, the way back to M-VAVE's firmware included), step-by-step help and a repair for a damaged stock key mapping. Updated as new firmwares and ports come out.
 > * **[fm1-to-smk37 Port Kit by genkigenki](https://github.com/genkigenki/fm1-to-smk37)** & **[Snoop37](https://github.com/genkigenki/Snoop37)**:
 >   * **License:** Open Source (GPL-3.0 for Snoop37 firmware port; CC BY-NC 4.0 for hardware guide & documentation).
 >   * **Hardware Relationship:** Both devices share the identical **JieLi AC791N (WL82)** processor, second-stage bootloader, update loader, and chip key, differing primarily in panel wiring (keyboard matrix, 16 RGB pads, 8 encoders, 4 faders, pitch/mod wheels, display pins, and flash partition map).
