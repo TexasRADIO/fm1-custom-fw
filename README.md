@@ -221,11 +221,22 @@ Firmwares built upon or directly forked from the foundational open-source multi-
       * **Sequencing & Performance:** 16 patterns with pattern chaining up to 64 steps, 16 chords with chord progression chaining, parameter locks (p-locks), ratchets, slides, swing, 16 punch-in effects, and live/step recording.
     * **Installation:** One-click browser WebMIDI installer (`v0.1.0`), in-browser WebAssembly emulator, or flashing prebuilt `lcd4-0.1.0.fwsc`.
 
-23. **[PIGEON by The Shrimp Blimp](https://github.com/TheShrimpBlimp/pigeon) ([Website](https://theshrimpblimp.com/pigeon/) | [Web Emulator](https://theshrimpblimp.com/pigeon/webapp/emu/)):**
-    * **License:** Open Source (GPL-3.0). Built on Felucca by Hügelton Instruments.
-    * **Concept:** Old-school hip-hop and house sampling groovebox inspired by the Roland SP-404 and Teenage Engineering Pocket Operator PO-33.
-    * **Features:** Two song sample tracks and a 16-pad drum kit, up to 32 chops per song sample, 64-step sequencer, pattern chaining, and complete song arrangement mode.
-    * **Installation:** Browser WebMIDI installer via USB directly from the project site or flashing prebuilt releases.
+23. **[PIGEON by The Shrimp Blimp](https://github.com/TheShrimpBlimp/pigeon) ([Website](http://theshrimpblimp.com/pigeon) | [Web Installer](http://theshrimpblimp.com/webapp/installer/) | [Web Sample Tool](http://theshrimpblimp.com/webapp/pigeon/) | [Web Emulator](http://theshrimpblimp.com/webapp/emu/)):**
+    * **License:** Open Source (GPL-3.0-only). Built upon Felucca (Leo Kuroshita / Hügelton Instruments) with update safeguards and recovery boot stub adapted from ChoralRoot FM-1 (Quixotic7).
+    * **Concept:** Old-school hip-hop, boom-bap, and house sampling groovebox inspired by the Roland SP-404 and Teenage Engineering Pocket Operator PO-33, featuring in-browser sample slicing, chop queues, and scratch decks.
+    * **Architecture & Memory Model:**
+      * **Shared Audio Bank:** 496 KiB flash allocation shared between two song sample tracks (indexed mono MP3, libmad decoder) and a 16-pad drum kit (ADPCM one-shots).
+      * **Polyphony:** 8 playback voices shared between Song 1 and Song 2, plus 4 dedicated voices reserved for drum pads (12 voices total).
+    * **Features:**
+      * **Transient Slicing & Chop Shaping:** Up to 32 chops per song sample with automatic transient detection, editable start/end boundaries, waveform zoom, pitch, envelopes, hold loops, and latching; two independent chop layouts can share the same audio.
+      * **FIFO Chop Queue:** Queue mode (`EDIT → ARP`) allows queuing up to 64 waiting chops with live queue manipulation while the current slice plays.
+      * **Scratch & Cue Deck:** Dedicated turntable deck (`EDIT → FX`) with jog, brake, reverse playback, level cuts, return-to-cue, and fine cent tuning per song.
+      * **Dual-View Sequencer:** Step grid and piano roll views (1–64 steps per track, 4 notes per step, 4 pattern banks, song arrangement sections) with per-note nudge/timing, microtiming, swing, hit probability, repeats, pitch locks, conditional hits, and Euclidean rhythm generation.
+      * **Effects Chain:** Resonant filter, tempo-synced tape delay, chorus, reverb, distortion, and independent master compressor.
+      * **Accessibility & MIDI:** Built-in screen-reader support across hardware and browser emulator; per-track discrete MIDI channels with incoming-note track selection and MIDI screen wake.
+    * **Update Safeguards & Recovery Boot Stub:** Includes installer compatibility checks and recovery boot stub adapted from ChoralRoot FM-1. An interrupted write can safely resume: holding `OCT-` alone on power-on re-enters update mode. Seamlessly interoperates with [TransitFM1](https://quixotic7.github.io/TransitFM1/) as a safe bridge when migrating from other custom firmwares.
+    * **Web Tools & Simulation:** Companion web studio for importing, trimming, previewing, and encoding audio banks (`webapp/pigeon/`), alongside a full in-browser WebAssembly hardware emulator (`webapp/emu/`).
+    * **Installation:** Browser WebMIDI installer via USB directly from the web installer or flashing prebuilt `.fwsc` firmware packages.
 
 24. **[NOIZ DEMONS by SPIKE the Percussionist](https://github.com/SPIKE-the-Percussionist/noiz_demons) ([Releases](https://github.com/SPIKE-the-Percussionist/noiz_demons/releases)):**
     * **License:** Open Source. Built on Felucca by Hügelton Instruments.
@@ -882,7 +893,7 @@ Firmwares featuring original sound engines, written-from-scratch architectures, 
 
 > [!TIP]
 > **Community Flashing Experience & Safe Upgrade Practice:**  
-> While not an absolute hard rule, there is a prominent community recommendation to avoid flashing one custom firmware directly over another. To minimize bricking risks, some users suggest rolling back to the official stock firmware (v15) via M-VAVE's official updater first, and only then flashing the next custom firmware build.
+> While not an absolute hard rule, there is a prominent community recommendation to avoid flashing one custom firmware directly over another. To minimize bricking risks, developers recommend either rolling back to the official stock firmware (V15) via M-VAVE's official updater first, or using **[TransitFM1](https://quixotic7.github.io/TransitFM1/)** — a dedicated lightweight bridge firmware by Quixotic7 designed with crash-guarded boot stubs and stock V15 identity emulation to safely transition between custom builds.
 
 ---
 
@@ -951,6 +962,16 @@ Useful open-source tools, documentation, and SDK repositories:
 
 13. **[FM-SWITCH by Drew Robinson (ocean)](https://github.com/ocean/FM-SWITCH):**
     Native iOS companion app that installs and swaps FM-1 firmwares directly from an iPhone/iPad over USB-C using CoreMIDI, featuring an offline catalogue of community firmwares saved locally on the device for on-the-go flashing without a laptop.
+
+14. **[TransitFM1 by Quixotic7](https://github.com/Quixotic7/TransitFM1) ([Web Installer](https://quixotic7.github.io/TransitFM1/)):**
+    * **License:** Open Source (GPL-3.0-only). Built upon Dinghy (zvenson), Felucca's platform as carried by SLOOP, and ChoralRoot FM-1's boot stub. Concept proposed by Melodee author Kerem Kilic.
+    * **Concept & Role:** Lightweight intermediate "stopover" bridge firmware for the M-VAVE FM-1 designed to safely transition between different community custom firmwares.
+    * **Features & Safety Mechanisms:**
+      * **V15 Protocol Identity:** Answers the USB-MIDI update protocol disguised as official stock V15 so that third-party web updaters and installers accept it without version conflicts or compatibility rejections.
+      * **Crash-Guarded Write Cycle:** Employs a commit-last write strategy where the first sector of the application area is programmed last, protecting the flash from being left in an unbootable state during an incomplete write.
+      * **Power Interruption Recovery:** If a cable is unplugged or battery dies mid-flash, cycling power automatically enters update mode (signaled by 3 short key LED flashes and a black screen). Re-running the installer completes the flashing process without requiring emergency hardware recovery. Holding `OCT-` on power-on manually triggers update mode at any time.
+      * **Built-in Safety Checks:** Blocks direct flashing over incompatible older firmwares (such as SLOOP or early Felucca betas) and disallows firmware packages that exceed the standard application partition size (such as Baud Girl, which requires returning to true stock V15 first).
+      * **Direct Package Flashing:** Includes browser functionality to inspect the currently installed firmware or upload and flash any raw `.fwsc` package directly (including official stock `FM-1.fwsc`).
 
 ### 3.2. Reverse Engineering, Disassembly & Decompilation
 
@@ -1029,6 +1050,9 @@ Useful open-source tools, documentation, and SDK repositories:
       * Full touch panel simulating the FM-1's 240 × 240 color display, keys, and rotary encoders.
       * Integrated touch piano roll, sound editors, preset management, and USB-MIDI integration to synchronize projects with physical FM-1 hardware.
 
+ 9. **[PIGEON WebAssembly Emulator](http://theshrimpblimp.com/webapp/emu/) ([Project Page](http://theshrimpblimp.com/pigeon)):**
+    Complete in-browser WebAssembly hardware simulation of the PIGEON sampler firmware. Renders the 240 × 240 interface, loads custom samples, demonstrates transient slicing, sequencing, scratch decks, and audio playback directly in Chrome or Edge without physical hardware.
+
 ### 3.5. Web Editors, Patch Librarians & Companion Utilities
 
  1. **[FM-1 Online Editor & Firmware Directory](https://fm1-editor.com/) ([Firmware Catalog](https://fm1-editor.com/firmware/)):**
@@ -1101,6 +1125,10 @@ Useful open-source tools, documentation, and SDK repositories:
       * **Generative Chance & Mutation:** Per-track hit stutter, drift, and random dice-roll probability parameters.
       * **Audio & MIDI Integration:** Supports internal sample playback or live microphone recording alongside Web MIDI transmission, plus direct WAV audio capture and standard MIDI file export.
       * **User Interface:** Clean bilingual (English / French) responsive UI with built-in interactive help tooltips.
+
+19. **[PIGEON Web Sample Tool & Studio](http://theshrimpblimp.com/webapp/pigeon/) ([Documentation](http://theshrimpblimp.com/pigeon)):**
+    * In-browser sample preparation, slicing, and backup workstation for the PIGEON sampler firmware.
+    * Allows importing custom audio files into Song 1 / Song 2 slots and a 16-pad drum kit, previewing waveforms, automatic transient slicing (up to 32 chops per song), trimming boundaries, offline MP3/ADPCM encoding, and transmitting complete 496 KiB soundbanks to the FM-1 hardware over Web MIDI. Also creates complete session archives and firmware backups before flashing.
 
 ### 3.6. Developer Frameworks, UI Designers & Curated Collections
 
