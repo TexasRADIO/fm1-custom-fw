@@ -331,6 +331,17 @@ Firmwares built upon or directly forked from the foundational open-source multi-
     * **Features:** Triple-oscillator bank (LO to 2' range, 6 selectable waveforms including triangle, saw-triangle, reverse sawtooth, pulse, and wide/narrow square; independent detuning on OSC 2 & 3; noise generator with white and pink noise), 4-pole 24 dB/oct resonant ladder low-pass filter with per-stage nonlinear saturation and self-oscillation, dual Minimoog-style exponential contour generators (Filter ADS and Loudness ADS with release switch), LFO modulation (triangle/square) routable to pitch or cutoff, 100 factory presets across 5 categories + 32 user memory slots, dedicated arpeggiator with HOLD latch, 16-step sequencer (REC/PLAY), per-preset FX (reverb, tape delay, stereo chorus, overdrive), 50 assignable MIDI CC parameters with MIDI learn, USB and 3.5 mm TRS MIDI IN, and a custom 240×240 vintage Minimoog-inspired graphical UI with animated real-time filter response curves and ADSR envelopes.
     * **Installation:** Browser-based WebMIDI installer via USB directly in Chrome/Edge, with full backup and restore support to stock V15.
 
+35. **[Clipper by isod89](https://isod89.github.io/clipper-fm1/) ([Web Installer](https://isod89.github.io/clipper-fm1/webapp/installer/) | [Web Editor](https://isod89.github.io/clipper-fm1/webapp/editor/)):**
+    * **License:** Open Source (GPL-3.0-only). Built upon Felucca by Leo Kuroshita / Hügelton Instruments.
+    * **Polyphony:** 8 voices standard (12 or 16 voices optional compile target rendered across both CPU cores) with glide, polyphonic unison (2 or 4 voices per note), and dual-sound layer/split/multi-timbral support.
+    * **Concept:** Deep polyphonic synthesizer firmware turning the FM-1 into an expansive multi-engine sound design powerhouse.
+    * **Features:**
+      * **23 Synthesis Engines & 407 Sounds:** Includes HYBRID (3 oscillators with supersaw/FM/waveshaping, dual filters in series/parallel, 16-slot mod matrix), FMX (6-operator Korg opsix-style FM with PM/linear FM/ring mod), FM6 (DX7 32-algorithm engine with `.syx` import), DIGITAL (4-op FM), WAVE (16 wavetables with anti-aliasing and Serum WAV import), WSEQ (Korg Wavestation wave sequencing), VECTOR (Prophet VS 4-corner vector crossfading), JUNO (Roland Juno DCO + sub, 24 dB filter, and stereo BBD chorus), ANALOG (virtual analog with 8 filter models), ACID (TB-303 ladder with accent slide), STRINGS (70s divide-down ensemble string machine), MACRO (Plaits-inspired CHORD, SWARM, ADDITIVE, SPEECH engines with LPG), PHASE (Casio CZ phase distortion), VPS (Vector Phase Shaping), TERRAIN (orbital wave-terrain synthesis), PHYS (Rings/DaisySP physical modeling), TRIO (8-bit computer sound chip), LOFI, WHEEL (9-drawbar tonewheel organ), VOICE (formant singing vowels), NOISE, GRAIN (granular clouds), and SAMPLE playback.
+      * **Modulation & Sequencing:** 12-slot modulation matrix, 3 LFOs, looping auxiliary envelopes, 4 performance macros (BRITE, TIMBR, MOTN, SPACE), and a 4-lane MOD SEQ modulation sequencer. Step sequencer with chord recording and 15-mode arpeggiator including a Turing machine generative looper (`TURNG`) and SPICE/DICE variations.
+      * **Zero-Delay-Feedback Filters & FX:** 8 filter topologies (Moog ladder, MS-20, diode ladder, SEM, SVF, notch, BP, HP), per-sound insert FX (drive, fuzz, fold, crush, phaser, flanger, Juno chorus), stereo tempo-synced delays, Dattorro hall and shimmer reverbs, 3-band master EQ, and bus look-ahead limiter.
+      * **Microtonal & MPE Support:** Full Scala (`.scl`) scale import alongside 14 historical/ethnic temperaments, MPE (per-note pitch bend, pressure, slide), and USB class-compliant stereo audio streaming directly into DAWs.
+    * **Installation:** Browser-based WebMIDI installer via USB directly in Chrome/Edge, with full backup and restore support to stock V15.
+
 #### 1.1.2. SLOOP Ecosystem (Groovebox Core & Derived Firmwares)
 
 
@@ -489,6 +500,17 @@ Suzuki Omnichord and Japanese Shigin accompaniment instruments featuring strumpl
     * **Concept:** Expressive chord machine inspired by the Torso Electronics T-1 / Orchid chord concepts, tailored specifically to the ergonomics of the FM-1.
     * **Features:** Single-finger chord generation with root and bass note coupling, 27 musical scales, built-in arpeggiator, looper, lush plate reverb, and an evolving pixel flower graphic that grows on the 240 × 240 screen as you play.
     * **Installation:** In-browser WebMIDI player/installer or flashing prebuilt releases (`v0.2`).
+
+ 4. **[FM-1 Pocket Guitar by xMagElonx](https://github.com/xMagElonx/fm1-guitar) ([Web Emulator & Releases](https://fm1-tone-engine.app.workbuddy.host/guitar-fw/)):**
+    * **License:** Open Source (GPL-3.0). Pure C99 guitar strumming and chord voicing layer for the FM-1.
+    * **Polyphony:** Polyphonic acoustic/electric string modeling engine with per-string voice allocation and realistic micro-delay onset pick modeling (~65 ms strum spread).
+    * **Concept:** Virtual acoustic and electric guitar performance instrument mapping the FM-1's 27 keys into an interactive fretboard and strumming surface.
+    * **Features:**
+      * **Strings & Chords Keybed Layout:** 11 black keys silently select chords while the 16 white keys act as individual strings for realistic arpeggios, fingerpicking, and automated down/up stroke strumming with velocity dynamics, chucking, and palm muting.
+      * **On-Device Chord Library Editor:** Dedicated `ACTIONS -> CHORD LIBRARY` configuration page allowing users to customize and reassign all 11 black key chord slots to any root and chord quality with persistent saving across power cycles.
+      * **Auto-Rhythm Looper:** Dedicated rhythm keys trigger full bars of genre strumming patterns (folk, pop, punk, reggae) that loop while held and seamlessly finish at bar boundaries upon release.
+      * **5 Factory Timbres & Key Change:** Gapless on-the-fly timbre switching at measure boundaries and mid-song instant transposition.
+    * **Installation:** In-browser WebAssembly simulation player, direct `.fwsc` firmware package flashing via WebMIDI or CLI updater.
 
 #### 1.1.4. Independent & Original Engine Firmwares
 
@@ -832,15 +854,15 @@ Firmwares featuring original sound engines, written-from-scratch architectures, 
     * **Concept:** Clip-launching performance firmware turning the FM-1 into an Ableton Live-style clip launcher and matrix sequencer.
     * **Status:** Work in progress.
 
- 2. **[Optimist by w0ts](https://github.com/w0ts/optimist):**
+ 2. **[Optimist by w0ts](https://github.com/w0ts/optimist) ([Website & Web Builder](https://w0ts.github.io/optimist/)):**
     * **License:** Open Source (GPL-3.0-only). Derived from SLOOP, Felucca, Melodee, and X0X.
     * **Status:** In active development (tested in emulator).
-    * **Concept:** Modular firmware builder and platform allowing users to custom-assemble FM-1 firmware images tailored to flash and RAM budgets.
+    * **Concept:** Modular firmware builder and platform allowing users to custom-assemble FM-1 firmware images tailored to flash and RAM budgets directly from the browser or CLI.
     * **Features:**
-      * **Firmware Builder (`make builder`):** Choose specific synth engines (ANALOG 2, DIGITAL, PHASE, LOFI, SAMPLE, VOICE, TRIO, WHEEL, GRAIN, FM6, SLICE, PHYS, ACID), drum kits, effects (DUST, DUCK, DJ filter, delay, reverb), and sequencer capabilities at compile-time.
+      * **Modular Web & CLI Builder:** Choose specific synth engines (ANALOG 2, DIGITAL, PHASE, LOFI, SAMPLE, VOICE, TRIO, WHEEL, GRAIN, FM6, SLICE, PHYS, ACID), drum kits (including 808/909 styles), effects (DUST, DUCK, DJ filter, delay, reverb), and sequencer capabilities while monitoring flash and RAM allocations live.
       * **Multi-Layer UI & Sequencer:** SLOOP-style live button-held layers, per-track patterns, scenes, snapshots, fills, microtiming, and parameter locks.
-      * **SLOOP 2.4 Project Compatibility & Web Editor:** Full project interchangeability and web-based parameters librarian.
-    * **Installation:** Build and flash via CLI/Docker toolchain.
+      * **In-Browser Simulator & Web Editor:** Test and audition custom firmware configurations in the browser before flashing; full SLOOP project interchangeability and web-based parameters librarian.
+    * **Installation:** In-browser Web Builder & WebMIDI installer, or build locally via CLI/Docker toolchain.
 
  3. **[Dinghy by Sven Trogus (zvenson)](https://github.com/zvenson/dinghy):**
     * **License:** Open Source (GPL-3.0-only).
@@ -1016,6 +1038,15 @@ Useful open-source tools, documentation, and SDK repositories:
       * **Power Interruption Recovery:** If a cable is unplugged or battery dies mid-flash, cycling power automatically enters update mode (signaled by 3 short key LED flashes and a black screen). Re-running the installer completes the flashing process without requiring emergency hardware recovery. Holding `OCT-` on power-on manually triggers update mode at any time.
       * **Built-in Safety Checks:** Blocks direct flashing over incompatible older firmwares (such as SLOOP or early Felucca betas) and disallows firmware packages that exceed the standard application partition size (such as Baud Girl, which requires returning to true stock V15 first).
       * **Direct Package Flashing:** Includes browser functionality to inspect the currently installed firmware or upload and flash any raw `.fwsc` package directly (including official stock `FM-1.fwsc`).
+
+15. **[Octo-Vave by amacias (Artificial Music)](https://github.com/amacias/octo-vave) ([Web App & Directory](https://amacias.github.io/octo-vave/) | [Reddit Announcement](https://www.reddit.com/r/synthdiy/comments/1x9ptdn/octovave_taming_the_mvave_fm1_firmware_explosion/)):**
+    * **License:** Open Source (MIT).
+    * **Concept:** Local web application and firmware catalog dashboard designed to organize, track, and test-verify the expanding universe of community FM-1 custom firmwares.
+    * **Features:**
+      * **Automatic Ranking & Catalog:** Live top-firmware tracking sorted by stars and downloads, directory of 30+ firmwares with install routes, open/closed-source tags, and revert-path indicators.
+      * **"Octo-Seal" Hardware Verification:** Badging system signifying firmwares that have been physically installed, auditioned, and successfully reverted to stock on real FM-1 hardware, pinned by SHA256 checksums.
+      * **DX7-Style Voice Editor & Sound Checks:** Built-in 6-operator patch library and editor with MIDI/SysEx transfer, post-flash sound check routines, and real-time MIDI monitoring.
+      * **Local & Privacy-Focused:** Runs locally via standard-library Python (`127.0.0.1:8765`) or directly in the browser with no required accounts or cloud dependencies.
 
 ### 3.2. Reverse Engineering, Disassembly & Decompilation
 
