@@ -60,7 +60,7 @@ Firmwares built upon or directly forked from the foundational open-source multi-
 
  3. **[Melodee by keremimo](https://github.com/keremimo/melodee) ([Web Installer](https://keremimo.github.io/melodee/) | [Web Editor](https://keremimo.github.io/melodee/webapp/editor/)):**
    * **License:** Open Source (GPL-3.0-only). Modified build based on Felucca.
-   * **Polyphony:** 8 shared synth voices across tracks with configurable per-engine caps: 5–6 voices for Prophet-5 (with unison detune mode), 6 voices for FM6, 3 voices for SID emulation, plus dedicated rhythm accompaniment.
+   * **Polyphony:** Per-engine voice limits: 16 voices for Casio CZ-1, 8 voices for Prophet-5, 8 voices for DX-7 / FM-6, and faithful hardware-accurate voice count for SID chip emulation (3 voices per chip), plus rhythm accompaniment.
    * **Features:**
      * **Prophet-5 Engine:** Native **Sequential Prophet-5 Rev 4** engine replacing ANALOG — two oscillators with hard sync, Poly-Mod, LFO/noise wheel modulation, selectable SSI (Rev 1/2) and Curtis (Rev 3) 4-pole low-pass filters, separate filter/amp envelopes, Vintage knob, glide, unison, and 5 voices per track. Includes **all 200 programs** of Sequential's v1.03 factory bank (128 native user slots P001–P128), 16 device parameter pages, and `.syx` program/bank import and export in the web editor.
      * **Casio CZ-1 Phase Distortion:** Authentic CZ-1 engine with 64 original CZ-1 factory preset tones, 8 CZ device banks with `.syx` import/export, and 38 dedicated editing pages.
