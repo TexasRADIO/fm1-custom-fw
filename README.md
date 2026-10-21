@@ -357,6 +357,11 @@ Firmwares built upon or directly forked from the foundational open-source multi-
     * **Concept:** Studio performance firmware utilizing dual JieLi `pi32v2` cores for polyphonic rendering alongside algorithmic generative polyrhythmic step sequencing.
     * **Installation:** Flashing prebuilt dual-core release packages via WebMIDI or CLI updater.
 
+39. **[Gnomad Synth V1 by Kyle Palaniuk](https://github.com/kpalaniuk/gnomad-firmware) ([Website & How-to](https://gnomad.cc) | [Releases](https://github.com/kpalaniuk/gnomad-firmware/releases)):**
+    * **License:** Open Source (GPL-3.0). Built on Felucca.
+    * **Concept:** Kid- and beginner-friendly firmware. EASY mode picks sounds by picture (10 pictures, 57 sounds, no reading needed), four colour-coded knobs named on screen with no shift layer, a singing Gnome, five ready-made grooves, loop recording with click and count-in, and hold PLAY to restart on the next bar. Hold HOME + SAVE to switch to Advanced: four tracks, step sequencer, effects, MIDI over USB and TRS.
+    * **Installation:** Python CLI installer from a computer ([INSTALL.md](https://github.com/kpalaniuk/gnomad-firmware/blob/main/INSTALL.md)); an optional iPhone/iPad companion app (TestFlight beta) can also install it.
+
 #### 1.1.2. SLOOP Ecosystem (Groovebox Core & Derived Firmwares)
 
 
