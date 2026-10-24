@@ -5,14 +5,9 @@ A curated directory and reference hub for the **M-VAVE FM1** synthesizer (powere
 > [!NOTE]
 > **Device Compatibility Notice & SMK-37 Resources:**  
 > This repository strictly curates custom firmwares and tools specifically targeted at the **M-VAVE FM-1** synthesizer.  
-> If you are looking for custom firmwares, ports, community discussions, and tools for the **M-VAVE SMK-37 / SMK-37 Pro** keyboard controller:
-> * **[r/MvaveSmk Subreddit](https://www.reddit.com/r/MvaveSmk/):** Community hub for SMK-37 discussion and mods.
-> * **[M-VAVE SMK-37 Custom Firmware Hub](https://genkigenki.github.io/smk37/):** One page for 20+ SMK-37 firmwares, original ones and FM-1 ports, each installed and played on an SMK-37 before it goes up, with a browser installer (Chrome/Edge over USB, the way back to M-VAVE's firmware included), step-by-step help and a repair for a damaged stock key mapping. Updated as new firmwares and ports come out.
-> * **[fm1-to-smk37 Port Kit by genkigenki](https://github.com/genkigenki/fm1-to-smk37)** & **[Snoop37](https://github.com/genkigenki/Snoop37)**:
->   * **License:** Open Source (GPL-3.0 for Snoop37 firmware port; CC BY-NC 4.0 for hardware guide & documentation).
->   * **Hardware Relationship:** Both devices share the identical **JieLi AC791N (WL82)** processor, second-stage bootloader, update loader, and chip key, differing primarily in panel wiring (keyboard matrix, 16 RGB pads, 8 encoders, 4 faders, pitch/mod wheels, display pins, and flash partition map).
->   * **Features:** Board Port Patch Series (`smk37-board`), Snoop37 reference port of SLOOP 2.5 on SMK-37 Pro, porting compatibility matrix, and critical flash safety documentation on preserving unique SPI flash regions (`0xC1000` USRTRIM factory calibration `trimdat`, `0xC0000` BTIF, `0xFF000` chip key/MAC).
-> * **[Erik37 by genkigenki](https://github.com/genkigenki/erik37):** Acoustic concert grand piano firmware natively supporting both SMK-37 (Pro, Elite, MKE-P37) and FM-1 (`erik37-fm1.fwsc`).
+> Resources and ports for the **M-VAVE SMK-37 / SMK-37 Pro** keyboard controller:
+> * **[M-VAVE SMK-37 Custom Firmware Hub](https://genkigenki.github.io/smk37/):** Directory and browser-based installer for SMK-37 firmwares and FM-1 ports.
+> * **[fm1-to-smk37 Port Kit by genkigenki](https://github.com/genkigenki/fm1-to-smk37):** Board port patches and documentation for adapting FM-1 firmwares to SMK-37 hardware.
 
 > [!IMPORTANT]
 > **Official Open Source Firmware & SDK (M-VAVE):**  
