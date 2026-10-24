@@ -295,11 +295,16 @@ Firmwares built upon or directly forked from the foundational open-source multi-
     * **Features:** A single key press algorithmically generates and rolls a pad, an ambient sequence, a chord arpeggio, and a live-playable lead voice all locked to a shared harmonic key. Includes cathedral reverb algorithms, slow parameter drift, and church-inspired screen aesthetics.
     * **Installation:** Flashing prebuilt `v0.2.3` releases via WebMIDI or CLI updater.
 
-29. **[Melodee (Tess) by Rastapopolix](https://github.com/Rastapopolix/melodee-tess) ([Releases](https://github.com/Rastapopolix/melodee-tess/releases)):**
-    * **License:** Open Source (GPL-3.0). Fork of Melodee by Leo Kuroshita.
-    * **Concept:** Algorithmic and generative pattern expansion for Melodee's 4-track synthesizer engine.
-    * **Features:** Adds four distinct algorithmic note generators across its four tracks: Turing machine shift-register random loops, Euclidean rhythmic distribution, Markov chain note transitions, and Morph phrase mutation. Features dedicated on-device Evolve, Form, and Tweak pages for dynamically mutating melodic phrases and structuring live song sections.
-    * **Installation:** Flashing prebuilt `v1.1.0` releases via WebMIDI.
+29. **[Tessera by Rastapopolix](https://github.com/Rastapopolix/tessera) ([Project Page & Web Installer](https://rastapopolix.github.io/tessera/) | [Releases](https://github.com/Rastapopolix/tessera/releases)):**
+    * **License:** Open Source (GPL-3.0). Formerly Melodee (Tess); a fork of Melodee by keremimo, itself built on Felucca by Leo Kuroshita (Hügelton Instruments).
+    * **Concept:** Generative sequencer firmware: four tracks that write, evolve, and arrange music with you, from short loops to slowly changing ambient pieces.
+    * **Features:**
+      * **13 Algorithmic Note Generators:** Turing machine shift register, Euclid, Markov chain transitions, Morph phrase mutation, Atlas drum maps, Bounce/Fall, Awake, Poly, Quad, Constellation, Series, Chord progressions, and Answer (which dynamically replies to phrases you play).
+      * **Generative Progression & Structure:** Evolve, Form (AABA-style sections), Tweak, and Energy pages dynamically shape and arrange musical phrases over time.
+      * **Modulation Matrix & Cords:** 16 modulation cords from any source to any destination, slow organic modulation sources (`TIDE`, `SWARM`), and a dedicated modulation matrix.
+      * **Sequencer & I/O:** Per-step ratchets and nudge, unified musical key for the whole project, MIDI clock out, and multi-channel MIDI output (dedicated MIDI channel per track).
+      * **Sound Engines:** Authentic 6-operator FM (FM6), TRIO, and DRUM engines (808, 909, SID drum kit).
+    * **Installation:** Browser WebMIDI installer via USB directly from the project page with automated backup and rollback to stock V15, or flashing prebuilt release packages.
 
 30. **[REGGAE-OS by Kemar Pennant (KemstheSage)](https://github.com/KemstheSage/reggae-os):**
     * **License:** Open Source (GPL-3.0). Derivative of Felucca 1.6.1.
@@ -1135,6 +1140,15 @@ Firmwares featuring original sound engines, written-from-scratch architectures, 
     * **Concept:** Thin-client bridge firmware turning the physical FM-1 into a hardware surface and LCD display for computer-based firmware emulators.
     * **Features:** Streams every capacitive keypress, button event, encoder turn, and knob value over USB to a host computer while rendering computer-sent framebuffers directly onto the 240 × 240 screen and LEDs. Allows developers and musicians to audition and live-code new firmwares at full speed on desktop or web emulators using real FM-1 controls without flashing flash memory.
     * **Installation:** Flashing prebuilt `.fwsc` package (`FM-1_015`).
+
+ 10. **[FMDj by DeadActive](https://github.com/DeadActive/FMDj) ([Web Installer](https://deadactive.github.io/FMDj/webapp/lsdj-install/) | [Web Simulator](https://deadactive.github.io/FMDj/webapp/lsdj-sim/)):**
+     * **License:** Open Source (GPL-3.0-only). Built upon Felucca by Leo Kuroshita / Hügelton Instruments with Peanut-GB and `minigb_apu` cores.
+     * **Concept:** Game Boy music tracker emulator firmware for running Little Sound Dj (LSDj) and Drum Machina Go! (DMGo!) natively on the FM-1.
+     * **Features:**
+       * **Dedicated Game Boy Tracker Integration:** Runs user-provided Game Boy `.gb` ROMs with frame-accurate sound generation across all 4 Game Boy audio channels (pulse 1, pulse 2, 4-bit wave channel, noise).
+       * **1.5× Scaled Color Display & Palettes:** Scaled display rendering with customizable retro palettes (DMG pea-soup green, Pocket grayscale, Light, Super Game Boy, Dark) and optional performance overlay (FPS, CPU load).
+       * **Ergonomic Tracker Controls:** SELECT/ALGORITHM rotary encoders and directional keys navigate rows and screens, top keys act as A/B buttons, 16 white keys act as step triggers for DMGo!, and holding REC triggers instant battery/flash save.
+     * **Installation:** In-browser WebMIDI installer via USB directly from the web installer page, or building custom `.fwsc` images from source.
 
 ### 1.4. Stock Firmware Patchers & Binary Mods
 
