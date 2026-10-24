@@ -1504,15 +1504,13 @@ Community hubs, live directory dashboards, web-based flashers, and metadata regi
 
 Comprehensive technical references and community guides:
 
-1. **[FM-1 SysEx Protocol & Provenance (by KingParamount)](https://github.com/KingParamount/fm1-factory-presets/blob/main/docs/protocol-and-provenance.md):**
-   Technical documentation of the FM-1 handshake sequence, 7-bit payload packing, and bulk dump transfers.
-2. **[FM-1 OTA Protocol & Architecture Docs (AL-255/FM-1-RE)](https://github.com/AL-255/FM-1-RE/blob/main/docs/io/11-ota-protocol.md):**
-   In-depth specifications for the USB-MIDI packet framing, session handshakes, and XIP flash memory layouts.
-3. **[FM-1 Easy Guide (by pingywon)](https://pingywon.github.io/fm1-easy-guide/) ([Source](https://github.com/pingywon/fm1-easy-guide)):**
+1. **[M-VAVE FM1 Hardware Architecture & Protocol Reference (Local)](REVERSE_ENGINEERING.md):**
+   In-depth local technical documentation covering JieLi AC791N hardware architecture, pinout maps, OTA MIDI SysEx protocol specifications, and external protocol references ([AL-255](https://github.com/AL-255/FM-1-RE/blob/main/docs/io/11-ota-protocol.md) and [KingParamount](https://github.com/KingParamount/fm1-factory-presets/blob/main/docs/protocol-and-provenance.md)).
+2. **[FM-1 Easy Guide (by pingywon)](https://pingywon.github.io/fm1-easy-guide/) ([Source](https://github.com/pingywon/fm1-easy-guide)):**
    Beginner-friendly rewrite of the official manual with an interactive step-by-step browser walkthrough.
-4. **[fm1-guide (by fuleo)](https://fuleo.github.io/fm1-guide/):**
+3. **[fm1-guide (by fuleo)](https://fuleo.github.io/fm1-guide/):**
    Practical operational notes covering sequencer workflows, the V15 reverb bugfix, and Linux flashing procedures.
-5. **[FM-1 on Tao of Mac (by Rui Carmo)](https://taoofmac.com/space/com/m-vave/fm-1):**
+4. **[FM-1 on Tao of Mac (by Rui Carmo)](https://taoofmac.com/space/com/m-vave/fm-1):**
    Architectural notes, teardown observations, and hackability insights.
 
 ---

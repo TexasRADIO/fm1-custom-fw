@@ -246,7 +246,11 @@ Security checks include:
 * **Parameter Query Fuzzing Note:** Exhaustive read scanning confirmed that the M-VAVE FM1 synthesizer responds **exclusively to Parameter ID `0x40` (64)**. Queries sent to all other Parameter IDs produce no response.
 
 ### 4.2. Verified Two-Step Session Flow (Device-Pull Protocol)
-Analysis of the hardware verifier (`AL-255/FM-1-RE`, `docs/io/11-ota-protocol.md`, Issue #2) confirms that the firmware update is a **device-pull** architecture rather than host-push:
+Analysis of the hardware verifier ([AL-255/FM-1-RE `docs/io/11-ota-protocol.md`](https://github.com/AL-255/FM-1-RE/blob/main/docs/io/11-ota-protocol.md), Issue #2) and factory preset transfer research ([FM-1 SysEx Protocol & Provenance by KingParamount](https://github.com/KingParamount/fm1-factory-presets/blob/main/docs/protocol-and-provenance.md)) confirms that the firmware update is a **device-pull** architecture rather than host-push:
+
+* **External Protocol Specifications:**
+  * **[AL-255/FM-1-RE: OTA Protocol & Flash Memory Specs](https://github.com/AL-255/FM-1-RE/blob/main/docs/io/11-ota-protocol.md):** In-depth technical specifications for USB-MIDI packet framing, session handshakes, and XIP flash memory layouts.
+  * **[KingParamount: FM-1 SysEx Protocol & Provenance](https://github.com/KingParamount/fm1-factory-presets/blob/main/docs/protocol-and-provenance.md):** Detailed documentation of the FM-1 handshake sequence, 7-bit payload packing, and bulk dump transfers.
 
 1. **Step 1: Verification Mode**
    * Host sends enter-upgrade command: `F0 22 24 35 7F F7`.
