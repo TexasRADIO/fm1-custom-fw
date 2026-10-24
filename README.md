@@ -811,11 +811,11 @@ Firmwares featuring original sound engines, written-from-scratch architectures, 
     * **Features:** One dedicated drum kit track and five monophonic synth tracks each hosting independent synthesis machines, a 64-step sequencer with parameter locks (p-locks) per step, three assignable LFOs per track, and per-track stereo delay lines.
     * **Installation:** Build and flash via CLI toolchain.
 
-32. **[SIDOU by Denis Sablic (dsablic)](https://github.com/dsablic/sidou):**
-    * **License:** Open Source (GPL-3.0-or-later).
-    * **Concept:** Commodore 64 SID chip (MOS 6581/8580) emulation instrument for the FM-1.
-    * **Features:** Authentic software SID emulation, real-time live performance mode, capacitive key and USB-MIDI input response, with an onboard step sequencer and `.sid` chiptune file playback architecture.
-    * **Installation:** Build from source / desktop simulation.
+32. **[SIDOU by Denis Sablic (dsablic)](https://github.com/dsablic/sidou) ([Releases](https://github.com/dsablic/sidou/releases)):**
+    * **License:** Open Source (GPL-3.0-only for the firmware image; SIDOU's own code GPL-3.0-or-later).
+    * **Concept:** A C64 SID music machine: two emulated SID chips (6581 and 8580) with a GoatTracker 2 compatible tracker.
+    * **Features:** Tracker and step sequencer with parameter locks, whose songs are GoatTracker 2 `.sng` files; a live instrument playable over a song on the other chip; the chip's character (age, worn DACs, the 6581's thump, filter bleed) and CHIP SPREAD stereo; chord arpeggios; MIDI clock, CC/NRPN and MIDI learn; songs over SysEx on USB. `.sid` file playback is planned.
+    * **Installation:** Prebuilt `.fwsc` releases, installed with Felucca's `fm1_install.py`; try it first in the browser at https://dsablic.github.io/sidou/.
 
 33. **[TripDeck by anonymousacademe](https://github.com/anonymousacademe/FM-1-TripDeck):**
     * **License:** Open Source (GPL-3.0).
