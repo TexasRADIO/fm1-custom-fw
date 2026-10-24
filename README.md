@@ -243,15 +243,16 @@ Firmwares built upon or directly forked from the foundational open-source multi-
       * **Sequencing & Performance:** 16 patterns with pattern chaining up to 64 steps, 16 chords with chord progression chaining, parameter locks (p-locks), ratchets, slides, swing, 16 punch-in effects, and live/step recording.
     * **Installation:** One-click browser WebMIDI installer (`v0.1.0`), in-browser WebAssembly emulator, or flashing prebuilt `lcd4-0.1.0.fwsc`.
 
- 23. **[PIGEON by The Shrimp Blimp](https://github.com/TheShrimpBlimp/pigeon) ([Website](http://theshrimpblimp.com/pigeon) | [Web Installer](http://theshrimpblimp.com/webapp/installer/) | [Web Sample Tool](http://theshrimpblimp.com/webapp/pigeon/) | [Web Emulator](http://theshrimpblimp.com/webapp/emu/)):**
-    * **License:** Open Source (GPL-3.0-only). Built upon Felucca by Hügelton Instruments with update recovery safeguards adapted from ChoralRoot FM-1.
-    * **Concept:** Old-school hip-hop and house sampling groovebox inspired by the Roland SP-404 and PO-33, featuring in-browser slicing, chop queues, and scratch decks.
+ 23. **[PIGEON by The Shrimp Blimp](https://github.com/TheShrimpBlimp/pigeon) ([Website](https://theshrimpblimp.com/pigeon/) | [Signed Final Beta](https://github.com/TheShrimpBlimp/pigeon/releases/tag/v0.5.0-beta.1) | [Web Installer](https://theshrimpblimp.github.io/pigeon-website/webapp/installer/) | [Web Sample Tool](https://theshrimpblimp.github.io/pigeon-website/webapp/pigeon/) | [Web Emulator](https://theshrimpblimp.github.io/pigeon-website/webapp/emu/)):**
+    * **License:** Open Source (GPL-3.0-only). Based on Felucca 1.5.1 by Hügelton Instruments, with recovery safeguards adapted from ChoralRoot FM-1.
+    * **Concept:** Performance sampler with two song tracks, a 16-pad drum kit, chopping, sequencing and digital USB audio sampling. Current release: **0.5.0-beta.1 — THE FINAL BETA**.
     * **Features:**
-      * **Sample Memory & Voices:** 496 KiB flash audio memory shared between two song tracks (mono MP3) and 16 drum pads (ADPCM); 12-voice polyphony (8 melodic/chops + 4 drums).
-      * **Transient Chops & Turntable Deck:** Up to 32 chops per song with auto-transient detection; 64-slot FIFO chop queue (`EDIT → ARP`); scratch/cue turntable deck (`EDIT → FX`) with jog, brake, and reverse.
-      * **Sequencer & Effects:** Step grid and piano roll (1–64 steps, 4 notes/step) with per-note timing nudge, microtiming, swing, probability, and Euclidean rhythms; filter, tape delay, chorus, reverb, distortion, and master compressor.
-      * **Update Safeguards & Web Tools:** Crash-guarded boot stub with `OCT-` recovery mode; companion browser sample editor and WebAssembly emulator.
-    * **Installation:** Browser WebMIDI installer via USB directly from the web installer or flashing prebuilt `.fwsc` firmware packages.
+      * **Samples & Voices:** 500 KiB usable shared storage; indexed mono MP3/IMA ADPCM songs and ADPCM drum hits. Up to 32 chops per song, eight shared song voices and four additional drum voices.
+      * **USB Sampling:** Record to the selected song or drum pad, with threshold start, seconds/bar limits, meter/clipping indication, unsaved-take audition, trim, retry/discard and confirmed save. Input is mono PCM16 at 22.05 kHz; USB audio output can also be recorded on a computer.
+      * **Chops & Library:** Per-chop playback point, reverse, cents, gain and loop crossfade; FIFO queues, undo/redo, selected-chop retention and bank reclamation. Browser chop collections assemble reusable sounds into songs or kits. Scratch decks are excluded from 0.5.
+      * **Sequencer & Effects:** Grid/piano roll, 1–64 steps and four notes per step, independent note length/nudge, probability, conditions, Euclidean tools, A–D patterns and a 16-section arrangement; mixer, filter, delay, chorus, reverb, distortion and compression.
+      * **Web & Accessibility:** Local sample editor, complete-session backups, screen-reader support, browser emulator and WAV/MP3 emulator recording.
+    * **Installation & Provenance:** Browser USB MIDI installer or release package. GitHub builds and attests the package through Firmware Hub's shared workflow; the maintainer reports hardware checks complete. Back up before installing; see the release's compatibility notes.
 
  24. **[NOIZ DEMONS by SPIKE the Percussionist](https://github.com/SPIKE-the-Percussionist/noiz_demons) ([Releases](https://github.com/SPIKE-the-Percussionist/noiz_demons/releases)):**
     * **License:** Open Source. Built on Felucca by Hügelton Instruments.
@@ -1315,8 +1316,8 @@ Useful open-source tools, documentation, and SDK repositories:
       * Full touch panel simulating the FM-1's 240 × 240 color display, keys, and rotary encoders.
       * Integrated touch piano roll, sound editors, preset management, and USB-MIDI integration to synchronize projects with physical FM-1 hardware.
 
- 9. **[PIGEON WebAssembly Emulator](http://theshrimpblimp.com/webapp/emu/) ([Project Page](http://theshrimpblimp.com/pigeon)):**
-    Complete in-browser WebAssembly hardware simulation of the PIGEON sampler firmware. Renders the 240 × 240 interface, loads custom samples, demonstrates transient slicing, sequencing, scratch decks, and audio playback directly in Chrome or Edge without physical hardware.
+ 9. **[PIGEON WebAssembly Emulator](https://theshrimpblimp.github.io/pigeon-website/webapp/emu/) ([Project Page](https://theshrimpblimp.com/pigeon/)):**
+    Firmware-based WebAssembly emulator with the 240 × 240 interface, user sample loading, chopping, sequencing, audio playback, screen-reader support and WAV/MP3 output recording. It runs in the browser without hardware; it does not emulate the physical USB sampling peripheral.
 
 ### 3.5. Web Editors, Patch Librarians & Companion Utilities
 
@@ -1391,9 +1392,9 @@ Useful open-source tools, documentation, and SDK repositories:
       * **Audio & MIDI Integration:** Supports internal sample playback or live microphone recording alongside Web MIDI transmission, plus direct WAV audio capture and standard MIDI file export.
       * **User Interface:** Clean bilingual (English / French) responsive UI with built-in interactive help tooltips.
 
-19. **[PIGEON Web Sample Tool & Studio](http://theshrimpblimp.com/webapp/pigeon/) ([Documentation](http://theshrimpblimp.com/pigeon)):**
+19. **[PIGEON Web Sample Tool & Studio](https://theshrimpblimp.github.io/pigeon-website/webapp/pigeon/) ([Documentation](https://theshrimpblimp.com/pigeon/)):**
     * In-browser sample preparation, slicing, and backup workstation for the PIGEON sampler firmware.
-    * Allows importing custom audio files into Song 1 / Song 2 slots and a 16-pad drum kit, previewing waveforms, automatic transient slicing (up to 32 chops per song), trimming boundaries, offline MP3/ADPCM encoding, and transmitting complete 496 KiB soundbanks to the FM-1 hardware over Web MIDI. Also creates complete session archives and firmware backups before flashing.
+    * Allows importing custom audio files into Song 1 / Song 2 slots and a 16-pad drum kit, previewing waveforms, automatic transient slicing (up to 32 chops per song), trimming boundaries, offline MP3/ADPCM encoding, and transmitting complete banks with up to 500 KiB usable sample storage to the FM-1 over Web MIDI. The 0.5 tool adds reusable chop collections, selected-chop trimming, playback controls and normalization. Complete session archives preserve samples and patterns before firmware updates.
 
 ### 3.6. Developer Frameworks, UI Designers & Curated Collections
 
