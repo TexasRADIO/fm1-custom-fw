@@ -1058,6 +1058,16 @@ Firmwares featuring original sound engines, written-from-scratch architectures, 
      * **Features:** Raw industrial drone synthesis engines, interactive noise layers, algorithm selection, built-in tape delay and drive effects, and complete MIDI CC control mapping (CC 20–27).
      * **Installation:** Browser WebMIDI flasher via USB directly from the web project page.
 
+63. **[Monohull by markterm](https://github.com/markterm/monohull) ([Releases](https://github.com/markterm/monohull/releases)):**
+     * **License:** Open Source (GPL-3.0). C99 DSP core on Felucca HAL.
+     * **Concept:** Uncompromising high-fidelity analogue-modeled monophonic synthesizer firmware for the FM-1.
+     * **Features:**
+       * **Zero-Compromise Monophonic Voice:** Devotes the entire 240 MHz `pi32v2` single-core/dual-core budget to a single voice with no per-voice compromises; any leftover cycles dynamically scheduled for unison, chorus, delay, and reverb.
+       * **Analogue-Modeled Oscillators:** Saw, pulse (PWM), triangle, and sine morphing oscillators with BLEP/BLAMP bandlimiting correction, hard sync, through-zero FM (TZFM), and dedicated sub-oscillator.
+       * **5 Classic Filter Topologies:** Transistor ladder (Moog-style with TPT Newton non-linear solve), diode ladder (TB-303), OTA cascade (Roland IR3109), Sallen-Key (Korg Korg-35 via Surge model), and 12 dB state-variable filter (SVF).
+       * **Dual Engine Modes:** "High" mode (oversampled oscillators, non-linear filter equations solved per-sample, antialiased drive) and "Efficient" mode (optimized solvers for maximum battery life and headroom).
+     * **Installation:** Flashing prebuilt `.fwsc` release package (`FM-1_928`) via WebMIDI / Python CLI installer (`tools/fm1_install.py`).
+
 ### 1.2. Modular Firmware Platforms & Builders
 
  1. **[fm1-rocket-os by cmlarsen](https://github.com/cmlarsen/fm1-rocket-os):**
