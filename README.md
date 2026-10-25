@@ -42,10 +42,10 @@ Firmwares built upon or directly forked from the foundational open-source multi-
 * **Video Guides & Demos:** [Complete Guide (v0.9)](https://www.youtube.com/watch?v=UzgbDjsFEpY) | [Engine Tour & Sequencing](https://www.youtube.com/watch?v=EzFknmhtKZk) | [Live Performance Jam](https://www.youtube.com/watch?v=XEK4VhsYwCE).
 * **Installation:** Direct web installer via WebMIDI in Chrome/Edge over standard USB-C cable (no extra hardware needed; stock updater restores official firmware).
 
- 2. **[Felucca [Salt] by Chance Roth (ChanceTheMaker)](https://github.com/ChanceTheMaker/Felucca) ([Web Installer](https://chancethemaker.github.io/Felucca/webapp/installer/) | [Web Studio](https://chancethemaker.github.io/Felucca/webapp/editor/)):**
-    ***License:** Open Source (GPL-3.0-only). Enhanced fork of Felucca by Leo Kuroshita (Hügelton Instruments).
+ 1. **[Felucca [Salt] by Chance Roth (ChanceTheMaker)](https://github.com/ChanceTheMaker/Felucca) ([Web Installer](https://chancethemaker.github.io/Felucca/webapp/installer/) | [Web Studio](https://chancethemaker.github.io/Felucca/webapp/editor/)):**
+    * **License:** Open Source (GPL-3.0-only). Enhanced fork of Felucca by Leo Kuroshita (Hügelton Instruments).
     * **Polyphony:** 8 dynamically shared synth voices across 3 tracks plus 6 dedicated drum voices (up to 14 voices total).
-    ***Concept:** Multi-engine synthesizer firmware with hardware-inspired browser Studio, hardware TRS MIDI expansion, rich display palettes, and standalone in-browser sound generation.
+    * **Concept:** Multi-engine synthesizer firmware with hardware-inspired browser Studio, hardware TRS MIDI expansion, rich display palettes, and standalone in-browser sound generation.
     * **Features:**
       * **Studio & In-Browser Synthesizer:** Browser Studio can act as an online synthesizer without physical hardware (nine engines, 54 presets, live oscilloscope waveform, 12 hardware themes like Stage Red, Matrix, Vintage DX, Model D, Vaporwave, and on-screen keyboard).
       * **Hardware TRS MIDI Input:** Full expression handling on 3.5 mm TRS MIDI IN alongside USB (sustain pedal, pitch bend, mod-wheel vibrato, MIDI panic/reset).
@@ -54,7 +54,7 @@ Firmwares built upon or directly forked from the foundational open-source multi-
       * **Preset Management:** Persistent favorite stars, All/Favorites browsing filtering, and live MIDI event/chord monitor.
     * **Installation:** Browser-based WebMIDI installer via USB.
 
- 3. **[Melodee by keremimo](https://github.com/keremimo/melodee) ([Web Installer](https://keremimo.github.io/melodee/) | [Web Editor](https://keremimo.github.io/melodee/webapp/editor/)):**
+ 2. **[Melodee by keremimo](https://github.com/keremimo/melodee) ([Web Installer](https://keremimo.github.io/melodee/) | [Web Editor](https://keremimo.github.io/melodee/webapp/editor/)):**
 
 * **License:** Open Source (GPL-3.0-only). Modified build based on Felucca.
 * **Polyphony:** Per-engine voice limits: 16 voices for Casio CZ-1, 8 voices for Prophet-5, 8 voices for DX-7 / FM-6, and faithful hardware-accurate voice count for SID chip emulation (3 voices per chip), plus rhythm accompaniment.
@@ -65,7 +65,7 @@ Firmwares built upon or directly forked from the foundational open-source multi-
   * **Advanced Sequencing:** Single unified note editor (`SEQ > NOTES`), reversible timing quantization (`QNT`), and 1,024 recorded notes across 32 pattern banks.
 * **Installation:** Browser WebMIDI installer with built-in backup before installation.
 
- 4. **[ChoralRoot FM-1 by Quixotic7](https://github.com/Quixotic7/ChoralRootFM1) ([Web Installer](https://quixotic7.github.io/ChoralRootFM1/) | [Web Emulator](https://quixotic7.github.io/ChoralRootFM1/emu/)):**
+ 1. **[ChoralRoot FM-1 by Quixotic7](https://github.com/Quixotic7/ChoralRootFM1) ([Web Installer](https://quixotic7.github.io/ChoralRootFM1/) | [Web Emulator](https://quixotic7.github.io/ChoralRootFM1/emu/)):**
 
 * **License:** Open Source (GPL-3.0). Based on Felucca (engines/platform) and ChoralRoot (Monome grid chord engine).
 * **Polyphony:** Dynamic multi-voice chord voicing engine + separate dedicated performance bass layer leveraging dual-core rendering.
@@ -74,75 +74,75 @@ Firmwares built upon or directly forked from the foundational open-source multi-
 * **Installation:** Browser WebMIDI installer via USB.
 * **Community Remix / Mod:** [Choralroot-remix on r/MVaveFM1](https://www.reddit.com/r/MVaveFM1/comments/1x3qrqx/choralrootremix/) by Creative_One919 — extended remix incorporating Melodee's 6-voice Prophet-5 engine with 200 factory presets, DUELL-inspired Morph engine, dedicated BASS engine with multi-core rendering, "Rosen" random preset cycling, "Swag voicing" mode, synced BPM gate, and sidechain volume.
 
- 5. **[X0X by Charles Vestal](https://github.com/charlesvestal/fm1-x0x) ([Web Installer](https://charlesvestal.github.io/fm1-x0x/install/) | [Web Emulator](https://charlesvestal.github.io/fm1-x0x/emu/) | [Manual](https://charlesvestal.github.io/fm1-x0x/manual/)):**
-    ***License:** Open Source (GPL-3.0). Based on Felucca.
+ 1. **[X0X by Charles Vestal](https://github.com/charlesvestal/fm1-x0x) ([Web Installer](https://charlesvestal.github.io/fm1-x0x/install/) | [Web Emulator](https://charlesvestal.github.io/fm1-x0x/emu/) | [Manual](https://charlesvestal.github.io/fm1-x0x/manual/)):**
+    * **License:** Open Source (GPL-3.0). Based on Felucca.
     * **Polyphony & Engines:** Two monophonic TB-303 synthesizers (303A & 303B), 11-voice TR-909 drum machine, 11-voice TR-808 drum machine, and 1 breakbeat slice player running simultaneously.
-    ***Concept:** Propellerhead ReBirth-inspired techno/acid groovebox machine.
+    * **Concept:** Propellerhead ReBirth-inspired techno/acid groovebox machine.
     * **Features:** TR-909, TR-808, two TB-303 synths with an integrated acid line generator, and a breakbeat player all playing simultaneously; includes automation, shared reverb and tape delay sends, and a master compressor.
     * **Installation:** Browser WebMIDI installer via USB (with stock restore option).
 
- 6. **[GHOULBOX 2.0 by Jason Persinger](https://github.com/jasonpersinger/ghoulbox-fm1-dungeon-synth) ([Website & Browser Emulator](https://ghoulbox.messy.quest) | [Web Installer](https://ghoulbox.messy.quest/webapp/installer/)):**
-    ***License:** Open Source (GPL-3.0). Based on Felucca.
+ 2. **[GHOULBOX 2.0 by Jason Persinger](https://github.com/jasonpersinger/ghoulbox-fm1-dungeon-synth) ([Website & Browser Emulator](https://ghoulbox.messy.quest) | [Web Installer](https://ghoulbox.messy.quest/webapp/installer/)):**
+    * **License:** Open Source (GPL-3.0). Based on Felucca.
     * **Polyphony:** 12 voices of polyphony (expanded from 8) with dedicated drone latching.
-    ***Concept:** Dungeon synth, dark ambient, and fantasy music groovebox firmware.
+    * **Concept:** Dungeon synth, dark ambient, and fantasy music groovebox firmware.
     * **Features:** Cathedral-sized HALL reverb, worn-cassette TAPE / CRKL stage, dedicated hurdy-gurdy engine (GURDY with crank clicks and buzzing trompette), drone latching, historical/just temperaments, and 36+ dungeon sounds (crypt pads, monk choirs, lutes, organs) with an old-school RPG UI and skull boot screen.
-    ***Interactive Browser Version:** Complete in-browser emulation playable on an interactive virtual FM-1 via keyboard or mouse at [ghoulbox.messy.quest](https://ghoulbox.messy.quest) without flashing hardware first.
+    * **Interactive Browser Version:** Complete in-browser emulation playable on an interactive virtual FM-1 via keyboard or mouse at [ghoulbox.messy.quest](https://ghoulbox.messy.quest) without flashing hardware first.
     * **Installation:** Browser WebMIDI installer via USB with full backup feature before flashing.
 
- 7. **[Jangada by zednaked](https://github.com/zednaked/jangada) ([Web Installer](https://zednaked.github.io/jangada/) | [Web Studio](https://zednaked.github.io/jangada/webapp/studio/)):**
-    ***License:** Open Source (GPL-3.0). Based on Felucca.
+ 3. **[Jangada by zednaked](https://github.com/zednaked/jangada) ([Web Installer](https://zednaked.github.io/jangada/) | [Web Studio](https://zednaked.github.io/jangada/webapp/studio/)):**
+    * **License:** Open Source (GPL-3.0). Based on Felucca.
     * **Polyphony:** 8 shared voices across 4 tracks with `TENS` voice detune spreading (±12 cents) and drone holding.
-    ***Concept:** Dark, industrial, Brazilian-accented groovebox firmware.
+    * **Concept:** Dark, industrial, Brazilian-accented groovebox firmware.
     * **Features:** 10 sound engines (including 6-op FM and superwave analog), 4 tracks, modulation matrix, ratchets, drone holding/evolving modes, and dedicated custom drum kits.
     * **Installation:** Browser WebMIDI installer via USB.
 
- 8. **[REDACTED by DJ Redacted](https://fm1-redacted-installer.xrhetor.chatgpt.site/):**
-    ***License:** Open Source (GPL-3.0). Built on Felucca by Hügelton Instruments.
+ 4. **[REDACTED by DJ Redacted](https://fm1-redacted-installer.xrhetor.chatgpt.site/):**
+    * **License:** Open Source (GPL-3.0). Built on Felucca by Hügelton Instruments.
     * **Polyphony:** 4-track layered groovebox architecture with dynamic voice allocation.
-    ***Concept:** Experimental dark, fractured lo-fi four-track groovebox firmware (`PULSE` · `VOLTAGE` · `STATIC` · `GHOST`).
+    * **Concept:** Experimental dark, fractured lo-fi four-track groovebox firmware (`PULSE` · `VOLTAGE` · `STATIC` · `GHOST`).
     * **Features:**
       * **Four Track Engines:** Four distinct sound layers chosen via `ALGORITHM`.
       * **Real-Time Track Shapers:** Four top knobs mapped to dynamic performance parameters: `FRACTURE`, `STATIC`, `CHANCE`, and `MUTATE`.
       * **Startup Artwork:** Custom broken vinyl record splash screen.
     * **Installation:** Browser WebMIDI installer via USB directly from the project page.
 
- 9. **[Hortator by DEADACTIVE](https://github.com/DeadActive/hortator) ([Web Emulator & Player](https://deadactive.github.io/hortator/)):**
-    ***License:** Open Source (GPL-3.0). Built on Felucca.
+ 5. **[Hortator by DEADACTIVE](https://github.com/DeadActive/hortator) ([Web Emulator & Player](https://deadactive.github.io/hortator/)):**
+    * **License:** Open Source (GPL-3.0). Built on Felucca.
     * **Polyphony:** 8 dedicated percussion tracks running simultaneous drum synthesis (Plaits, 808/909, 2-op FM, physical membrane models).
-    ***Concept:** 8-track drum machine firmware.
+    * **Concept:** 8-track drum machine firmware.
     * **Features:** TR-808, TR-909 and Mutable Instruments Plaits drum models, user samples, Mutable Instruments Grids generative rhythm algorithm, pumping master compressor, and acoustic resonators.
     * **Installation:** Browser WebMIDI installer via USB.
 
-10. **[April OS by beashoko](https://github.com/beashoko/april-os) ([Web Installer](https://beashoko.github.io/april-os/)):**
-    ***License:** Open Source (MIT). Based on Felucca.
+ 6. **[April OS by beashoko](https://github.com/beashoko/april-os) ([Web Installer](https://beashoko.github.io/april-os/)):**
+    * **License:** Open Source (MIT). Based on Felucca.
     * **Polyphony:** 8 tracks of sample playback and live sequencing.
-    ***Concept:** Dedicated sampling-focused groovebox firmware.
+    * **Concept:** Dedicated sampling-focused groovebox firmware.
     * **Features:** 32 sample slots (up to 3 seconds each), 8-track sequencer, built-in sample slice and loop editor, direct audio recording using a connected smartphone or computer microphone.
     * **Installation:** Browser WebMIDI installer via USB.
 
-11. **[WaveLoop FM-1 by ELI7VH](https://github.com/ELI7VH/Felucca) ([Web Installer](https://eli7vh.github.io/Felucca/)):**
-    ***License:** Open Source (GPL-3.0). Based on Felucca.
+ 7. **[WaveLoop FM-1 by ELI7VH](https://github.com/ELI7VH/Felucca) ([Web Installer](https://eli7vh.github.io/Felucca/)):**
+    * **License:** Open Source (GPL-3.0). Based on Felucca.
     * **Polyphony:** 8 shared synth voices across 3 tracks plus dedicated drum track (Felucca core).
-    ***Concept:** Performance firmware specifically mapped for external control via Arturia MiniLab 3.
+    * **Concept:** Performance firmware specifically mapped for external control via Arturia MiniLab 3.
     * **Features:** Dedicated track fader mappings, follow-the-track encoder integration, DJ filter mode, and momentary punch-in FX pad triggers.
     * **Installation:** Browser WebMIDI installer via USB.
 
-12. **[Rainbow mode by joshbartlettband-web](https://github.com/joshbartlettband-web/felucca-rainbow) ([Web Installer & Emulator](https://joshbartlettband-web.github.io/felucca-rainbow/)):**
-    ***License:** Open Source (GPL-3.0). Based on Felucca.
+ 8. **[Rainbow mode by joshbartlettband-web](https://github.com/joshbartlettband-web/felucca-rainbow) ([Web Installer & Emulator](https://joshbartlettband-web.github.io/felucca-rainbow/)):**
+    * **License:** Open Source (GPL-3.0). Based on Felucca.
     * **Polyphony:** 8 shared voices across tracks + drum voice layer.
-    ***Concept:** Children's musical exploration instrument with rainbow color-coded keys, 40 animal sound effects and rhythms, safe volume limiter, and access to the complete Felucca engine via secret key combination.
+    * **Concept:** Children's musical exploration instrument with rainbow color-coded keys, 40 animal sound effects and rhythms, safe volume limiter, and access to the complete Felucca engine via secret key combination.
     * **Installation:** Browser WebMIDI installer via USB.
 
-13. **[fm1-chord by math0ne](https://github.com/math0ne/fm1-chord):**
-    ***License:** Open Source (GPL-3.0). Built on Felucca.
+ 9. **[fm1-chord by math0ne](https://github.com/math0ne/fm1-chord):**
+    * **License:** Open Source (GPL-3.0). Built on Felucca.
     * **Polyphony:** Multi-voice polyphonic chord generator and arpeggiator engine.
-    ***Concept:** Chord composition tool, chord sequencer, rhythm accompanist, and ear-training aid.
+    * **Concept:** Chord composition tool, chord sequencer, rhythm accompanist, and ear-training aid.
     * **Installation:** Python installation script via USB MIDI.
 
-14. **[DUELL by balinthcom](https://github.com/oscillr/DUELL) ([Web Emulator](https://oscillr.github.io/DUELL/emu/)):**
-    ***License:** Open Source (GPL-3.0). Built on Felucca by Hügelton Instruments.
+10. **[DUELL by balinthcom](https://github.com/oscillr/DUELL) ([Web Emulator](https://oscillr.github.io/DUELL/emu/)):**
+    * **License:** Open Source (GPL-3.0). Built on Felucca by Hügelton Instruments.
     * **Polyphony:** Bi-timbral 2-part synthesizer (Part 1 and Part 2) with independent per-part polyphony, unison stereo detune stack, and LAYER/SPLIT/STEREO routing.
-    ***Concept:** Multi-morphing bi-timbral synthesizer firmware for the FM-1: two full simultaneous sound parts, each with its own synthesis engine, patches, effects, EQ, and arpeggiator.
+    * **Concept:** Multi-morphing bi-timbral synthesizer firmware for the FM-1: two full simultaneous sound parts, each with its own synthesis engine, patches, effects, EQ, and arpeggiator.
     * **Features:**
       * **Bi-Timbral Modes:** LAYER, SPLIT (keyboard zone), and STEREO (dual mono, part 1 hard-left and part 2 hard-right with isolated audio engines).
       * **Patch Morphing:** Smooth glide between two states of any patch with SMART randomization and per-patch morph amount.
@@ -151,10 +151,10 @@ Firmwares built upon or directly forked from the foundational open-source multi-
       * **MIDI Implementation:** Discrete MIDI channel per part, program change, bank select, and clock sync.
     * **Status & Installation:** Available to play via in-browser WebAssembly emulator; hardware flashing in ongoing development.
 
-15. **[MAKU (幕間機) by okumurari2](https://github.com/okumurari2/maku) ([Web Emulator](https://okumurari2.github.io/maku/) | [Releases](https://github.com/okumurari2/maku/releases)):**
-    ***License:** Open Source (GPL-3.0-only). Built on Felucca by Hügelton Instruments.
+11. **[MAKU (幕間機) by okumurari2](https://github.com/okumurari2/maku) ([Web Emulator](https://okumurari2.github.io/maku/) | [Releases](https://github.com/okumurari2/maku/releases)):**
+    * **License:** Open Source (GPL-3.0-only). Built on Felucca by Hügelton Instruments.
     * **Polyphony:** 4 simultaneous voice layers (Pulse kick, Floor drone, Haze shimmer, Voice arpeggiated phrase).
-    ***Concept:** Always-on generative ambient machine firmware designed for DJ intermissions and generative soundscapes: power on and an evolving, random, in-key sonic world is immediately playing.
+    * **Concept:** Always-on generative ambient machine firmware designed for DJ intermissions and generative soundscapes: power on and an evolving, random, in-key sonic world is immediately playing.
     * **Features:**
       * **Four Continuous Parts:** Pulse (kick/rhythm, DRUM engine), Floor (drone, PHYS physical modeling), Haze (shimmer/textures, GRAIN granular engine), and Voice (arpeggiated melodic phrase, PHYS engine).
       * **Dynamic Generative Evolution:** Every boot generates a unique scale, tempo (70–90 BPM), sounds, and macro states. Holding HOME regenerates a new world.
@@ -162,10 +162,10 @@ Firmwares built upon or directly forked from the foundational open-source multi-
       * **Verb-Based Interface:** Action buttons perform timed organic changes — FX (sinks depth), SCL (cascades higher intervals), ENV (swells chords), LFO (wobbles filter/pitch), EDIT (lifts brightness/sharpness), GLO (scrambles phrases), and PLAY (toggles DRIFT value wandering).
     * **Installation:** Flash prebuilt `maku-X.Y.fwsc` via `tools/fm1_install.py` or browser WebMIDI updaters.
 
-16. **[Polly by Charles Vestal](https://github.com/charlesvestal/fm1-polly) ([Web Installer & Emulator](https://charlesvestal.github.io/fm1-polly/)):**
-    ***License:** Open Source (GPL-3.0). Built on Felucca by Leo Kuroshita / Hügelton Instruments.
+12. **[Polly by Charles Vestal](https://github.com/charlesvestal/fm1-polly) ([Web Installer & Emulator](https://charlesvestal.github.io/fm1-polly/)):**
+    * **License:** Open Source (GPL-3.0). Built on Felucca by Leo Kuroshita / Hügelton Instruments.
     * **Polyphony:** Dynamic multi-voice polyphony driven by the Sonivox EAS General MIDI sound engine across 8 accompaniment and melody tracks.
-    ***Concept:** Yamaha QY70-inspired 8-track pocket accompaniment arranger and auto-accompaniment workstation for the FM-1.
+    * **Concept:** Yamaha QY70-inspired 8-track pocket accompaniment arranger and auto-accompaniment workstation for the FM-1.
     * **Features:**
       * **8-Track Arranger Architecture:** Dedicated parts for Drums, Percussion, Bass, and 5 Chord accompaniment tracks powered by the Sonivox EAS General MIDI sound engine.
       * **Interactive Chord Recognition & Follower:** Play chord shapes on the keyboard (or via MIDI IN) to drive realistic live auto-accompaniment transformations.
@@ -173,10 +173,10 @@ Firmwares built upon or directly forked from the foundational open-source multi-
       * **In-Browser WebAssembly Simulator:** Full hardware simulation with screen rendering and audio playback running directly in the browser at [charlesvestal.github.io/fm1-polly](https://charlesvestal.github.io/fm1-polly/).
     * **Installation:** Browser WebMIDI installer via USB directly from the project page.
 
-17. **[TRIBE (fm1-tribe) by Alexandre Piel (apiel)](https://github.com/apiel/fm1-tribe) ([Site & Web Installer](https://apiel.github.io/fm1-tribe/)):**
-    ***License:** Open Source (GPL-3.0-only). Fork of X0X (Charles Vestal) and built on Felucca (Leo Kuroshita / Hügelton Instruments) with kicks and scatter effects from zicBox.
+13. **[TRIBE (fm1-tribe) by Alexandre Piel (apiel)](https://github.com/apiel/fm1-tribe) ([Site & Web Installer](https://apiel.github.io/fm1-tribe/)):**
+    * **License:** Open Source (GPL-3.0-only). Fork of X0X (Charles Vestal) and built on Felucca (Leo Kuroshita / Hügelton Instruments) with kicks and scatter effects from zicBox.
     * **Polyphony:** 10 simultaneous polyphonic and percussion tracks across 25 assignable engines (dual kicks, 909/808 drums, 303 bass).
-    ***Concept:** Ten-track groovebox firmware where any synthesis or drum engine plays on any track.
+    * **Concept:** Ten-track groovebox firmware where any synthesis or drum engine plays on any track.
     * **Features:**
       * **10 Tracks & 25 Engines:** Freely assignable tracks running two dedicated kick models (`KICK W`, `KICK P`), Roland TR-909 and TR-808 drum voice models (9W9 / 8W8 ports), and TB-303 bassline synthesis (schwung-303 port).
       * **16 Clips per Track:** Launch clips at pattern boundaries or instantly; supports 16, 32, or 64 steps, 6 playback clock rates, 4 playback directions, and shuffle/swing.
@@ -185,10 +185,10 @@ Firmwares built upon or directly forked from the foundational open-source multi-
       * **In-Browser Emulator:** Real firmware compiled to WebAssembly running directly in the browser at [apiel.github.io/fm1-tribe](https://apiel.github.io/fm1-tribe/#emulator).
     * **Installation:** Browser WebMIDI installer via USB directly from the project page.
 
-18. **[Golana by Gadlele](https://github.com/Gadlele/Golana) ([Website & Web Installer](https://gadlele.github.io/Golana/) | [Releases](https://github.com/Gadlele/Golana/releases)):**
-    ***License:** Open Source (GPL-3.0). Built on Felucca by Leo Kuroshita / Hügelton Instruments.
+14. **[Golana by Gadlele](https://github.com/Gadlele/Golana) ([Website & Web Installer](https://gadlele.github.io/Golana/) | [Releases](https://github.com/Gadlele/Golana/releases)):**
+    * **License:** Open Source (GPL-3.0). Built on Felucca by Leo Kuroshita / Hügelton Instruments.
     * **Polyphony:** 4-voice polyphonic / unison / mono / legato engine.
-    ***Concept:** Korg microKORG-inspired analog-modeling synthesizer firmware for the FM-1 featuring the classic MATRIX editing workflow.
+    * **Concept:** Korg microKORG-inspired analog-modeling synthesizer firmware for the FM-1 featuring the classic MATRIX editing workflow.
     * **Features:**
       * **MicroKORG Synth Architecture:** 4-voice polyphonic / unison / mono / legato engine with 2 oscillators per voice (saw, pulse with PWM, tri with wavefold, sine with cross-mod from OSC 2, noise, and ring modulation), dual LFOs, and 4 assignable virtual modulation patch routings.
       * **Resonant Multi-Mode Filter:** 24 dB/oct LPF, 12 dB/oct LPF, BPF, HPF, and an aggressive screaming MS-20-style resonant low-pass filter model.
@@ -196,10 +196,10 @@ Firmwares built upon or directly forked from the foundational open-source multi-
       * **FX Chain & 16-Step Sequencer:** Integrated arpeggiator, 16-step sequencer with ties/slides per program, modulation FX (chorus, flanger, ensemble, phaser, metal distortion), tempo-synced delay, and reverb with flexible FX routing orders.
     * **Installation:** Browser WebMIDI installer via USB directly from the project site or building/flashing firmware via CLI toolchain (`tools/fm1_install.py`).
 
-19. **[FANTASMA / Pelucco by Gadlele](https://github.com/Gadlele/Pelucco) ([Web Emulator / Artifact](https://claude.ai/artifact/RLDaXqXDuzzfyJZ8ibS5Gk)):**
-    ***License:** Open Source (GPL-3.0). Built on Felucca by Leo Kuroshita / Hügelton Instruments.
+15. **[FANTASMA / Pelucco by Gadlele](https://github.com/Gadlele/Pelucco) ([Web Emulator / Artifact](https://claude.ai/artifact/RLDaXqXDuzzfyJZ8ibS5Gk)):**
+    * **License:** Open Source (GPL-3.0). Built on Felucca by Leo Kuroshita / Hügelton Instruments.
     * **Polyphony:** 12-voice polyphony (8 melodic/chops voices + 4 drum/ambient voices) across 4 dedicated roles.
-    ***Concept:** Generative ambient and drone synthesizer firmware for the FM-1 with dedicated chord-strum and generative "haunted" modes.
+    * **Concept:** Generative ambient and drone synthesizer firmware for the FM-1 with dedicated chord-strum and generative "haunted" modes.
     * **Features:**
       * **"Haunted" Generative Ambient Engine:** Pressing `OCT+` on the fourth SEQ page triggers self-generating, evolving ambient music across three independent channels across randomized musical scales (major, minor, dorian, mixolydian, pentatonic, phrygian, lydian) even with the transport stopped; `OCT-` halts the generator.
       * **BELL Generative Loops:** 4 drifting loops of 13/17/23/29 steps (`DENS`, `EVOLVE`, `RANGE`, `SEED`) snapped to the scale on the BELL engine.
@@ -209,10 +209,10 @@ Firmwares built upon or directly forked from the foundational open-source multi-
       * **Custom Ambient UI & Reverb:** Expansive long-decay `AMBI` reverb engine, custom ghost splash screen, and high-visibility neon "ECTO" color theme.
     * **Installation:** In-browser WebAssembly simulation and WebMIDI installer via Claude artifact, or build from the [Gadlele/Pelucco repository](https://github.com/Gadlele/Pelucco).
 
-20. **[Skiff by illuminus5](https://github.com/illuminus5/skiff) ([Web Installer](https://illuminus5.github.io/skiff/webapp/installer/) | [Web Editor](https://illuminus5.github.io/skiff/webapp/editor/) | [Learn / 19-Chapter Manual](https://illuminus5.github.io/skiff/learn/)):**
-    ***License:** Open Source (GPL-3.0). Fork of Felucca by Leo Kuroshita / Hügelton Instruments.
+16. **[Skiff by illuminus5](https://github.com/illuminus5/skiff) ([Web Installer](https://illuminus5.github.io/skiff/webapp/installer/) | [Web Editor](https://illuminus5.github.io/skiff/webapp/editor/) | [Learn / 19-Chapter Manual](https://illuminus5.github.io/skiff/learn/)):**
+    * **License:** Open Source (GPL-3.0). Fork of Felucca by Leo Kuroshita / Hügelton Instruments.
     * **Polyphony:** 6 polyphonic tracks with up to 12 shared voices on dual-core CPU.
-    ***Concept:** 6-track groovebox firmware for the FM-1 with 14 synthesis engines and deep parameter-locking sequencer.
+    * **Concept:** 6-track groovebox firmware for the FM-1 with 14 synthesis engines and deep parameter-locking sequencer.
     * **Features:**
       * **6 Tracks & 14 Engines:** Expanded polyphonic tracks hosting virtual analog, FM, wavetable, physical modeling, drums, and noise generators.
       * **Advanced 64-Step Sequencer:** Per-step parameter locks (p-locks), microtiming, ratchets, and trig conditions (probability / iteration logic).
@@ -220,18 +220,18 @@ Firmwares built upon or directly forked from the foundational open-source multi-
       * **Web Tooling:** Dedicated browser WebMIDI installer and companion web editor for patch and pattern management.
     * **Installation:** Browser WebMIDI installer via USB directly from the web installer page.
 
-21. **[Felucca 8 Patterns by echoe](https://github.com/echoe/Felucca_8_patterns) ([Releases](https://github.com/echoe/Felucca_8_patterns/releases/tag/1.5.1_and_sequences)):**
-    ***License:** Open Source (GPL-3.0). Fork of Felucca 1.5.1.
+17. **[Felucca 8 Patterns by echoe](https://github.com/echoe/Felucca_8_patterns) ([Releases](https://github.com/echoe/Felucca_8_patterns/releases/tag/1.5.1_and_sequences)):**
+    * **License:** Open Source (GPL-3.0). Fork of Felucca 1.5.1.
     * **Concept:** Pattern-chaining and arrangement expansion fork of Felucca.
     * **Features:**
       * **8 Chainable Patterns per Track:** Extends Felucca with 8 independent pattern slots per track that can be chained into song sequences.
       * **Optimized Flash Footprint:** Sample playback assets removed to maximize flash space and code budget for sequence memory and pattern chaining.
     * **Installation:** Prebuilt `.fwsc` firmware releases available on GitHub; flash via WebMIDI or CLI flasher.
 
-22. **[LCD-4 by devrvega](https://github.com/devrvega/LCD-4) ([Website & Hub](https://devrvega.github.io/LCD-4/) | [Web Emulator](https://devrvega.github.io/LCD-4/emu/) | [Web Installer](https://devrvega.github.io/LCD-4/install/) | [Manual](https://devrvega.github.io/LCD-4/manual/)):**
-    ***License:** Open Source (GPL-3.0). Built on Felucca by Hügelton Instruments, by way of X0X, AMB-1, and IND-1.
+18. **[LCD-4 by devrvega](https://github.com/devrvega/LCD-4) ([Website & Hub](https://devrvega.github.io/LCD-4/) | [Web Emulator](https://devrvega.github.io/LCD-4/emu/) | [Web Installer](https://devrvega.github.io/LCD-4/install/) | [Manual](https://devrvega.github.io/LCD-4/manual/)):**
+    * **License:** Open Source (GPL-3.0). Built on Felucca by Hügelton Instruments, by way of X0X, AMB-1, and IND-1.
     * **Polyphony:** 12-voice polyphony (8 melodic/synth voices + 4 drum voices) across 4 dedicated tracks.
-    ***Concept:** Four-track pocket groovebox inspired by pocket calculator synths (Teenage Engineering Pocket Operator style) and vintage Game & Watch LCD games, featuring custom animated LCD game scenes for every sound engine.
+    * **Concept:** Four-track pocket groovebox inspired by pocket calculator synths (Teenage Engineering Pocket Operator style) and vintage Game & Watch LCD games, featuring custom animated LCD game scenes for every sound engine.
     * **Features:**
       * **Four Dedicated Tracks:**
         * **Drums:** 4 kits of 11 parts selectable on black keys (TR-808, TR-909, Arcade console with pulse kicks/zaps/coin, and Vintage Rhythm Box CR-78/606). White keys act as 16-step sequencer lanes as on X0X, featuring Pip the drummer animating on screen.
@@ -241,13 +241,13 @@ Firmwares built upon or directly forked from the foundational open-source multi-
       * **Sequencing & Performance:** 16 patterns with pattern chaining up to 64 steps, 16 chords with chord progression chaining, parameter locks (p-locks), ratchets, slides, swing, 16 punch-in effects, and live/step recording.
     * **Installation:** One-click browser WebMIDI installer (`v0.1.0`), in-browser WebAssembly emulator, or flashing prebuilt `lcd4-0.1.0.fwsc`.
 
-23. **[Caravel by bonszaimusic](https://github.com/bonszaimusic/caravel) ([Web Installer & Studio](https://bonszaimusic.github.io/caravel/webapp/installer/)):**
+19. **[Caravel by bonszaimusic](https://github.com/bonszaimusic/caravel) ([Web Installer & Studio](https://bonszaimusic.github.io/caravel/webapp/installer/)):**
      * **License:** Open Source (GPL-3.0). Based on Felucca 1.6.1 by Leo Kuroshita / Hügelton Instruments.
      * **Concept:** Multi-engine synthesizer and groovebox featuring custom CrispyZebra waveforms, drum voices, expanded sample pack, and companion web studio.
      * **Installation:** Browser WebMIDI installer via USB directly from the web installer page.
 
-24. **[PIGEON by The Shrimp Blimp](https://github.com/TheShrimpBlimp/pigeon) ([Website](https://theshrimpblimp.com/pigeon/) | [Signed Final Beta](https://github.com/TheShrimpBlimp/pigeon/releases/tag/v0.5.0-beta.1) | [Web Installer](https://theshrimpblimp.github.io/pigeon-website/webapp/installer/) | [Web Sample Tool](https://theshrimpblimp.github.io/pigeon-website/webapp/pigeon/) | [Web Emulator](https://theshrimpblimp.github.io/pigeon-website/webapp/emu/)):**
-    ***License:** Open Source (GPL-3.0-only). Based on Felucca 1.5.1 by Hügelton Instruments, with recovery safeguards adapted from ChoralRoot FM-1.
+20. **[PIGEON by The Shrimp Blimp](https://github.com/TheShrimpBlimp/pigeon) ([Website](https://theshrimpblimp.com/pigeon/) | [Signed Final Beta](https://github.com/TheShrimpBlimp/pigeon/releases/tag/v0.5.0-beta.1) | [Web Installer](https://theshrimpblimp.github.io/pigeon-website/webapp/installer/) | [Web Sample Tool](https://theshrimpblimp.github.io/pigeon-website/webapp/pigeon/) | [Web Emulator](https://theshrimpblimp.github.io/pigeon-website/webapp/emu/)):**
+    * **License:** Open Source (GPL-3.0-only). Based on Felucca 1.5.1 by Hügelton Instruments, with recovery safeguards adapted from ChoralRoot FM-1.
     * **Concept:** Performance sampler with two song tracks, a 16-pad drum kit, chopping, sequencing and digital USB audio sampling. Current release: **0.5.0-beta.1 — THE FINAL BETA**.
     * **Features:**
       * **Samples & Voices:** 500 KiB usable shared storage; indexed mono MP3/IMA ADPCM songs and ADPCM drum hits. Up to 32 chops per song, eight shared song voices and four additional drum voices.
@@ -257,22 +257,22 @@ Firmwares built upon or directly forked from the foundational open-source multi-
       * **Web & Accessibility:** Local sample editor, complete-session backups, screen-reader support, browser emulator and WAV/MP3 emulator recording.
     * **Installation & Provenance:** Browser USB MIDI installer or release package. GitHub builds and attests the package through Firmware Hub's shared workflow; the maintainer reports hardware checks complete. Back up before installing; see the release's compatibility notes.
 
-25. **[NOIZ DEMONS by SPIKE the Percussionist](https://github.com/SPIKE-the-Percussionist/noiz_demons) ([Releases](https://github.com/SPIKE-the-Percussionist/noiz_demons/releases)):**
-    ***License:** Open Source. Built on Felucca by Hügelton Instruments.
+21. **[NOIZ DEMONS by SPIKE the Percussionist](https://github.com/SPIKE-the-Percussionist/noiz_demons) ([Releases](https://github.com/SPIKE-the-Percussionist/noiz_demons/releases)):**
+    * **License:** Open Source. Built on Felucca by Hügelton Instruments.
     * **Concept:** Ritualistic noise and sound generator firmware where parameter randomization is framed as occult summoning.
-    ***Features:** Generating a sound summons one of 30 demons of the Ars Goetia, rendering the demon's sigil across the 240 × 240 color screen while its demonic rank algorithmically drives the wildness and distortion of the sound synthesis engine.
+    * **Features:** Generating a sound summons one of 30 demons of the Ars Goetia, rendering the demon's sigil across the 240 × 240 color screen while its demonic rank algorithmically drives the wildness and distortion of the sound synthesis engine.
     * **Installation:** Flashing prebuilt `noiz_demons-v666.fwsc` via WebMIDI or CLI flasher.
 
-26. **[Tuna by delirioux](https://github.com/delirioux/tuna) ([Website & Web Emulator](https://delirioux.github.io/tuna/)):**
-    ***License:** Open Source. Built on Felucca by Hügelton Instruments.
+22. **[Tuna by delirioux](https://github.com/delirioux/tuna) ([Website & Web Emulator](https://delirioux.github.io/tuna/)):**
+    * **License:** Open Source. Built on Felucca by Hügelton Instruments.
     * **Concept:** Generative music synthesizer and composition engine.
-    ***Features:** Interactive composer profiles algorithmically generate and evolve musical tracks in real time, with macro controls allowing the performer to steer tonal palettes, tempo, and arrangement.
+    * **Features:** Interactive composer profiles algorithmically generate and evolve musical tracks in real time, with macro controls allowing the performer to steer tonal palettes, tempo, and arrangement.
     * **Installation:** Browser WebMIDI installer via USB directly from the project site.
 
-27. **[X0X-RMX by Mr-Roboto](https://github.com/Mr-Roboto/fm1-x0x-rmx) ([Website](https://mr-roboto.github.io/fm1-x0x-rmx/) | [Web Installer](https://mr-roboto.github.io/fm1-x0x-rmx/install/) | [Web Emulator](https://mr-roboto.github.io/fm1-x0x-rmx/emu/) | [Releases](https://github.com/Mr-Roboto/fm1-x0x-rmx/releases)):**
-    ***License:** Open Source (GPL-3.0). Independent fork of X0X by Charles Vestal (built on Felucca).
+23. **[X0X-RMX by Mr-Roboto](https://github.com/Mr-Roboto/fm1-x0x-rmx) ([Website](https://mr-roboto.github.io/fm1-x0x-rmx/) | [Web Installer](https://mr-roboto.github.io/fm1-x0x-rmx/install/) | [Web Emulator](https://mr-roboto.github.io/fm1-x0x-rmx/emu/) | [Releases](https://github.com/Mr-Roboto/fm1-x0x-rmx/releases)):**
+    * **License:** Open Source (GPL-3.0). Independent fork of X0X by Charles Vestal (built on Felucca).
     * **Polyphony & Engines:** Dual monophonic TB-303 synthesizers, dual TR-909 / TR-808 drum engines, and breakbeat slice playback.
-    ***Concept:** Enhanced ReBirth-style acid and techno groovebox machine expanding the dual drum machines (TR-909 / TR-808), dual TB-303 synthesizers, and breakbeat engine.
+    * **Concept:** Enhanced ReBirth-style acid and techno groovebox machine expanding the dual drum machines (TR-909 / TR-808), dual TB-303 synthesizers, and breakbeat engine.
     * **Features:**
       * **ORB-Inspired Remix Engine:** 256 step-remapping patterns available independently for the 909, 808, 303A, and 303B lanes.
       * **Enhanced TB-3PO Bassline Generator:** 22 musical scales, motif-based melodic phrase generation, rhythmic call-and-response phrasing, expressive accents/slides, and controlled parameter mutation.
@@ -281,10 +281,10 @@ Firmwares built upon or directly forked from the foundational open-source multi-
       * **Performance & Display Polish:** Pattern chaining, saved startup pattern combinations, and six selectable LCD color schemes.
     * **Installation:** Browser WebMIDI installer via USB directly from the project website or flashing prebuilt `v1.0.0` releases.
 
-28. **[DUB-1 by sbegueria](https://github.com/sbegueria/fm1-dub) ([Homepage](https://sbegueria.github.io/fm1-dub/) | [Web Installer](https://sbegueria.github.io/fm1-dub/install/) | [Web Emulator](https://sbegueria.github.io/fm1-dub/emu/) | [Manual](https://sbegueria.github.io/fm1-dub/manual/)):**
-    ***License:** Open Source (GPL-3.0). Fork of AMB-1 by Charles Vestal (built on Felucca by Hügelton Instruments).
+24. **[DUB-1 by sbegueria](https://github.com/sbegueria/fm1-dub) ([Homepage](https://sbegueria.github.io/fm1-dub/) | [Web Installer](https://sbegueria.github.io/fm1-dub/install/) | [Web Emulator](https://sbegueria.github.io/fm1-dub/emu/) | [Manual](https://sbegueria.github.io/fm1-dub/manual/)):**
+    * **License:** Open Source (GPL-3.0). Fork of AMB-1 by Charles Vestal (built on Felucca by Hügelton Instruments).
     * **Polyphony:** Multi-voice chord-memory stabs (open 7th, 9th) layered over 4 polymetric FM ping loops, sub-bass, and drum voices.
-    ***Concept:** Berlin-style generative dub techno machine ("4 AM in Berlin"): power on and it immediately self-generates deep, evolving dub techno arrangements.
+    * **Concept:** Berlin-style generative dub techno machine ("4 AM in Berlin"): power on and it immediately self-generates deep, evolving dub techno arrangements.
     * **Features:**
       * **Generative Dub Structure:** Chord stabs sent into tape delay, 4 FM ping loops running at independent polymeter lengths, tuned deep sub-bass under a ducking kick, rhythmic shaker, off-beat hi-hat, rimshot, sparse claps, and authentic vinyl crackle.
       * **Self-Arranging 8-Bar Phrases:** Automatically generates evolving arrangements with kick drops, breakdowns, builds, and fills.
@@ -292,14 +292,14 @@ Firmwares built upon or directly forked from the foundational open-source multi-
       * **Performance Dub Controls & Echo Ripples:** Dedicated `REC` dub-hold button to freeze and loop the tape delay buffer infinitely while reverb continues ringing out and dry beats ride over top; real-time echo ripple animations visualising delay throws and loop positions on screen.
     * **Installation:** Browser WebMIDI installer via USB directly from the project site or in-browser WebAssembly simulation.
 
-29. **[Unholy Union by Sparky (actuallysparky)](https://github.com/actuallysparky/FM-1-Unholy-Union-generative-drone-firmware) ([Releases](https://github.com/actuallysparky/FM-1-Unholy-Union-generative-drone-firmware/releases)):**
-    ***License:** Open Source (GPL-3.0). Built on Felucca and Jangada.
+25. **[Unholy Union by Sparky (actuallysparky)](https://github.com/actuallysparky/FM-1-Unholy-Union-generative-drone-firmware) ([Releases](https://github.com/actuallysparky/FM-1-Unholy-Union-generative-drone-firmware/releases)):**
+    * **License:** Open Source (GPL-3.0). Built on Felucca and Jangada.
     * **Concept:** Generative ambient and drone firmware featuring church-themed visuals and atmospheric harmonics.
-    ***Features:** A single key press algorithmically generates and rolls a pad, an ambient sequence, a chord arpeggio, and a live-playable lead voice all locked to a shared harmonic key. Includes cathedral reverb algorithms, slow parameter drift, and church-inspired screen aesthetics.
+    * **Features:** A single key press algorithmically generates and rolls a pad, an ambient sequence, a chord arpeggio, and a live-playable lead voice all locked to a shared harmonic key. Includes cathedral reverb algorithms, slow parameter drift, and church-inspired screen aesthetics.
     * **Installation:** Flashing prebuilt `v0.2.3` releases via WebMIDI or CLI updater.
 
-30. **[Tessera by Rastapopolix](https://github.com/Rastapopolix/tessera) ([Project Page & Web Installer](https://rastapopolix.github.io/tessera/) | [Releases](https://github.com/Rastapopolix/tessera/releases)):**
-    ***License:** Open Source (GPL-3.0). Formerly Melodee (Tess); a fork of Melodee by keremimo, itself built on Felucca by Leo Kuroshita (Hügelton Instruments).
+26. **[Tessera by Rastapopolix](https://github.com/Rastapopolix/tessera) ([Project Page & Web Installer](https://rastapopolix.github.io/tessera/) | [Releases](https://github.com/Rastapopolix/tessera/releases)):**
+    * **License:** Open Source (GPL-3.0). Formerly Melodee (Tess); a fork of Melodee by keremimo, itself built on Felucca by Leo Kuroshita (Hügelton Instruments).
     * **Concept:** Generative sequencer firmware: four tracks that write, evolve, and arrange music with you, from short loops to slowly changing ambient pieces.
     * **Features:**
       * **13 Algorithmic Note Generators:** Turing machine shift register, Euclid, Markov chain transitions, Morph phrase mutation, Atlas drum maps, Bounce/Fall, Awake, Poly, Quad, Constellation, Series, Chord progressions, and Answer (which dynamically replies to phrases you play).
@@ -309,41 +309,41 @@ Firmwares built upon or directly forked from the foundational open-source multi-
       * **Sound Engines:** Authentic 6-operator FM (FM6), TRIO, and DRUM engines (808, 909, SID drum kit).
     * **Installation:** Browser WebMIDI installer via USB directly from the project page with automated backup and rollback to stock V15, or flashing prebuilt release packages.
 
-31. **[REGGAE-OS by Kemar Pennant (KemstheSage)](https://github.com/KemstheSage/reggae-os):**
-    ***License:** Open Source (GPL-3.0). Derivative of Felucca 1.6.1.
+27. **[REGGAE-OS by Kemar Pennant (KemstheSage)](https://github.com/KemstheSage/reggae-os):**
+    * **License:** Open Source (GPL-3.0). Derivative of Felucca 1.6.1.
     * **Concept:** Dub and roots reggae performance firmware transforming the FM-1 into a portable reggae sound system.
-    ***Features:** Dedicated reggae tonewheel organ and deep sub-bass sound engines, intuitive four-knob dub shaping, and an animated retro sound system UI on the color display.
+    * **Features:** Dedicated reggae tonewheel organ and deep sub-bass sound engines, intuitive four-knob dub shaping, and an animated retro sound system UI on the color display.
     * **Installation:** Build and flash via CLI toolchain.
 
-32. **[Glitchbox by Erik de Vos](https://github.com/erikdevos/glitchbox):**
-    ***License:** Open Source (GPL-3.0). Fork of Felucca 1.5.1.
+28. **[Glitchbox by Erik de Vos](https://github.com/erikdevos/glitchbox):**
+    * **License:** Open Source (GPL-3.0). Fork of Felucca 1.5.1.
     * **Concept:** Harsh, experimental glitch synthesizer and live performance noise box.
-    ***Features:** Self-chopping glitch synthesizer engine, a crushed bit-reduced synthesized drum kit, and live punch-in performance effects (beat rolls, rhythmic gating, pitch sweeps, and bitcrush filters) — 100% synthesized in real time without sample playback dependencies.
+    * **Features:** Self-chopping glitch synthesizer engine, a crushed bit-reduced synthesized drum kit, and live punch-in performance effects (beat rolls, rhythmic gating, pitch sweeps, and bitcrush filters) — 100% synthesized in real time without sample playback dependencies.
     * **Installation:** Build and flash via CLI toolchain.
 
-33. **[FM-1 T1 by Tensor-Programming](https://github.com/tensor-programming/fm1-t1):**
-    ***License:** Open Source (GPL-3.0). Fork of Felucca 1.6.
+29. **[FM-1 T1 by Tensor-Programming](https://github.com/tensor-programming/fm1-t1):**
+    * **License:** Open Source (GPL-3.0). Fork of Felucca 1.6.
     * **Concept:** Torso T-1 style generative algorithmic sequencer firmware for the FM-1.
-    ***Features:** Six tracks running algorithmic generative cycles inspired by the Torso T-1 hardware sequencer, featuring Euclidean rhythm generation, pitch mapping, velocity accentuation, and simultaneous MIDI output routing across five tracks.
+    * **Features:** Six tracks running algorithmic generative cycles inspired by the Torso T-1 hardware sequencer, featuring Euclidean rhythm generation, pitch mapping, velocity accentuation, and simultaneous MIDI output routing across five tracks.
     * **Installation:** Build and flash via CLI toolchain.
 
-34. **[Patricktronics by gaumondp](https://github.com/gaumondp/patricktronics):**
-    ***License:** Open Source (GPL-3.0). Derivative of Felucca.
+30. **[Patricktronics by gaumondp](https://github.com/gaumondp/patricktronics):**
+    * **License:** Open Source (GPL-3.0). Derivative of Felucca.
     * **Concept:** Self-evolving ambient looping synthesizer inspired by Robert Fripp and Brian Eno's tape-delay Frippertronics setup.
-    ***Features:** Locks a musical palette of up to five notes played through an FM sound engine, while a bounded random generator continuously rearranges the sequence note order, octave, and timing over time into an endless, evolving ambient soundscape.
+    * **Features:** Locks a musical palette of up to five notes played through an FM sound engine, while a bounded random generator continuously rearranges the sequence note order, octave, and timing over time into an endless, evolving ambient soundscape.
     * **Installation:** Build and flash via CLI toolchain.
 
-35. **[FMini-1 by Guilherme Ruppert](https://github.com/ruppert/fmini-1) ([Web Installer & Manual](https://ruppert.github.io/fmini-1/)):**
-    ***License:** Open Source (GPL-3.0-only). Built upon Felucca by Leo Kuroshita / Hügelton Instruments.
+31. **[FMini-1 by Guilherme Ruppert](https://github.com/ruppert/fmini-1) ([Web Installer & Manual](https://ruppert.github.io/fmini-1/)):**
+    * **License:** Open Source (GPL-3.0-only). Built upon Felucca by Leo Kuroshita / Hügelton Instruments.
     * **Polyphony:** Monophonic (1 voice with 3-oscillator architecture, low-note priority, and authentic analog drift simulation).
-    ***Concept:** Minimoog Model D style analog modeling synthesizer firmware for the M-VAVE FM-1.
+    * **Concept:** Minimoog Model D style analog modeling synthesizer firmware for the M-VAVE FM-1.
     * **Features:** Triple-oscillator bank (LO to 2' range, 6 selectable waveforms including triangle, saw-triangle, reverse sawtooth, pulse, and wide/narrow square; independent detuning on OSC 2 & 3; noise generator with white and pink noise), 4-pole 24 dB/oct resonant ladder low-pass filter with per-stage nonlinear saturation and self-oscillation, dual Minimoog-style exponential contour generators (Filter ADS and Loudness ADS with release switch), LFO modulation (triangle/square) routable to pitch or cutoff, 100 factory presets across 5 categories + 32 user memory slots, dedicated arpeggiator with HOLD latch, 16-step sequencer (REC/PLAY), per-preset FX (reverb, tape delay, stereo chorus, overdrive), 50 assignable MIDI CC parameters with MIDI learn, USB and 3.5 mm TRS MIDI IN, and a custom 240×240 vintage Minimoog-inspired graphical UI with animated real-time filter response curves and ADSR envelopes.
     * **Installation:** Browser-based WebMIDI installer via USB directly in Chrome/Edge, with full backup and restore support to stock V15.
 
-36. **[Clipper by isod89](https://isod89.github.io/clipper-fm1/) ([Web Installer](https://isod89.github.io/clipper-fm1/webapp/installer/) | [Web Editor](https://isod89.github.io/clipper-fm1/webapp/editor/)):**
-    ***License:** Open Source (GPL-3.0-only). Built upon Felucca by Leo Kuroshita / Hügelton Instruments.
+32. **[Clipper by isod89](https://isod89.github.io/clipper-fm1/) ([Web Installer](https://isod89.github.io/clipper-fm1/webapp/installer/) | [Web Editor](https://isod89.github.io/clipper-fm1/webapp/editor/)):**
+    * **License:** Open Source (GPL-3.0-only). Built upon Felucca by Leo Kuroshita / Hügelton Instruments.
     * **Polyphony:** 8 voices standard (12 or 16 voices optional compile target rendered across both CPU cores) with glide, polyphonic unison (2 or 4 voices per note), and dual-sound layer/split/multi-timbral support.
-    ***Concept:** Deep polyphonic synthesizer firmware turning the FM-1 into an expansive multi-engine sound design powerhouse.
+    * **Concept:** Deep polyphonic synthesizer firmware turning the FM-1 into an expansive multi-engine sound design powerhouse.
     * **Features:**
       * **23 Synthesis Engines & 407 Sounds:** Expansive multi-engine library (virtual analog, 6-op FM, wavetable, wave sequencing, vector crossfading, physical modeling, Casio CZ phase distortion, Roland Juno, granular, and sample playback).
       * **Modulation & Sequencing:** 12-slot modulation matrix, 3 LFOs, looping auxiliary envelopes, 4 performance macros (BRITE, TIMBR, MOTN, SPACE), and a 4-lane MOD SEQ modulation sequencer. Step sequencer with chord recording and 15-mode arpeggiator including a Turing machine generative looper (`TURNG`) and SPICE/DICE variations.
@@ -351,23 +351,23 @@ Firmwares built upon or directly forked from the foundational open-source multi-
       * **Microtonal & MPE Support:** Full Scala (`.scl`) scale import alongside 14 historical/ethnic temperaments, MPE (per-note pitch bend, pressure, slide), and USB class-compliant stereo audio streaming directly into DAWs.
     * **Installation:** Browser-based WebMIDI installer via USB directly in Chrome/Edge, with full backup and restore support to stock V15.
 
-37. **[Felucca Wavetable Odeath Mod by gybe808-dotcom](https://github.com/gybe808-dotcom/FeluccaWavetableOdeathMod) ([Web Installer](https://gybe808-dotcom.github.io/FeluccaWavetableOdeathMod/)):**
-    ***License:** Open Source (GPL-3.0). Built upon Felucca by Leo Kuroshita / Hügelton Instruments.
+33. **[Felucca Wavetable Odeath Mod by gybe808-dotcom](https://github.com/gybe808-dotcom/FeluccaWavetableOdeathMod) ([Web Installer](https://gybe808-dotcom.github.io/FeluccaWavetableOdeathMod/)):**
+    * **License:** Open Source (GPL-3.0). Built upon Felucca by Leo Kuroshita / Hügelton Instruments.
     * **Concept:** Community wavetable expansion modification for Felucca integrating custom wavetable banks and wave interpolation.
     * **Installation:** Browser-based WebMIDI installer via USB directly from the project site.
 
-38. **[AmbWave by mentalcells](https://github.com/mentalcells/ambwave) ([Web Demo & Emulator](https://mentalcells.github.io/ambwave/try/)):**
-    ***License:** Open Source (GPL-3.0). Built upon Felucca (formerly known as Hasake).
+34. **[AmbWave by mentalcells](https://github.com/mentalcells/ambwave) ([Web Demo & Emulator](https://mentalcells.github.io/ambwave/try/)):**
+    * **License:** Open Source (GPL-3.0). Built upon Felucca (formerly known as Hasake).
     * **Concept:** Ambient performance instrument: hold chords, layer atmospheric textures and sparse generative notes, and morph acoustic scenes via four rotary encoders.
     * **Installation:** Browser WebMIDI installer via FM-1 Manager or building from source.
 
-39. **[fm1-studio-tess by jamesusmusic](https://github.com/jamesusmusic/fm1-studio-tess):**
-    ***License:** Open Source (GPL-3.0). Merges Melodee's sound engine with Tess's generative sequencing algorithms.
+35. **[fm1-studio-tess by jamesusmusic](https://github.com/jamesusmusic/fm1-studio-tess):**
+    * **License:** Open Source (GPL-3.0). Merges Melodee's sound engine with Tess's generative sequencing algorithms.
     * **Concept:** Studio performance firmware utilizing dual JieLi `pi32v2` cores for polyphonic rendering alongside algorithmic generative polyrhythmic step sequencing.
     * **Installation:** Flashing prebuilt dual-core release packages via WebMIDI or CLI updater.
 
-40. **[Gnomad Synth V1 by Kyle Palaniuk](https://github.com/kpalaniuk/gnomad-firmware) ([Website & How-to](https://gnomad.cc) | [Releases](https://github.com/kpalaniuk/gnomad-firmware/releases)):**
-    ***License:** Open Source (GPL-3.0). Built on Felucca.
+36. **[Gnomad Synth V1 by Kyle Palaniuk](https://github.com/kpalaniuk/gnomad-firmware) ([Website & How-to](https://gnomad.cc) | [Releases](https://github.com/kpalaniuk/gnomad-firmware/releases)):**
+    * **License:** Open Source (GPL-3.0). Built on Felucca.
     * **Concept:** Kid- and beginner-friendly firmware. EASY mode picks sounds by picture (10 pictures, 57 sounds, no reading needed), four colour-coded knobs named on screen with no shift layer, a singing Gnome, five ready-made grooves, loop recording with click and count-in, and hold PLAY to restart on the next bar. Hold HOME + SAVE to switch to Advanced: four tracks, step sequencer, effects, MIDI over USB and TRS.
     * **Installation:** Python CLI installer from a computer ([INSTALL.md](https://github.com/kpalaniuk/gnomad-firmware/blob/main/INSTALL.md)); an optional iPhone/iPad companion app (TestFlight beta) can also install it.
 
@@ -383,7 +383,7 @@ Firmwares centered around the **SLOOP** 4-track live groovebox workflow and its 
 * **Features:** 4 tracks (3 synth tracks + 1 drum machine with 16 sounds across the white keys), 9 synthesis engines, 68 sounds, 37 drum kits, custom sample support, and live-playable song mode. Features USB stereo audio input (class-compliant recording directly into DAWs without drivers), 3.5 mm TRS MIDI IN keyboard input, MIDI clock in/sync, button and note LED illumination modes for dark environments, sample chopping/fitting, and a web editor with full backup/restore (including portable project dumps and loads directly from mobile phones over USB-C WebMIDI).
 * **Installation:** Browser-based installer via WebMIDI in Chrome/Edge, with easy rollback to M-VAVE stock V15.
 
- 2. **[sloopDX by zvenson](https://github.com/zvenson/dxsloop) ([Website & Web Installer](https://dx7.designburgapps.com/) | [Web Editor](https://dx7.designburgapps.com/webapp/editor/) | [Cheat Sheet PDF](https://dx7.designburgapps.com/sloopdx-cheat-sheet.pdf)):**
+ 1. **[sloopDX by zvenson](https://github.com/zvenson/dxsloop) ([Website & Web Installer](https://dx7.designburgapps.com/) | [Web Editor](https://dx7.designburgapps.com/webapp/editor/) | [Cheat Sheet PDF](https://dx7.designburgapps.com/sloopdx-cheat-sheet.pdf)):**
     * **License:** Open Source (GPL-3.0-only). Built upon SLOOP (isod89), Felucca (Leo Kuroshita), and the `msfa` 6-operator DX7 core of Dexed (Apache-2.0).
     * **Polyphony:** Shared 8-voice polyphonic budget across 3 synth parts (Dexed 6-op FM) + 1 dedicated FM drum machine.
     * **Concept:** SLOOP's live groovebox workflow merged with an authentic Yamaha DX7 engine and a fully programmable FM drum machine.
@@ -397,7 +397,7 @@ Firmwares centered around the **SLOOP** 4-track live groovebox workflow and its 
       * **Sequencer & Effects:** Up to 128 steps per track (256 steps shared dynamically across tracks), dedicated per-effect pages (SENDS, DIST with soft/hard/fuzz/crush, CHORUS, DELAY, REVERB), USB audio streaming, and live punch-in FX.
     * **Installation:** Browser WebMIDI installer via USB directly from the project page.
 
- 3. **[FM1 Move by Nicodesy06](https://github.com/Nicodesy06/FM1-MOVE) ([Web Simulator](https://nicodesy06.github.io/FM1-MOVE/sim/) | [Device Installer & Manager](https://nicodesy06.github.io/FM1-MOVE/device/) | [Manual / Quick Start](https://nicodesy06.github.io/FM1-MOVE/manual/) | [Source Branch](https://github.com/Nicodesy06/FM1-MOVE/tree/fm1-move/dev)):**
+ 2. **[FM1 Move by Nicodesy06](https://github.com/Nicodesy06/FM1-MOVE) ([Web Simulator](https://nicodesy06.github.io/FM1-MOVE/sim/) | [Device Installer & Manager](https://nicodesy06.github.io/FM1-MOVE/device/) | [Manual / Quick Start](https://nicodesy06.github.io/FM1-MOVE/manual/) | [Source Branch](https://github.com/Nicodesy06/FM1-MOVE/tree/fm1-move/dev)):**
     * **License:** Open Source (GPL-3.0). Built upon SLOOP 2.5 by isod89.
     * **Polyphony:** 8 independent tracks with an 8-voice polyphony budget.
     * **Concept:** Eight-track groovebox firmware for the FM-1 inspired by the Ableton Move workflow, featuring a custom 240 × 240 UI designed for live performance.
@@ -408,13 +408,13 @@ Firmwares centered around the **SLOOP** 4-track live groovebox workflow and its 
       * **Device Page:** In-browser WebMIDI tool to install/backup firmware, manage presets, kits, FM6 banks, and samples.
       * **Status:** Verified in host simulation and builds cleanly for the JieLi AC791N target compiler (experimental / hardware verification in progress).
 
- 4. **[FM1 Quest by hericdk](https://github.com/hericdk/fm1-quest) ([Web Installer](https://hericdk.github.io/fm1-quest/webapp/installer/) | [Web Emulator](https://hericdk.github.io/fm1-quest/emulator/)):**
+ 3. **[FM1 Quest by hericdk](https://github.com/hericdk/fm1-quest) ([Web Installer](https://hericdk.github.io/fm1-quest/webapp/installer/) | [Web Emulator](https://hericdk.github.io/fm1-quest/emulator/)):**
     * **License:** Open Source (GPL-3.0-only). Built upon the SLOOP groovebox core.
     * **Polyphony:** 8 shared synth voices across 3 tracks + 6 drum voices (up to 14 voices total).
     * **Concept:** Fantasy RPG sidescroller interface for the groovebox: tracks are represented as party heroes, sequence steps are attacks, BPM drives party walk speed, scales dictate biomes, and recording loops triggers boss fights.
     * **Installation:** Browser WebMIDI installer via USB.
 
- 5. **[JIANT FM by juanjiant-bit](https://github.com/juanjiant-bit/JIANT) ([Online Emulator](https://juanjiant-bit.github.io/JIANT/) | [Web Installer](https://juanjiant-bit.github.io/JIANT/webapp/installer/) | [Web Editor](https://juanjiant-bit.github.io/JIANT/webapp/editor/)):**
+ 4. **[JIANT FM by juanjiant-bit](https://github.com/juanjiant-bit/JIANT) ([Online Emulator](https://juanjiant-bit.github.io/JIANT/) | [Web Installer](https://juanjiant-bit.github.io/JIANT/webapp/installer/) | [Web Editor](https://juanjiant-bit.github.io/JIANT/webapp/editor/)):**
     * **License:** Open Source (GPL-3.0-only). Built upon Felucca 1.1.5.1 and SLOOP.
     * **Polyphony:** 6 multi-engine tracks with dynamic voice allocation and dual-core processing.
     * **Concept:** Bio-synthetic groovebox & performance synthesizer OS for the FM-1 with a high-contrast "thermal camera" UI theme (ironbow gradient palette and Chakra Petch typography). Treat each sound engine as an organic bio-organism reacting dynamically in real time.
@@ -426,29 +426,29 @@ Firmwares centered around the **SLOOP** 4-track live groovebox workflow and its 
       * **Live Performance Navigation:** Quick page-jumping by turning the `PRESETS` encoder while holding page navigation buttons.
     * **Installation:** One-click USB browser installer, web-based companion librarian/editor, or in-browser emulator.
 
- 6. **[ORBIT by dspaudio](https://github.com/dspaudio/orbit) ([Web Installer](https://dspaudio.github.io/orbit/) | [Web Emulator](https://dspaudio.github.io/orbit-web-emu/)):**
+ 5. **[ORBIT by dspaudio](https://github.com/dspaudio/orbit) ([Web Installer](https://dspaudio.github.io/orbit/) | [Web Emulator](https://dspaudio.github.io/orbit-web-emu/)):**
     * **License:** Open Source (GPL-3.0). Based on SLOOP.
     * **Concept:** Groovebox with visual aesthetic and screen interfaces inspired by the Teenage Engineering OP-1.
     * **Features:** Integrated sample manipulation tools and an event tape mechanism for dynamically shifting and rearranging what the 4 tracks play.
     * **Installation:** In-browser WebMIDI installer via USB directly from the installer page or web emulator.
 
- 7. **[NoteSorcery by catacombius](https://github.com/catacombius/NoteSorcery):**
+ 6. **[NoteSorcery by catacombius](https://github.com/catacombius/NoteSorcery):**
     * **License:** Open Source (GPL-3.0). Built on SLOOP.
     * **Concept:** OP-1-style 8-track groovebox firmware.
     * **Features:** Live USB audio sampling, project export straight to Ableton Live sets, companion Android controller application.
     * **Installation:** Build and flash via CLI toolchain.
 
- 8. **[SLOOP ALG by shaw-core](https://github.com/shaw-core/Sloop_ALG02):**
+ 7. **[SLOOP ALG by shaw-core](https://github.com/shaw-core/Sloop_ALG02):**
     * **License:** Open Source (GPL-3.0-only). Based on SLOOP.
     * **Concept:** Experimental synthesis expansion fork adding Karplus-Strong string synthesis, plucked physical models, additive synthesis, DX7, and VA engines.
     * **Installation:** Web installer and companion editor.
 
- 9. **[FM80S by Floydus (y6zkcqnf5r-hue)](https://github.com/y6zkcqnf5r-hue/fm1-fm80s):**
+ 8. **[FM80S by Floydus (y6zkcqnf5r-hue)](https://github.com/y6zkcqnf5r-hue/fm1-fm80s):**
     * **License:** Open Source (GPL-3.0). Based on SLOOP 2.5 and Felucca.
     * **Concept:** Synthwave-oriented synth-looper firmware for live loop stacking, step sequencing, and song assembly with planned 8-track expansion.
     * **Installation:** Build from source via CLI toolchain.
 
-10. **[SLOOP DX7 Banks by majnikool](https://github.com/majnikool/sloop-fm1):**
+ 9. **[SLOOP DX7 Banks by majnikool](https://github.com/majnikool/sloop-fm1):**
     * **License:** Open Source (GPL-3.0). Built on SLOOP by isod89.
     * **Concept:** SLOOP expansion fork supporting up to 12 DX7 voice banks grouped by sound category.
     * **Features:**
@@ -456,7 +456,7 @@ Firmwares centered around the **SLOOP** 4-track live groovebox workflow and its 
       * **Fast Preset Navigation:** Instant preset category selection without overwriting SLOOP sequencer project states.
     * **Installation:** Build and flash via CLI toolchain (`tools/fm1_install.py`).
 
-11. **[SLOOP Floyd FM by René Bohne](https://github.com/renebohne/sloop-fm1):**
+10. **[SLOOP Floyd FM by René Bohne](https://github.com/renebohne/sloop-fm1):**
     * **License:** Open Source (GPL-3.0). Fork of SLOOP by isod89.
     * **Concept:** SLOOP fork integrating Floyd Steinberg's 4-operator FM synthesis algorithms and real-time visual envelope feedback.
     * **Features:**
@@ -464,13 +464,13 @@ Firmwares centered around the **SLOOP** 4-track live groovebox workflow and its 
       * **Live Envelope & Scope Display:** Real-time on-device oscilloscope rendering active voice output and ADSR envelope curve response directly on the 240 × 240 screen.
     * **Installation:** Build and flash via CLI toolchain.
 
-12. **[SLICE64-FM by jeymadcat-ops](https://jeymadcat-ops.github.io/SLICE64-FM-web/):**
+11. **[SLICE64-FM by jeymadcat-ops](https://jeymadcat-ops.github.io/SLICE64-FM-web/):**
     * **License:** Open Source (GPL-3.0). Built upon SLOOP / Felucca core.
     * **Concept:** 64-slice sample chopper, beat-slicing, and FM groovebox firmware for the FM-1.
     * **Features:** Deep 64-slice sample mapping across pads/keys, auto-transient detection, slice reversal, pitch pitching per slice, and integrated FM synth accompaniment.
     * **Installation:** Browser WebMIDI installer via USB directly from the web project page.
 
-13. **[winampFM by hericdk](https://github.com/hericdk/winampFM) ([Website & 3D Web Simulator](https://hericdk.github.io/winampFM/)):**
+12. **[winampFM by hericdk](https://github.com/hericdk/winampFM) ([Website & 3D Web Simulator](https://hericdk.github.io/winampFM/)):**
     * **License:** Open Source (GPL-3.0-only). Built upon SLOOP 2.6 (isod89) and Felucca (Leo Kuroshita / Hügelton Instruments).
     * **Concept:** Winamp 2.x-inspired performance synthesizer & groovebox firmware turning the FM-1 interface into classic Winamp windows (main player, equalizer sliders, playlist, and pixel-art visualizers).
     * **Features:**
@@ -482,7 +482,7 @@ Firmwares centered around the **SLOOP** 4-track live groovebox workflow and its 
       * **Web 3D Simulator & Recorder:** Includes an interactive in-browser 3D model simulator running the real firmware via WebAssembly with audio playback and a Win98-style screen & sound recorder widget.
     * **Installation:** One-click WebMIDI installer via USB directly on the website or flashing `release/winampfm-0.12.fwsc`.
 
-14. **[No Man Sky FM by hericdk](https://github.com/hericdk/nomanskyFM) ([Website & Web Installer](https://hericdk.github.io/nomanskyFM/) | [3D Web Simulator](https://hericdk.github.io/nomanskyFM/#simulator)):**
+13. **[No Man Sky FM by hericdk](https://github.com/hericdk/nomanskyFM) ([Website & Web Installer](https://hericdk.github.io/nomanskyFM/) | [3D Web Simulator](https://hericdk.github.io/nomanskyFM/#simulator)):**
      * **License:** Open Source (GPL-3.0). Built upon SLOOP 2.7.1 (isod89) and Felucca (Leo Kuroshita / Hügelton Instruments).
      * **Concept:** Space exploration RPG adventure and live performance groovebox firmware for the FM-1: fly between procedurally generated planetary systems using the rotary knobs while the other hand performs and arranges the live soundtrack.
      * **Features:**
@@ -492,13 +492,13 @@ Firmwares centered around the **SLOOP** 4-track live groovebox workflow and its 
        * **Web 3D Simulator & Installer:** Includes an interactive in-browser 3D model simulator running the firmware via WebAssembly with sound output, plus one-click browser WebMIDI installation directly from the project site.
      * **Installation:** One-click WebMIDI installer via USB directly on the website or flashing prebuilt release packages (`.fwsc`).
 
-15. **[MYCELIUM by Mandalars](https://github.com/megagott/mycelium-fm1) ([Website](https://www.mandalars.org/mandalars/fm1/) | [Releases](https://github.com/megagott/mycelium-fm1/releases)):**
+14. **[MYCELIUM by Mandalars](https://github.com/megagott/mycelium-fm1) ([Website](https://www.mandalars.org/mandalars/fm1/) | [Releases](https://github.com/megagott/mycelium-fm1/releases)):**
      * **License:** Open Source (GPL-3.0). Built upon Felucca and SLOOP.
      * **Concept:** Psychedelic dance music groovebox firmware dedicated to Forest, Psytrance, Goa, and Hitech production on the FM-1.
      * **Features:** Custom-crafted punchy trance drum kits, alien psychedelic icons and animations, fast rolling 16th-note bassline tools, and four factory demo arrangements.
      * **Installation:** Flashing prebuilt `.fwsc` test releases via WebMIDI or CLI flasher.
 
-16. **[GR!MM by GRiMMBIENT](https://github.com/GRiMMBIENT/grimm) ([Browser Demo](https://grimmbient.github.io/grimm/) | [Web Sound & Sample Editor](https://grimmbient.github.io/grimm/editor.html) | [Reddit Announcement](https://www.reddit.com/r/MVaveFM1/comments/1xapljs/grmm_firmware_for_dark_ambient_v20_coming_soon/)):**
+15. **[GR!MM by GRiMMBIENT](https://github.com/GRiMMBIENT/grimm) ([Browser Demo](https://grimmbient.github.io/grimm/) | [Web Sound & Sample Editor](https://grimmbient.github.io/grimm/editor.html) | [Reddit Announcement](https://www.reddit.com/r/MVaveFM1/comments/1xapljs/grmm_firmware_for_dark_ambient_v20_coming_soon/)):**
      * **License:** Open Source (GPL-3.0). Built upon Felucca and SLOOP.
      * **Concept:** Dark ambient, dungeon synth, and deathdream groovebox firmware transforming the FM-1 into an atmospheric sound generator.
      * **Features:**
@@ -509,42 +509,42 @@ Firmwares centered around the **SLOOP** 4-track live groovebox workflow and its 
        * **Web Companion:** Browser-based editor for sculpting sounds, loading custom WAV samples, and managing backups over WebMIDI, plus an in-browser WebAssembly demo.
      * **Installation:** Browser WebMIDI installer via The Firmware Hub / Web Editor or flashing prebuilt `.fwsc` release packages.
 
-17. **[TheReFmB1rth by AlexanderSeel](https://github.com/AlexanderSeel/TheReFmB1rth) ([Releases](https://github.com/AlexanderSeel/TheReFmB1rth/releases)):**
+16. **[TheReFmB1rth by AlexanderSeel](https://github.com/AlexanderSeel/TheReFmB1rth) ([Releases](https://github.com/AlexanderSeel/TheReFmB1rth/releases)):**
      * **License:** Open Source (GPL-3.0). Built upon Felucca and SLOOP core.
      * **Concept:** Four-machine acid groovebox inspired by Propellerhead ReBirth RB-338: dual TB-303 style acid basslines alongside TR-808 and TR-909 drum machines (including 909 flam memory).
      * **Features:** 4-track mixer, sequence sections A through H chainable into complete songs, resonant filter, stereo delay, distortion, and master compression.
      * **Installation:** Flashing prebuilt `.fwsc` releases via WebMIDI or CLI flasher.
 
-18. **[Kawa Tracker by Guizmoh](https://github.com/Guizmoh/Kawa-Tracker-Fm1):**
+17. **[Kawa Tracker by Guizmoh](https://github.com/Guizmoh/Kawa-Tracker-Fm1):**
      * **License:** Open Source (GPL-3.0). Built upon SLOOP and Felucca.
      * **Concept:** 6-track pocket tracker and groovebox firmware with trilingual UI support (English, French, Spanish).
      * **Features:** 6 tracks assignable to pulse, 4-bit wave, noise, 6-operator FM, drum kits, or samples; song chaining, 32 live performance punch-in effects, and Magic generative tools for drums, melodies, and breakbeat slicing.
      * **Installation:** Build and flash via CLI toolchain or FM-1 Manager.
 
-19. **[BREAK//174 (Fm1dnbchatgpt) by EremanSim](https://github.com/EremanSim/Fm1dnbchatgpt):**
+18. **[BREAK//174 (Fm1dnbchatgpt) by EremanSim](https://github.com/EremanSim/Fm1dnbchatgpt):**
      * **License:** Open Source (GPL-3.0).
      * **Concept:** Jungle and Drum & Bass performance machine running at ~166–174 BPM.
      * **Features:** Instant Amen break generator with live roll staging, slice stutter, and reverse playback mapped across physical keys.
      * **Installation:** Flashing prebuilt `.fwsc` release package via WebMIDI.
 
-20. **[Loom FM-1 by Co-oscillator](https://github.com/Co-oscillator/Loom-FM-1):**
+19. **[Loom FM-1 by Co-oscillator](https://github.com/Co-oscillator/Loom-FM-1):**
      * **License:** Open Source (GPL-3.0-only). Built upon Felucca platform.
      * **Concept:** Five-track polyphonic synthesizer, sampler, and groovebox firmware with neon color-coded UI themes.
      * **Features:** 4 polyphonic synth/sampler tracks (1–4) plus a dedicated 5th synthesized drum track (D) featuring analog and FM kits, choke groups, and per-lane mixing.
      * **Installation:** Flashing prebuilt `.fwsc` package via WebMIDI.
 
-21. **[Ravel FM-1 by De-Pattern](https://github.com/De-Pattern/Ravel_FM1):**
+20. **[Ravel FM-1 by De-Pattern](https://github.com/De-Pattern/Ravel_FM1):**
      * **License:** Open Source (GPL-3.0).
      * **Concept:** Eight-track sound-design groovebox turning the FM-1 into an ambient tape-sampling laboratory.
      * **Features:** 8 synthesizer tracks that continuously capture performance audio onto a shared virtual tape loop, with live slicing, re-triggering, and generative cross-track modulation.
      * **Installation:** Flashing prebuilt `.fwsc` release package via WebMIDI.
 
-22. **[Bunker Evolved by kidbee85-beep](https://github.com/kidbee85-beep/bunker-evolved) ([Simulator](https://bunker-evolved.sugarypixie10.chatgpt.site/simulator/)):**
+21. **[Bunker Evolved by kidbee85-beep](https://github.com/kidbee85-beep/bunker-evolved) ([Simulator](https://bunker-evolved.sugarypixie10.chatgpt.site/simulator/)):**
      * **License:** Open Source (GPL-3.0). Built upon Felucca.
      * **Concept:** Generative ambient soundscape explorer featuring 4 evolving layers, 64 presets, 24 ambient acoustic worlds, and GROW generative scaling.
      * **Installation:** Flashing prebuilt `.fwsc` packages via WebMIDI.
 
-23. **[MASIF by thecemeterygates](https://github.com/thecemeterygates/masif-fm1) ([Website & Web Installer](https://thecemeterygates.github.io/masif-fm1/) | [Releases](https://github.com/thecemeterygates/masif-fm1/releases)):**
+22. **[MASIF by thecemeterygates](https://github.com/thecemeterygates/masif-fm1) ([Website & Web Installer](https://thecemeterygates.github.io/masif-fm1/) | [Releases](https://github.com/thecemeterygates/masif-fm1/releases)):**
      * **License:** Open Source (GPL-3.0-only). Built upon zp12, SLOOP, and Felucca.
      * **Concept:** 4-track sample tracker and rack sampler firmware turning the FM-1 into a portable tracker and hardware sampling workstation.
      * **Features:**
@@ -567,20 +567,20 @@ Suzuki Omnichord and Japanese Shigin accompaniment instruments featuring strumpl
 * **Features:** Strum chords across the white keys like a harp strumplate, select chord roots and types on the black keys, integrated rhythmic accompaniment and arpeggiator modes.
 * **Installation:** Browser WebMIDI installer via USB.
 
- 2. **[FuMi-1 by cartesive](https://github.com/cartesive/fumi-1) ([Web Installer & Emulator](https://cartesive.github.io/fumi-1/)):**
+ 1. **[FuMi-1 by cartesive](https://github.com/cartesive/fumi-1) ([Web Installer & Emulator](https://cartesive.github.io/fumi-1/)):**
     * **License:** Open Source (GPL-3.0). Fork of FoMni.
     * **Concept:** Traditional Japanese Shigin accompaniment synthesizer inspired by Suikohsha's ST-50.
     * **Features:** Authentic Koto, Sho, Shakuhachi, and Taiko voices tuned to the historical ST-50 just intonation scale system.
     * **Installation:** Browser WebMIDI installer via USB.
 
- 3. **[CoralFlower by FicusFicusov](https://github.com/FicusFicusov/CoralFlower) ([Website & Web Player](https://ficusficusov.github.io/CoralFlower/) | [Releases](https://github.com/FicusFicusov/CoralFlower/releases)):**
+ 2. **[CoralFlower by FicusFicusov](https://github.com/FicusFicusov/CoralFlower) ([Website & Web Player](https://ficusficusov.github.io/CoralFlower/) | [Releases](https://github.com/FicusFicusov/CoralFlower/releases)):**
     * **License:** Open Source (GPL-3.0).
     * **Polyphony:** Multi-voice chord engine with dedicated coupled bass voice.
     * **Concept:** Expressive chord machine inspired by the Torso Electronics T-1 / Orchid chord concepts, tailored specifically to the ergonomics of the FM-1.
     * **Features:** Single-finger chord generation with root and bass note coupling, 27 musical scales, built-in arpeggiator, looper, lush plate reverb, and an evolving pixel flower graphic that grows on the 240 × 240 screen as you play.
     * **Installation:** In-browser WebMIDI player/installer or flashing prebuilt releases (`v0.2`).
 
- 4. **[FM-1 Pocket Guitar by xMagElonx](https://github.com/xMagElonx/fm1-guitar) ([Web Emulator & Releases](https://fm1-tone-engine.app.workbuddy.host/guitar-fw/)):**
+ 3. **[FM-1 Pocket Guitar by xMagElonx](https://github.com/xMagElonx/fm1-guitar) ([Web Emulator & Releases](https://fm1-tone-engine.app.workbuddy.host/guitar-fw/)):**
     * **License:** Open Source (GPL-3.0). Pure C99 guitar strumming and chord voicing layer for the FM-1.
     * **Polyphony:** Polyphonic acoustic/electric string modeling engine with per-string voice allocation and realistic micro-delay onset pick modeling (~65 ms strum spread).
     * **Concept:** Virtual acoustic and electric guitar performance instrument mapping the FM-1's 27 keys into an interactive fretboard and strumming surface.
@@ -604,14 +604,14 @@ Firmwares featuring original sound engines, written-from-scratch architectures, 
 * **Video Tutorial:** [Baud Girl FM-1+VA Comprehensive Tutorial (NatLife Sounds)](https://www.youtube.com/watch?v=jfuoEBIUsEE) — programming VA engines and the dot-matrix sequencer.
 * **Installation:** Web-based browser installer in a couple of clicks via WebMIDI.
 
- 2. **[Groove OS](https://www.groove-os.com/) ([Web Emulator](https://www.groove-os.com/emu)):**
+ 1. **[Groove OS](https://www.groove-os.com/) ([Web Emulator](https://www.groove-os.com/emu)):**
 
 * **License:** Commercial / Proprietary ($29).
 * **Concept:** Transforms the FM-1 into a standalone multitrack groovebox without needing any external equipment.
 * **Features:** Up to 8 independent tracks (drums, bass, chords, leads) with independent loop lengths (1 to 8 bars) for evolving polyrhythmic structures, dual sound engine (native 6-op FM + Virtual Analog with ladder filter), up to 20 voices of polyphony (12 FM + 8 VA, max 6 for drums), 64-step sequencer with parameter locks (p-locks), live stage view, curated sound packs, and DX7 SysEx patch reception.
 * **Installation:** Browser-based USB installer via WebMIDI in Chrome/Edge (~2 minutes).
 
- 3. **[Bubba Machine by Erbubar23](https://github.com/Erbubar23/bubba-machine) ([Website](https://erbubar23.github.io/bubba-machine/) | [Web Emulator](https://erbubar23.github.io/bubba-machine/emulador.html) | [Manual](https://github.com/Erbubar23/bubba-machine/blob/main/docs/MANUAL.md)):**
+ 1. **[Bubba Machine by Erbubar23](https://github.com/Erbubar23/bubba-machine) ([Website](https://erbubar23.github.io/bubba-machine/) | [Web Emulator](https://erbubar23.github.io/bubba-machine/emulador.html) | [Manual](https://github.com/Erbubar23/bubba-machine/blob/main/docs/MANUAL.md)):**
     * **License:** Open Source (GPL-3.0-or-later). Written from scratch in C99.
     * **Polyphony:** Up to 20 voices of polyphony across 6 tracks (FM, VA, drums).
     * **Concept:** 6-track live performance groovebox firmware for the FM-1 with four gestures per button, dedicated HOME layer, and zero third-party audio dependencies (all factory kits and wavetables synthesized procedurally in C).
@@ -626,7 +626,7 @@ Firmwares featuring original sound engines, written-from-scratch architectures, 
       * **Live Performance & Safe Flash:** 4 chained scenes, song recording, auto-fills, 16 punch-in FX, track/instrument mutes, and crash-resilient flash saving (CRC, end commit, wear-leveling, and auto-save on stop).
     * **Status & Installation:** Firmware runs in desktop simulation and the in-browser WebAssembly emulator; hardware flasher/installer is in roadmap development.
 
- 4. **[zp12 by Sven Trogus (zvenson)](https://github.com/zvenson/zp12) ([Web Installer & Homepage](https://zp12.designburgapps.com/)):**
+ 2. **[zp12 by Sven Trogus (zvenson)](https://github.com/zvenson/zp12) ([Web Installer & Homepage](https://zp12.designburgapps.com/)):**
     * **License:** Open Source (GPL-3.0-only).
     * **Concept:** Authentic 1980s-style 12-bit sampling drum machine firmware for the FM-1.
     * **Features:**
@@ -636,7 +636,7 @@ Firmwares featuring original sound engines, written-from-scratch architectures, 
       * **Browser Sample Dropper:** In-browser tool to drop custom user WAVs onto pads and transmit them directly to flash over WebMIDI.
     * **Installation:** Web-based browser installer via WebMIDI in Chrome/Edge.
 
- 5. **[FiMba-1 by J. Adam Sowers (jadamsowers)](https://github.com/jadamsowers/fm1-fimba) ([Web Installer & Emulator](https://jadamsowers.github.io/fm1-fimba/)):**
+ 3. **[FiMba-1 by J. Adam Sowers (jadamsowers)](https://github.com/jadamsowers/fm1-fimba) ([Web Installer & Emulator](https://jadamsowers.github.io/fm1-fimba/)):**
     * **License:** Open Source (GPL-3.0-only).
     * **Concept:** Thumb piano / kalimba / mbira physical modeling synthesizer firmware for the FM-1.
     * **Features:**
@@ -646,40 +646,40 @@ Firmwares featuring original sound engines, written-from-scratch architectures, 
       * **WebAssembly Browser Emulator:** Complete C sound engine and UI compiled to WebAssembly running in-browser with Web MIDI and preset saving.
     * **Installation:** Browser WebMIDI installer via USB directly from the project page.
 
- 6. **[Lunar Modulator by ip2k](https://github.com/ip2k/lunar-modulator):**
+ 4. **[Lunar Modulator by ip2k](https://github.com/ip2k/lunar-modulator):**
 
 * **License:** Open Source (MIT).
 * **Status:** Research / bench stage.
 * **Features:** *Intergalactic Modulation Station* — alternative firmware based on Mutable Instruments synthesizer engines, a Movy-style sequencer, and an in-browser virtual FM-1 emulator/simulator.
 
- 7. **[AMB-1 by Charles Vestal](https://github.com/charlesvestal/fm1-amb) ([Web Installer & Emulator](https://charlesvestal.github.io/fm1-amb/) | [Manual](https://charlesvestal.github.io/fm1-amb/)):**
+ 1. **[AMB-1 by Charles Vestal](https://github.com/charlesvestal/fm1-amb) ([Web Installer & Emulator](https://charlesvestal.github.io/fm1-amb/) | [Manual](https://charlesvestal.github.io/fm1-amb/)):**
     * **License:** Open Source (GPL-3.0).
     * **Concept:** Generative ambient synthesizer machine inspired by Brian Eno's *Music for Airports*.
     * **Features:** Self-generating playback immediately from power-on, unsynced tape loops of unequal lengths, gliding bass lines, and generative Euclidean percussion patterns.
     * **Installation:** Browser WebMIDI installer via USB.
 
- 8. **[CTL-1 by Charles Vestal](https://github.com/charlesvestal/fm1-ctl) ([Web Installer](https://charlesvestal.github.io/fm1-ctl/)):**
+ 2. **[CTL-1 by Charles Vestal](https://github.com/charlesvestal/fm1-ctl) ([Web Installer](https://charlesvestal.github.io/fm1-ctl/)):**
     * **License:** Open Source (GPL-3.0).
     * **Concept:** Dedicated MIDI master controller firmware for the FM-1.
     * **Features:** Turns the FM-1's keys and knobs into a multi-channel USB/TRS MIDI controller while providing internal General MIDI sounds for standalone monitoring.
     * **Installation:** Browser WebMIDI installer via USB.
 
- 9. **[PurpleMonkey FM-1 by Quixotic7](https://github.com/Quixotic7/PurpleMonkeyFM1) ([Web Emulator](https://quixotic7.github.io/PurpleMonkeyFM1/emu/)):**
+ 3. **[PurpleMonkey FM-1 by Quixotic7](https://github.com/Quixotic7/PurpleMonkeyFM1) ([Web Emulator](https://quixotic7.github.io/PurpleMonkeyFM1/emu/)):**
     * **License:** Open Source (GPL-3.0).
     * **Concept:** Simplified toddler music instrument featuring a 5-note pentatonic scale, backing drum beats, and zero menus.
     * **Installation:** Browser WebMIDI installer via USB.
 
-10. **[FM-1 B-Boy Edition by friendsmakenoise-prog](https://github.com/friendsmakenoise-prog/fm1-pocket-sampler):**
+ 4. **[FM-1 B-Boy Edition by friendsmakenoise-prog](https://github.com/friendsmakenoise-prog/fm1-pocket-sampler):**
     * **License:** Open Source (No license specified in upstream repository).
     * **Concept:** Late-1990s hip-hop chop sampler firmware featuring 3 sample tracks and a dedicated FM bass/lead lane.
     * **Installation:** Web installer via USB.
 
-11. **[fm1-polyseq by NOVALENTI](https://github.com/NOVALENTI/fm1-polyseq):**
+ 5. **[fm1-polyseq by NOVALENTI](https://github.com/NOVALENTI/fm1-polyseq):**
     * **License:** Open Source (No license file in repository; source code is publicly accessible).
     * **Concept:** Polyphonic 16-step sequencer and bare-metal hardware abstraction layer (HAL) written in strict C99 for the AC791N's pi32v2 CPU.
     * **Installation:** Compile from source.
 
-12. **[FM-106 by PattF](https://github.com/patttf/fm-106) ([Librarian & SysEx Editor](https://patttf.github.io/fm-106/Librarian.html)):**
+ 6. **[FM-106 by PattF](https://github.com/patttf/fm-106) ([Librarian & SysEx Editor](https://patttf.github.io/fm-106/Librarian.html)):**
     * **License:** Open Source (GPL-3.0).
     * **Concept:** Roland Juno-106 emulation firmware for the FM-1 based on an optimized port of the open-source KR-106 synthesizer engine.
     * **Features:**
@@ -690,19 +690,19 @@ Firmwares featuring original sound engines, written-from-scratch architectures, 
       * **USB-C Audio:** Integrated class-compliant digital stereo audio output over USB-C.
     * **Installation:** Browser WebMIDI installer via USB.
 
-13. **[ETCH by SikkenWorks](https://github.com/SikkenWorks/ETCH) ([Homepage & Web Installer](https://etch.sikkenworks.com/)):**
+ 7. **[ETCH by SikkenWorks](https://github.com/SikkenWorks/ETCH) ([Homepage & Web Installer](https://etch.sikkenworks.com/)):**
     * **License:** Open Source (GPL-3.0).
     * **Concept:** "Draw. Morph. Modulate." — waveform drawing and morphing synthesizer firmware.
     * **Features:** 8-voice polyphony, direct on-device single-cycle waveform drawing (Waves A, B, and modulating Wave C), real-time interpolation/morphing between drawn waves, wave library, motion recording, and arpeggiator with generative RIFF mode.
     * **Installation:** Browser WebMIDI installer via USB or flashing prebuilt `.fwsc` image.
 
-14. **[AMBII by MilkBoyG / JalopyMusic](https://github.com/JalopyMusic/fm1-milkboyg-ambii):**
+ 8. **[AMBII by MilkBoyG / JalopyMusic](https://github.com/JalopyMusic/fm1-milkboyg-ambii):**
     * **License:** Open Source (GPL-3.0). Built on Melodee and Felucca.
     * **Concept:** Alternative performance and recording interface firmware built on Melodee's real multi-engine C core.
     * **Features:** Four tracks with scoped pattern actions, drum ratchets, parameter automation graphs with undo, shared delay/reverb, and dedicated Galaxy / Dark Matter UI themes.
     * **Status:** In-browser prototype and development preview (no hardware release image yet).
 
-15. **[MC-1 by dspaudio](https://github.com/dspaudio/mc-1) ([Web Hub & Online Player](https://dspaudio.github.io/mc-1-web/)):**
+ 9. **[MC-1 by dspaudio](https://github.com/dspaudio/mc-1) ([Web Hub & Online Player](https://dspaudio.github.io/mc-1-web/)):**
     * **License:** Open Source (GPL-3.0).
     * **Concept:** 4-track groovebox firmware inspired by Roland Linear Arithmetic (LA) synthesis (D-50) and MC-series grooveboxes (MC-101 / MC-303).
     * **Features:**
@@ -712,7 +712,7 @@ Firmwares featuring original sound engines, written-from-scratch architectures, 
       * **Dedicated Web Companion:** Web audio player and patch tool running at `dspaudio.github.io/mc-1-web`.
     * **Installation:** Browser WebMIDI installer via USB directly from the web hub or build from source.
 
-16. **[OberVave by Sven Trogus (zvenson)](https://github.com/zvenson/obervave) ([Webpage & Web Installer](https://fm1.designburgapps.com/)):**
+10. **[OberVave by Sven Trogus (zvenson)](https://github.com/zvenson/obervave) ([Webpage & Web Installer](https://fm1.designburgapps.com/)):**
     * **License:** Open Source (GPL-3.0).
     * **Concept:** 8-voice American analog polysynth emulation (Oberheim OB-Xa / OB-8 style, 1979–1984) for the M-VAVE FM-1.
     * **Features:**
@@ -722,7 +722,7 @@ Firmwares featuring original sound engines, written-from-scratch architectures, 
       * **On-Device Graphical Editing:** Real-time filter frequency curve rendering and envelope visualization on the 240 × 240 display.
     * **Installation:** Browser WebMIDI installer via USB directly from the project homepage.
 
-17. **[MONK-1 by Charles Vestal](https://github.com/charlesvestal/fm1-monk) ([Web Emulator](https://charlesvestal.github.io/fm1-monk/emu/) | [Web Installer](https://charlesvestal.github.io/fm1-monk/install/) | [Manual](https://charlesvestal.github.io/fm1-monk/manual/) | [Releases](https://github.com/charlesvestal/fm1-monk/releases)):**
+11. **[MONK-1 by Charles Vestal](https://github.com/charlesvestal/fm1-monk) ([Web Emulator](https://charlesvestal.github.io/fm1-monk/emu/) | [Web Installer](https://charlesvestal.github.io/fm1-monk/install/) | [Manual](https://charlesvestal.github.io/fm1-monk/manual/) | [Releases](https://github.com/charlesvestal/fm1-monk/releases)):**
     * **License:** Open Source (GPL-3.0). Free of charge (donations suggested to savetibet.org).
     * **Concept:** Formant vocal synthesizer firmware turning the FM-1 into Jonathan Taylor's **MonkSynth** (homage to AudioNerdz's 2002 *Delay Lama* plug-in) with twelve singing characters (Jerry the monk, Philip the unicorn, Snider, etc.).
     * **Features:**
@@ -732,7 +732,7 @@ Firmwares featuring original sound engines, written-from-scratch architectures, 
       * **USB MIDI & Accessibility:** Full USB-MIDI in/out with polyphonic aftertouch and vowel CC controls; integrates with the [FM-1 Screen Reader](https://charlesvestal.github.io/fm1-reader/) to speak aloud on-screen parameters and button actions for visually impaired users.
     * **Installation:** Browser WebMIDI installer via USB, in-browser WebAssembly emulator, or flashing prebuilt releases.
 
-18. **[M-VAVE FM1 Open Firmware (m-vave/fm1_open)](https://github.com/m-vave/fm1_open) ([Releases / V10](https://github.com/m-vave/fm1_open/releases) | [Official Workbench](https://open.m-vave.com/fm1-workbench)):**
+12. **[M-VAVE FM1 Open Firmware (m-vave/fm1_open)](https://github.com/m-vave/fm1_open) ([Releases / V10](https://github.com/m-vave/fm1_open/releases) | [Official Workbench](https://open.m-vave.com/fm1-workbench)):**
     * **License:** Open Source (GPL-3.0-only for application code; includes vendor binary libraries and third-party notices).
     * **Significance:** Official open-source release of the factory FM-1 firmware and SDK directly from the manufacturer (M-VAVE).
     * **Architecture & Features:**
@@ -741,7 +741,7 @@ Firmwares featuring original sound engines, written-from-scratch architectures, 
       * **Complete Toolchain & WebAssembly Workbench:** Complete build scripts (`build.bat`) supporting both native firmware compilation via JieLi PI32v2 Clang 4.0.1 (`FM1_OFFICIAL_OPEN.fwsc`) and WebAssembly compilation via WASI SDK 27 for in-browser workbench simulation.
     * **Installation:** Web workbench flasher via USB (`open.m-vave.com`), official flasher, or building `.fwsc` from source.
 
-19. **[OPN-1 by putchdev](https://github.com/putchdev/opn-1) ([Reddit Announcement](https://www.reddit.com/r/MVaveFM1/comments/1x7edf7/mega_drive_genesis_sounds_on_the_fm1/)):**
+13. **[OPN-1 by putchdev](https://github.com/putchdev/opn-1) ([Reddit Announcement](https://www.reddit.com/r/MVaveFM1/comments/1x7edf7/mega_drive_genesis_sounds_on_the_fm1/)):**
     * **License:** Open Source.
     * **Concept:** Sega Mega Drive / Genesis sound chip recreation for the M-VAVE FM-1, accurately emulating both the Yamaha **YM2612** 6-channel FM synthesizer and the Texas Instruments **SN76489** 4-channel PSG (Programmable Sound Generator).
     * **Features:**
@@ -751,19 +751,19 @@ Firmwares featuring original sound engines, written-from-scratch architectures, 
       * **MIDI & On-Device Playback:** Retains the last loaded patch set in memory for standalone play via capacitive keys, USB MIDI, and 3.5 mm TRS MIDI input.
     * **Installation:** Web companion app over WebMIDI USB or building firmware from source.
 
-20. **[CS-1 by twochannels](https://github.com/twochannels/CS-1) ([Website & Web Emulator](https://twochannels.github.io/CS-1/)):**
+14. **[CS-1 by twochannels](https://github.com/twochannels/CS-1) ([Website & Web Emulator](https://twochannels.github.io/CS-1/)):**
     * **License:** Open Source.
     * **Concept:** Yamaha CS-80 analog synthesizer emulation in spirit for the FM-1.
     * **Features:** 8 voices consisting of dual independent synthesizer channels, resonant high-pass and low-pass filters in series, ring modulator, expressive touch response modeling, and 22 factory tones faithfully recreated from the original 1977 CS-80 owner's manual.
     * **Installation:** In-browser WebAssembly emulator and WebMIDI flasher.
 
-21. **[Frodhes by Leonardo Mirabal](https://github.com/leonardoMirabal/frodhes) ([Website & Web Emulator](https://leonardomirabal.github.io/frodhes/) | [Releases](https://github.com/leonardoMirabal/frodhes/releases)):**
+15. **[Frodhes by Leonardo Mirabal](https://github.com/leonardoMirabal/frodhes) ([Website & Web Emulator](https://leonardomirabal.github.io/frodhes/) | [Releases](https://github.com/leonardoMirabal/frodhes/releases)):**
     * **License:** Open Source. Built on Dinghy.
     * **Concept:** Fender Rhodes electric piano physical modeling synthesizer without sample dependencies.
     * **Features:** 4 physical electric piano models (tines, pickups, hammer character), modeled analog signal chain featuring compressor, drive, stereo tremolo or auto-wah, phaser, chorus, stereo delay, and reverb. Includes tap tempo, MIDI clock sync, musical scale quantization, and patch presets.
     * **Installation:** In-browser WebMIDI installer or flashing prebuilt `frodhes-X.X.X.fwsc`.
 
-22. **[Vector37 by genkigenki](https://github.com/genkigenki/Vector37) ([Web Installer](https://genkigenki.github.io/smk37/#fw-vector37) | [Web Simulator](https://genkigenki.github.io/smk37/vector37-sim/) | [Releases](https://github.com/genkigenki/Vector37/releases) | [Reddit Announcement](https://www.reddit.com/r/MVaveFM1/comments/1x8eo32/vector37_update_more_sounds_a_smoother_screen_for/)):**
+16. **[Vector37 by genkigenki](https://github.com/genkigenki/Vector37) ([Web Installer](https://genkigenki.github.io/smk37/#fw-vector37) | [Web Simulator](https://genkigenki.github.io/smk37/vector37-sim/) | [Releases](https://github.com/genkigenki/Vector37/releases) | [Reddit Announcement](https://www.reddit.com/r/MVaveFM1/comments/1x8eo32/vector37_update_more_sounds_a_smoother_screen_for/)):**
     * **License:** Open Source (GPL-3.0). Ported from the SMK-37 to FM-1.
     * **Concept:** Orbiting overtone vector synthesizer inspired by the Beetlecrab Vector.
     * **Features:**
@@ -772,79 +772,79 @@ Firmwares featuring original sound engines, written-from-scratch architectures, 
       * **Performance & Hardware Features:** Configurable MIDI TRS OUT and USB IN routings via SETUP, plus 60 FPS display rendering optimizations.
     * **Installation:** Browser WebMIDI installer via USB directly from the SMK-37 / FM-1 Hub, in-browser simulator, or flashing prebuilt release packages (`.fwsc`).
 
-23. **[HYP-1 by RedtailWorks](https://github.com/RustyPawz/fm1-HYP1) ([Website & Web Emulator](https://rustypawz.github.io/fm1-HYP1/)):**
+17. **[HYP-1 by RedtailWorks](https://github.com/RustyPawz/fm1-HYP1) ([Website & Web Emulator](https://rustypawz.github.io/fm1-HYP1/)):**
     * **License:** Open Source. Forked from AMB-1 by Charles Vestal.
     * **Concept:** Hypnotic techno, acid, and drone groovebox firmware.
     * **Features:** Continuously breathing atmospheric pads, deep sub-bass drones, generative TB-303 acid line generator, and granular textures layered over a hands-on live drum step sequencer with instant bar pattern flipping and breakdown/build-up macro staging.
     * **Installation:** In-browser WebAssembly emulator and WebMIDI installer.
 
-24. **[Tonitor by Nuno Zimas](https://github.com/nzimas/tonitor) ([Website](https://nzimas.github.io/tonitor/)):**
+18. **[Tonitor by Nuno Zimas](https://github.com/nzimas/tonitor) ([Website](https://nzimas.github.io/tonitor/)):**
     * **License:** Open Source.
     * **Concept:** 6-track experimental ambient and live looping performance synthesizer.
     * **Features:** 3 distinct synthesis engines, algorithmic sound patch generator, free-length live audio loops supporting up to 10 overdubs per track, real-time granulator, multi-mode filters, and lush ambient reverb.
     * **Installation:** Flashing via WebMIDI or CLI flasher.
 
-25. **[BEETLE by Joppe Sikken (SikkenWorks)](https://github.com/SikkenWorks/BEETLE) ([Website & Web Emulator](https://sikkenworks.github.io/BEETLE/) | [Releases](https://github.com/SikkenWorks/BEETLE/releases)):**
+19. **[BEETLE by Joppe Sikken (SikkenWorks)](https://github.com/SikkenWorks/BEETLE) ([Website & Web Emulator](https://sikkenworks.github.io/BEETLE/) | [Releases](https://github.com/SikkenWorks/BEETLE/releases)):**
     * **License:** Open Source.
     * **Concept:** Classic vertical tracker firmware for the FM-1.
     * **Features:** Vertical top-to-bottom step tracking interface styled after vintage trackers, featuring dedicated columns for Note, Instrument, Chord, and Effect commands, bringing fast demoscene tracker composition workflows to the FM-1's hardware screen and buttons.
     * **Installation:** Web-based browser emulator/installer or flashing prebuilt release packages (`V1.01d_RC`).
 
-26. **[FOMAJAM by konsumer](https://github.com/konsumer/fomajam) ([Website & Web Emulator](https://konsumer.js.org/fomajam/) | [Releases](https://github.com/konsumer/fomajam/releases)):**
+20. **[FOMAJAM by konsumer](https://github.com/konsumer/fomajam) ([Website & Web Emulator](https://konsumer.js.org/fomajam/) | [Releases](https://github.com/konsumer/fomajam/releases)):**
     * **License:** Open Source.
     * **Concept:** Classic step-grid vintage drum machine firmware for the FM-1.
     * **Features:** Faithfully synthesized drum engines inspired by iconic rhythm units: Roland TR-909, TR-808, TR-707, TR-606, Oberheim DMX, and more. Features per-voice machine assignment, step accents, pattern banks, and full browser WebAssembly simulation.
     * **Installation:** In-browser WebMIDI flasher and emulator directly from the project site or flashing prebuilt `fomajam-X.X.X.fwsc`.
 
-27. **[MIN-1 by Reytian](https://github.com/Reytian/fm1-min1) ([Website](https://reytian.github.io/fm1-min1/) | [Web Emulator](https://reytian.github.io/fm1-min1/emu/) | [Releases](https://github.com/Reytian/fm1-min1/releases)):**
+21. **[MIN-1 by Reytian](https://github.com/Reytian/fm1-min1) ([Website](https://reytian.github.io/fm1-min1/) | [Web Emulator](https://reytian.github.io/fm1-min1/emu/) | [Releases](https://github.com/Reytian/fm1-min1/releases)):**
     * **License:** Open Source.
     * **Concept:** Minimalist generative ensemble synthesizer firmware inspired by Philip Glass.
     * **Features:** Immediately begins performing intricate generative patterns upon power-up, allowing the player to seamlessly join the performance at any time. Features an EASY mode where every white key triggers harmonically fitting chords, 4 algorithmic models, and 20 built-in minimalist musical pieces.
     * **Installation:** Web-based emulator/installer via USB or flashing prebuilt `min1-X.X.X.fwsc`.
 
-28. **[Pocket GammaWave by ShadowTune (GammaWave Audio)](https://github.com/fvalente/GammaWave-FM1) ([Homepage](https://gammawaveaudio.com/) | [Web Simulator](https://fvalente.github.io/GammaWave-FM1/) | [Web Editor](https://fvalente.github.io/GammaWave-FM1/webapp/editor/?mock=1) | [Releases](https://github.com/fvalente/GammaWave-FM1/releases)):**
+22. **[Pocket GammaWave by ShadowTune (GammaWave Audio)](https://github.com/fvalente/GammaWave-FM1) ([Homepage](https://gammawaveaudio.com/) | [Web Simulator](https://fvalente.github.io/GammaWave-FM1/) | [Web Editor](https://fvalente.github.io/GammaWave-FM1/webapp/editor/?mock=1) | [Releases](https://github.com/fvalente/GammaWave-FM1/releases)):**
     * **License:** Open Source.
     * **Concept:** Companion pocket groovebox and industrial synthesizer for the GammaWave desktop synthesizer.
     * **Features:** Four industrial distortion modes, formant vowel and screaming resonant filters, real-time FFT audio spectrogram visualization, 4-track tape deck style interface, and an automated algorithmic song generator spanning 49 musical genres (including modern Trap, Drill, and industrial soundscapes).
     * **Installation:** In-browser WebAssembly simulator and WebMIDI installer or flashing prebuilt `gammawave-1.0-GW.fwsc`.
 
-29. **[TERKINSTEIN by TerkWerX](https://github.com/TerkWerX/FM1-TERKINSTEIN-Firmware) ([Releases](https://github.com/TerkWerX/FM1-TERKINSTEIN-Firmware/releases)):**
+23. **[TERKINSTEIN by TerkWerX](https://github.com/TerkWerX/FM1-TERKINSTEIN-Firmware) ([Releases](https://github.com/TerkWerX/FM1-TERKINSTEIN-Firmware/releases)):**
     * **License:** Open Source (GPL-3.0).
     * **Concept:** Dark performance synth and 4-track groovebox with a cybernetic reactive UI.
     * **Features:** 64 curated sounds, 6-operator FM engine, metallic distortion modes, fully synthesized drum kits and pads, reactive neon purple-and-green display animations, and 64-step tracks across 4 pattern banks.
     * **Installation:** Flashing prebuilt `v0.22.0-dev` releases via WebMIDI or CLI updater.
 
-30. **[Niagara Drift by Evan Yerburgh](https://github.com/evanyerburgh/niagara-drift) ([Releases](https://github.com/evanyerburgh/niagara-drift/releases)):**
+24. **[Niagara Drift by Evan Yerburgh](https://github.com/evanyerburgh/niagara-drift) ([Releases](https://github.com/evanyerburgh/niagara-drift/releases)):**
     * **License:** Open Source (GPL-3.0).
     * **Concept:** Immersive dual-drone synthesizer with slow algorithmic parameter drift.
     * **Features:** Two continuously sounding drones with partner and sub-oscillators, resonant multi-mode filters, dual-waveform LFO, rhythmic swell generator, stereo delay and reverb, 16 pre-programmed sound scenes, and slow continuous automatic drift.
     * **Installation:** Flashing prebuilt `v0.1-beta` releases via WebMIDI or CLI updater.
 
-31. **[MNM-1 by sirpearson](https://github.com/sirpearson/fm-1-monomachine):**
+25. **[MNM-1 by sirpearson](https://github.com/sirpearson/fm-1-monomachine):**
     * **License:** Open Source (GPL-3.0).
     * **Concept:** Six-track monophonic groovebox inspired by the workflow of the legendary Elektron Monomachine.
     * **Features:** One dedicated drum kit track and five monophonic synth tracks each hosting independent synthesis machines, a 64-step sequencer with parameter locks (p-locks) per step, three assignable LFOs per track, and per-track stereo delay lines.
     * **Installation:** Build and flash via CLI toolchain.
 
-32. **[SIDOU by Denis Sablic (dsablic)](https://github.com/dsablic/sidou) ([Releases](https://github.com/dsablic/sidou/releases)):**
+26. **[SIDOU by Denis Sablic (dsablic)](https://github.com/dsablic/sidou) ([Releases](https://github.com/dsablic/sidou/releases)):**
     * **License:** Open Source (GPL-3.0-only for the firmware image; SIDOU's own code GPL-3.0-or-later).
     * **Concept:** A C64 SID music machine: two emulated SID chips (6581 and 8580) with a GoatTracker 2 compatible tracker.
     * **Features:** Tracker and step sequencer with parameter locks, whose songs are GoatTracker 2 `.sng` files; a live instrument playable over a song on the other chip; the chip's character (age, worn DACs, the 6581's thump, filter bleed) and CHIP SPREAD stereo; chord arpeggios; MIDI clock, CC/NRPN and MIDI learn; songs over SysEx on USB. `.sid` file playback is planned.
     * **Installation:** Prebuilt `.fwsc` releases, installed with Felucca's `fm1_install.py`; try it first in the browser at <https://dsablic.github.io/sidou/>.
 
-33. **[TripDeck by anonymousacademe](https://github.com/anonymousacademe/FM-1-TripDeck):**
+27. **[TripDeck by anonymousacademe](https://github.com/anonymousacademe/FM-1-TripDeck):**
     * **License:** Open Source (GPL-3.0).
     * **Concept:** Psychedelic synthesizer where every screen page is an interactive full-screen animated graphic driven by the four rotary encoders.
     * **Features:** Sitar, evolving ambient pad, pipe organ, and bell FM voices; spiral echo delay, shimmer reverb, formant vowel filter, musical scale lock, integrated arpeggiator, and step sequencer.
     * **Installation:** Build and flash via CLI toolchain.
 
-34. **[Evander's Music Box by Mike Tsakiroglou (MikeTsak)](https://github.com/MikeTsak/Evanders-Music-Box--FM-1-LARP-firmware) ([Releases](https://github.com/MikeTsak/Evanders-Music-Box--FM-1-LARP-firmware/releases)):**
+28. **[Evander's Music Box by Mike Tsakiroglou (MikeTsak)](https://github.com/MikeTsak/Evanders-Music-Box--FM-1-LARP-firmware) ([Releases](https://github.com/MikeTsak/Evanders-Music-Box--FM-1-LARP-firmware/releases)):**
     * **License:** Open Source (GPL-3.0).
     * **Concept:** Roleplaying-themed firmware transforming the FM-1 into an elven bard's enchanted music box for tabletop and LARP gaming sessions.
     * **Features:** Four-track medieval workshop with a 64-step sequencer, plus an Encounter mode offering 16 instant atmospheric scene soundtracks for live games. Features custom fantasy UI and boot artwork.
     * **Installation:** Flashing prebuilt `v1.3` releases via WebMIDI or CLI updater.
 
-35. **[LOF-1 by RedtailWorks](https://github.com/RustyPawz/fm1-HYP1) ([Website & Web Installer](https://rustypawz.github.io/fm1-HYP1/lof/) | [Web Emulator](https://rustypawz.github.io/fm1-HYP1/lof/emu/) | [Manual](https://rustypawz.github.io/fm1-HYP1/lof/manual/) | [Reddit Announcement](https://www.reddit.com/r/MVaveFM1/comments/1x7pbwa/lof1_a_generative_lofi_ambiance_machine_with/)):**
+29. **[LOF-1 by RedtailWorks](https://github.com/RustyPawz/fm1-HYP1) ([Website & Web Installer](https://rustypawz.github.io/fm1-HYP1/lof/) | [Web Emulator](https://rustypawz.github.io/fm1-HYP1/lof/emu/) | [Manual](https://rustypawz.github.io/fm1-HYP1/lof/manual/) | [Reddit Announcement](https://www.reddit.com/r/MVaveFM1/comments/1x7pbwa/lof1_a_generative_lofi_ambiance_machine_with/)):**
     * **License:** Open Source (GPL-3.0). Built on AMB-1 (Charles Vestal) and Felucca.
     * **Concept:** Generative lo-fi ambience machine and tired jazz band groovebox: you play the lead on the capacitive keys, and an intelligent backing band listens to which chord your notes imply, dynamically following your performance with comp, bass, and drums.
     * **Features:**
@@ -856,7 +856,7 @@ Firmwares featuring original sound engines, written-from-scratch architectures, 
       * **Live Performance FX Keys:** Hardware keys map to tape stop, backspin, record skip, half-time, stutter, mufflers, and throws.
     * **Installation:** In-browser WebAssembly emulator and WebMIDI installer directly from the project site or flashing prebuilt `lof1-0.0.41.fwsc`.
 
-36. **[ECO-1 by RedtailWorks](https://github.com/RustyPawz/fm1-HYP1/tree/main/eco1) ([Website & Web Installer](https://rustypawz.github.io/fm1-HYP1/eco/) | [Web Emulator](https://rustypawz.github.io/fm1-HYP1/eco/emu/) | [Manual](https://rustypawz.github.io/fm1-HYP1/eco/manual/)):**
+30. **[ECO-1 by RedtailWorks](https://github.com/RustyPawz/fm1-HYP1/tree/main/eco1) ([Website & Web Installer](https://rustypawz.github.io/fm1-HYP1/eco/) | [Web Emulator](https://rustypawz.github.io/fm1-HYP1/eco/emu/) | [Manual](https://rustypawz.github.io/fm1-HYP1/eco/manual/)):**
     * **License:** Open Source (GPL-3.0). Fork of AMB-1 by Charles Vestal (built on Felucca by Hügelton Instruments). Experimental: tested in the simulator and browser emulator, not yet on a real FM-1.
     * **Concept:** Generative botanical ambient synthesizer turning the FM-1 into an algorithmic musical plant.
     * **Features:**
@@ -866,7 +866,7 @@ Firmwares featuring original sound engines, written-from-scratch architectures, 
       * **DAW Integration:** MIDI clock in (the day counts in bars, leaves can fire on a 1/4 to 1/16 grid), MIDI out with each leaf and the stem on its own channel plus the plant's signals (charge, water, soil, light, rain, wind) as CCs; the browser emulator outputs eight channels, each voice apart.
     * **Installation:** Browser WebMIDI installer via USB directly from the project site, in-browser WebAssembly emulator, or flashing the prebuilt release package (`eco1-latest.fwsc`).
 
-37. **[P6 by Jonbenderr](https://github.com/Jonbenderr/fm1-p6) ([Web Installer](https://jonbenderr.github.io/fm1-p6/install/) | [Web Emulator](https://jonbenderr.github.io/fm1-p6/emu/) | [Releases](https://github.com/Jonbenderr/fm1-p6/releases)):**
+31. **[P6 by Jonbenderr](https://github.com/Jonbenderr/fm1-p6) ([Web Installer](https://jonbenderr.github.io/fm1-p6/install/) | [Web Emulator](https://jonbenderr.github.io/fm1-p6/emu/) | [Releases](https://github.com/Jonbenderr/fm1-p6/releases)):**
     * **License:** Open Source (GPL-3.0). Built on Dinghy by Charles Vestal.
     * **Concept:** Korg Polysix-inspired 6-voice analog polysynthesizer firmware for the M-VAVE FM-1.
     * **Features:**
@@ -877,7 +877,7 @@ Firmwares featuring original sound engines, written-from-scratch architectures, 
       * **Preset Program Storage:** 32 preset program memories organized as 4 banks of 8 sounds (A-1 through D-8).
     * **Installation:** Browser WebMIDI installer via USB, in-browser WebAssembly emulator, or flashing prebuilt release packages (`.fwsc`).
 
-38. **[Speak37 by genkigenki](https://github.com/genkigenki/Speak37) ([Web Installer](https://genkigenki.github.io/smk37/#fw-speak37) | [Releases](https://github.com/genkigenki/Speak37/releases) | [Reddit Announcement](https://www.reddit.com/r/MVaveFM1/comments/1x89f3y/speak37_a_free_talking_synth_firmware_for_the/)):**
+32. **[Speak37 by genkigenki](https://github.com/genkigenki/Speak37) ([Web Installer](https://genkigenki.github.io/smk37/#fw-speak37) | [Releases](https://github.com/genkigenki/Speak37/releases) | [Reddit Announcement](https://www.reddit.com/r/MVaveFM1/comments/1x89f3y/speak37_a_free_talking_synth_firmware_for_the/)):**
     * **License:** Open Source (GPL-3.0). Compatible with both M-VAVE SMK-37 and FM-1.
     * **Concept:** Talking speech synthesizer and singing voice firmware for the FM-1: every keypress speaks or sings the next syllable or word of a sentence at that note's pitch, singing in multi-voice harmony when chords are played.
     * **Features:**
@@ -887,7 +887,7 @@ Firmwares featuring original sound engines, written-from-scratch architectures, 
       * **MOPE Mode:** An interactive sullen robot mode that actively monitors your playing, responds with melancholic spoken remarks, and plays sad algorithmic interludes when ignored.
     * **Installation:** Browser WebMIDI installer via USB directly from the SMK-37 / FM-1 Hub, or flashing prebuilt release packages (`.fwsc`).
 
-39. **[FMEL-1 (MEL) by Antonio Altea](https://github.com/AntonioAltea/fmel-1) ([Web Installer](https://antonioaltea.github.io/fmel-1/install/) | [Web Emulator](https://antonioaltea.github.io/fmel-1/) | [Releases](https://github.com/AntonioAltea/fmel-1/releases)):**
+33. **[FMEL-1 (MEL) by Antonio Altea](https://github.com/AntonioAltea/fmel-1) ([Web Installer](https://antonioaltea.github.io/fmel-1/install/) | [Web Emulator](https://antonioaltea.github.io/fmel-1/) | [Releases](https://github.com/AntonioAltea/fmel-1/releases)):**
     * **License:** Open Source (GPL-3.0). Built on Dinghy by Charles Vestal (SLOOP / Felucca lineage).
     * **Concept:** Mellotron M400 tape keyboard instrument for the FM-1 with authentic tape mechanics, dual-tape blending, and vintage analog signal processing.
     * **Features:**
@@ -898,7 +898,7 @@ Firmwares featuring original sound engines, written-from-scratch architectures, 
       * **Custom Display Art:** Features custom animated tape transport graphics and screen artwork drawn by Javi.
     * **Installation:** Browser WebMIDI installer via USB directly from the project site, in-browser WebAssembly emulator, or flashing prebuilt release packages (`.fwsc`).
 
-40. **[GRAV-1 by RedtailWorks](https://github.com/RustyPawz/fm1-HYP1/tree/main/grav1) ([Website & Web Installer](https://rustypawz.github.io/fm1-HYP1/grav/) | [Web Emulator](https://rustypawz.github.io/fm1-HYP1/grav/emu/) | [Manual](https://rustypawz.github.io/fm1-HYP1/grav/manual/)):**
+34. **[GRAV-1 by RedtailWorks](https://github.com/RustyPawz/fm1-HYP1/tree/main/grav1) ([Website & Web Installer](https://rustypawz.github.io/fm1-HYP1/grav/) | [Web Emulator](https://rustypawz.github.io/fm1-HYP1/grav/emu/) | [Manual](https://rustypawz.github.io/fm1-HYP1/grav/manual/)):**
     * **License:** Open Source (GPL-3.0). Built on AMB-1 by Charles Vestal and Felucca by Hügelton Instruments. Experimental: tested in the simulator and browser emulator, not yet on a real FM-1.
     * **Concept:** Generative dark, spacey ambient firmware that turns the FM-1 into a small solar system: a star and its planets play the music.
     * **Features:**
@@ -908,7 +908,7 @@ Firmwares featuring original sound engines, written-from-scratch architectures, 
       * **DAW Integration:** MIDI clock in drives the steps and the orbits; MIDI out sends each planet's notes on its own channel, the drums on another, and the system's signals as CCs; the browser emulator outputs eight channels, each voice apart.
     * **Installation:** Browser WebMIDI installer via USB directly from the project site, in-browser WebAssembly emulator, or flashing the prebuilt release package (`grav1-latest.fwsc`).
 
-41. **[MD-One by d0pe1](https://github.com/d0pe1/md-one):**
+35. **[MD-One by d0pe1](https://github.com/d0pe1/md-one):**
     * **License:** Open Source (GPL-3.0-only for firmware, inherited from Dinghy; standalone `dsp/` library is MIT).
     * **Concept:** Mutable Instruments-derived drone machine ("Mutable Droner") for the M-VAVE FM-1.
     * **Features:**
@@ -918,7 +918,7 @@ Firmwares featuring original sound engines, written-from-scratch architectures, 
       * **DAW Integration:** Designed to deliver multichannel drone soundscapes into a DAW over USB audio.
     * **Status & Installation:** Firmware core verified in desktop testing harnesses and the `fm1-emu` emulator; physical hardware release in active development.
 
-42. **[Erik37 by genkigenki](https://github.com/genkigenki/erik37) ([Web Installer](https://genkigenki.github.io/smk37/#fw-erik37) | [Video Demo](https://youtu.be/5yUCB1-OJNE) | [Reddit Announcement](https://www.reddit.com/r/MVaveFM1/comments/1x8qggc/erik37_a_grand_piano_firmware_for_the_mvave_smk37/)):**
+36. **[Erik37 by genkigenki](https://github.com/genkigenki/erik37) ([Web Installer](https://genkigenki.github.io/smk37/#fw-erik37) | [Video Demo](https://youtu.be/5yUCB1-OJNE) | [Reddit Announcement](https://www.reddit.com/r/MVaveFM1/comments/1x8qggc/erik37_a_grand_piano_firmware_for_the_mvave_smk37/)):**
     * **License:** Open Source (MPL-2.0; piano samples are Salamander Grand Piano V3 by Alexander Holm, CC BY 3.0). Built upon `fm1-base` (Charles Vestal) and `felucca-bsp` (Leo Kuroshita).
     * **Concept:** Acoustic concert grand piano firmware featuring dedicated dual-target builds for both the M-VAVE FM-1 (`erik37-fm1.fwsc`) and SMK-37 (Pro, Elite, MKE-P37).
     * **Sampling & Sound Engine:**
@@ -929,7 +929,7 @@ Firmwares featuring original sound engines, written-from-scratch architectures, 
     * **FM-1 Panel Integration:** Mapped for the FM-1's 27 keys (F3–G5 with velocity), Knobs 1–4 for page parameters, SELECT for page navigation, ALGORITHM for piano tones, PRESETS for 12 user preset slots, and REC/ENV/SEL acting as sustain, sostenuto, and una corda pedals.
     * **Installation:** Browser WebMIDI installer via USB directly from the web installer or compile from source.
 
-43. **[LOOM-8 by Charles Vestal](https://github.com/charlesvestal/fm1-loom) ([Website & Web Installer](https://charlesvestal.github.io/fm1-loom/) | [Reddit Announcement](https://www.reddit.com/r/MVaveFM1/comments/1xamjef/loom8_sequencing_groovebox_for_the_mvave_fm1/)):**
+37. **[LOOM-8 by Charles Vestal](https://github.com/charlesvestal/fm1-loom) ([Website & Web Installer](https://charlesvestal.github.io/fm1-loom/) | [Reddit Announcement](https://www.reddit.com/r/MVaveFM1/comments/1xamjef/loom8_sequencing_groovebox_for_the_mvave_fm1/)):**
      * **License:** Open Source (GPL-3.0). Built on Dinghy and Felucca.
      * **Concept:** Teenage Engineering OP-XY-inspired 8-track pocket groovebox firmware for the FM-1 with dedicated color-coded tracks, generative sequencing tricks, and rich sound engines.
      * **Features:**
@@ -940,7 +940,7 @@ Firmwares featuring original sound engines, written-from-scratch architectures, 
        * **Effects & Master Bus:** 2 send FX (including PSXVerb PlayStation-style vintage reverb and delay), master EQ, compressor, and ducking pump. Over 85 factory presets, 16 user slots, and custom sample uploads (~200 KB, up to 32 samples).
      * **Installation:** Browser WebMIDI installer via USB directly from the project site or in-browser emulator.
 
-44. **[Hersen MPC (庄赫森) by HackSnake](https://store.grandtree.art/HersenMPC/) ([FM-1 Web Manager](https://store.grandtree.art/FM1_Manager/) | [Reddit Announcement](https://www.reddit.com/r/MVaveFM1/comments/1xao5xt/hacksnake%E5%BA%84%E8%B5%AB%E6%A3%AE/)):**
+38. **[Hersen MPC (庄赫森) by HackSnake](https://store.grandtree.art/HersenMPC/) ([FM-1 Web Manager](https://store.grandtree.art/FM1_Manager/) | [Reddit Announcement](https://www.reddit.com/r/MVaveFM1/comments/1xao5xt/hacksnake%E5%BA%84%E8%B5%AB%E6%A3%AE/)):**
      * **License:** Closed Source / Freeware.
      * **Concept:** 12-bit vintage MPC-style sampling drum machine and groovebox firmware for the M-VAVE FM-1.
      * **Features:**
@@ -951,114 +951,114 @@ Firmwares featuring original sound engines, written-from-scratch architectures, 
        * **Instant Boot Preview:** On-boot instant beat playback for quick previewing without loading menus.
      * **Installation:** Web-based USB flasher and sample librarian via the FM-1 Web Manager (`store.grandtree.art/FM1_Manager/`).
 
-45. **[GRAN by Hersen Zhuang (庄赫森)](https://store.grandtree.art/GRAN/) ([Sample Manager](https://store.grandtree.art/FM1_Manager/gran/samples.html) | [FM-1 Manager](https://store.grandtree.art/FM1_Manager/#fw-gran)):**
+39. **[GRAN by Hersen Zhuang (庄赫森)](https://store.grandtree.art/GRAN/) ([Sample Manager](https://store.grandtree.art/FM1_Manager/gran/samples.html) | [FM-1 Manager](https://store.grandtree.art/FM1_Manager/#fw-gran)):**
      * **License:** Open Source (GPL-3.0).
      * **Concept:** Dedicated 8-voice granular synthesizer firmware for the M-VAVE FM-1.
      * **Features:** Classic, Loop, and Cloud grain synthesis models; 8 voices of polyphony, 12 factory ROM waveforms (~1 s each), 24 system presets, up to 1.48 s live sample playback buffer with browser-based sample uploading over USB WebMIDI, and a stylized cyan/magenta/sunset colorway.
      * **Installation:** Web installer via FM-1 Manager or direct `.fwsc` package flashing (`FM-1_GRAN`).
 
-46. **[SID-1 by putchdev](https://github.com/putchdev/sid-1):**
+40. **[SID-1 by putchdev](https://github.com/putchdev/sid-1):**
      * **License:** Open Source.
      * **Concept:** Dual Commodore 64 SID chip (MOS 6581 / 8580) synthesizer firmware for the FM-1.
      * **Features:** Authentic software modeling of two distinct SID chips providing 6 independent voices (3 voices per chip), selectable 6581 and 8580 filter non-linearities, and playable directly from capacitive keys or USB-MIDI.
      * **Installation:** Flashing prebuilt `.fwsc` release packages (`FM-1_960`).
 
-47. **[Shine On by Sven Trogus (zvenson)](https://github.com/zvenson/shineon):**
+41. **[Shine On by Sven Trogus (zvenson)](https://github.com/zvenson/shineon):**
      * **License:** Open Source (GPL-3.0).
      * **Concept:** 1970s analog string ensemble synthesizer (Solina / Eminent style) with top-octave divider voicing.
      * **Features:** Fully polyphonic divider organ architecture with locked-phase footages (16', 8', 4' saw and 8' pulse), six bus-level fixed formant filters (Contra Bass, Cello, Viola, Violin, Trumpet, Horn), analog-modeled triple-delay ensemble chorus, phaser, tape delay, and plate reverb.
      * **Installation:** Flashing prebuilt `.fwsc` release packages via WebMIDI (`FM-1_962`).
 
-48. **[B1 Drawbar Organ by Joppe Sikken (SikkenWorks)](https://github.com/SikkenWorks/B1-Drawbar-Organ):**
+42. **[B1 Drawbar Organ by Joppe Sikken (SikkenWorks)](https://github.com/SikkenWorks/B1-Drawbar-Organ):**
      * **License:** Open Source (GPL-3.0).
      * **Concept:** Authentic tonewheel drawbar organ firmware for the FM-1.
      * **Features:** 9 virtual drawbars built from tonewheel harmonic partials (not sample playback), modeled Leslie rotating speaker, harmonic percussion (2nd/3rd), scanner vibrato/chorus, and an experimental supersaw auxiliary engine.
      * **Installation:** Flashing prebuilt release packages via WebMIDI (`FM-1_2127`).
 
-49. **[fm1-gator by npi3pak](https://github.com/npi3pak/fm1-gator):**
+43. **[fm1-gator by npi3pak](https://github.com/npi3pak/fm1-gator):**
      * **License:** Open Source (MIT engine core).
      * **Concept:** Monophonic macro-oscillator synth engine based on the open-source DSP of **Mutable Instruments Plaits**.
      * **Features:** 24 distinct synthesis models across three banks (virtual analog, waveshaping, 2-op/6-op FM, formants, harmonic additive, wavetables, chords, speech, particles, noise, physical string/modal resonators, and drums) with control voltages reimagined as an interactive on-screen modulation matrix.
      * **Installation:** Browser WebMIDI installer via project page or flashing `.fwsc` (`FM-1_906`).
 
-50. **[Mutable Dreams by Christoph Link (Kid Bunka / kidbee85-beep)](https://github.com/kidbee85-beep/mutable-dreams):**
+44. **[Mutable Dreams by Christoph Link (Kid Bunka / kidbee85-beep)](https://github.com/kidbee85-beep/mutable-dreams):**
      * **License:** Open Source (GPL-3.0 / MIT components).
      * **Concept:** Six-voice ambient instrument powered by Émilie Gillet's Mutable Instruments algorithms.
      * **Features:** Six polyphonic voices running generative modular physical and harmonic models with integrated modulation and ambient spatial processing.
      * **Installation:** Flashing prebuilt `.fwsc` release package (`FM-1_710010000`).
 
-51. **[Prysm by Nicholas Pratt](https://github.com/NicholasPratt/Prysm):**
+45. **[Prysm by Nicholas Pratt](https://github.com/NicholasPratt/Prysm):**
      * **License:** Open Source (GPL-3.0).
      * **Concept:** Four-voice wavetable FM synthesizer firmware for the M-VAVE FM-1.
      * **Features:** 2 oscillators per voice where each oscillator is a 3-stage wavetable operator (Mod 2, Mod 1, Carrier) capable of FM, ring modulation, or hybrid blending; overdrive-enabled resonant filter, LFO, looping modulation envelope, chorus, delay, and plate reverb.
      * **Installation:** Flashing prebuilt release packages (`FM-1_982`).
 
-52. **[fm_lab by jsmith13](https://github.com/jsmith13/fm_lab):**
+46. **[fm_lab by jsmith13](https://github.com/jsmith13/fm_lab):**
      * **License:** Open Source (GPL-3.0).
      * **Concept:** Dedicated educational 6-operator FM synthesizer built for learning Yamaha DX7 frequency modulation hands-on.
      * **Features:** Strips away grooveboxes and drum machines to expose pure DX7 architecture: every parameter is instantly accessible under knobs and visible on screen with real-time feedback while audio is sounding.
      * **Installation:** Flashing prebuilt release packages (`FM-1_971`).
 
-53. **[Bytemania by llozd](https://github.com/llozd/bytemania):**
+47. **[Bytemania by llozd](https://github.com/llozd/bytemania):**
      * **License:** Open Source (GPL-3.0). Built upon Dinghy.
      * **Concept:** Bytebeat algorithmic synthesizer firmware running music generated entirely from one-line mathematical equations.
      * **Features:** Computes 8-bit audio formulas where played keys set the increment rate $t$ (middle C = 8 kHz classic rate) and the four rotary knobs dynamically modulate formula coefficients live during performance.
      * **Installation:** Flashing prebuilt release packages (`FM-1_941`).
 
-54. **[Selva1 by deabrewcontato-code](https://github.com/deabrewcontato-code/Selva1):**
+48. **[Selva1 by deabrewcontato-code](https://github.com/deabrewcontato-code/Selva1):**
      * **License:** Open Source.
      * **Concept:** Minimalist portable C synthesis engine inspired by São Paulo's urban soundscapes.
      * **Features:** 3 oscillators (A, B, C) configurable for analog waveforms, FM modulation, or noise with up to 8 overtone harmonics, detune, stereo width, and pan controls.
      * **Installation:** Flashing prebuilt release packages (`FM-1_901`).
 
-55. **[ZEN-1 by aceyprime](https://github.com/aceyprime/zen-1) ([Web Emulator](https://aceyprime.github.io/zen-1/emu/)):**
+49. **[ZEN-1 by aceyprime](https://github.com/aceyprime/zen-1) ([Web Emulator](https://aceyprime.github.io/zen-1/emu/)):**
      * **License:** Open Source.
      * **Concept:** Generative visual ambient firmware turning the FM-1 into an animated kinetic window.
      * **Features:** Falling sakura cherry blossom petals on running water, swimming koi fish, and fireflies dancing under moonlight — where each on-screen physical motion directly generates musical notes and harmonics; knobs sculpt acoustic soundscapes and spatial depth.
      * **Installation:** In-browser WebAssembly emulator and WebMIDI flasher (`FM-1_6010002`).
 
-56. **[AMB-1 Evolved by kidbee85-beep](https://github.com/kidbee85-beep/AMB-1-Evolved):**
+50. **[AMB-1 Evolved by kidbee85-beep](https://github.com/kidbee85-beep/AMB-1-Evolved):**
      * **License:** Open Source (GPL-3.0-only). Built upon AMB-1 by Charles Vestal.
      * **Concept:** Ambient generative synthesizer expanding the AMB-1 platform.
      * **Features:** 64 presets, 32 acoustic visual themes, and 20 musical scales with Bunkai-Wolf-A1 algorithmic design.
      * **Installation:** Flashing prebuilt `.fwsc` package (`FM-1_7080001`).
 
-57. **[386 DX FM1 KaraokeBot by seajaysec](https://seajaysec.github.io/386-DX-FM1-KaraokeBot/) ([Web Emulator](https://386dx.linecross.ing/emu/)):**
+51. **[386 DX FM1 KaraokeBot by seajaysec](https://seajaysec.github.io/386-DX-FM1-KaraokeBot/) ([Web Emulator](https://386dx.linecross.ing/emu/)):**
      * **License:** Open Source.
      * **Concept:** Cyberpunk tribute to Russian media artist Alexei Shulgin and his legendary cyber-band *386 DX*.
      * **Features:** Computerized synthetic voice singing classic rock and pop songs over raw MIDI accompaniment, bringing early cyberpunk street performance aesthetics to the FM-1 screen and speaker.
      * **Installation:** In-browser emulator and WebMIDI flasher (`FM-1_386010002`).
 
-58. **[fm1-gm by jartificer](https://github.com/jartificer/fm1-gm) ([Web Demo](https://jartificer.github.io/fm1-gm/)):**
+52. **[fm1-gm by jartificer](https://github.com/jartificer/fm1-gm) ([Web Demo](https://jartificer.github.io/fm1-gm/)):**
      * **License:** Open Source.
      * **Concept:** 16-channel General MIDI (GM1) sound module and playback firmware.
      * **Features:** Complete GM1 instrument set (128 melodic programs) plus General MIDI drum kit (notes 35–81) on channel 10, responding across all 16 MIDI channels with independent volume, pan, reverb, transpose, and velocity.
      * **Installation:** Web flasher via project page (`FM-1_600`).
 
-59. **[BOP-1 by devrvega](https://github.com/devrvega/BOP-1) ([Web Emulator](https://devrvega.github.io/BOP-1/emu/)):**
+53. **[BOP-1 by devrvega](https://github.com/devrvega/BOP-1) ([Web Emulator](https://devrvega.github.io/BOP-1/emu/)):**
      * **License:** Open Source (GPL-3.0).
      * **Concept:** Musical exploration firmware that grows with the player: from an accessible toddler sound companion (ages 3+) to beats and loops (ages 6–8), up to full subtractive synthesis (ages 9+).
      * **Installation:** In-browser emulator and WebMIDI flasher (`FM-1_61000100`).
 
-60. **[kidboy by WillCMcC](https://github.com/WillCMcC/kidboy-firmware):**
+54. **[kidboy by WillCMcC](https://github.com/WillCMcC/kidboy-firmware):**
      * **License:** Open Source.
      * **Concept:** Toddler-friendly toy synthesizer firmware with zero risk of misconfiguration.
      * **Features:** Four interactive activities on the preset wheel: nursery rhyme songs across all 27 keys, alphabet cards with spoken letters A–Z and ABC song, color notes, and simple animal soundboards.
      * **Installation:** Flashing prebuilt `.fwsc` packages (`FM-1_938`).
 
-61. **[Carnac OS by OrbVorgis (Owen Kirby)](https://github.com/OwenKirby/carnac-os) ([Web Installer](https://owenkirby.github.io/carnac-os/install/)):**
+55. **[Carnac OS by OrbVorgis (Owen Kirby)](https://github.com/OwenKirby/carnac-os) ([Web Installer](https://owenkirby.github.io/carnac-os/install/)):**
      * **License:** Open Source (GPL-3.0). Dual-core C architecture.
      * **Concept:** Polyphonic wavetable synthesizer and performance firmware inspired by Carnac's standing stones and forgotten Neolithic rituals.
      * **Features:** 15 morphing wavetable banks, 7 voice architectures (including STRIKE with 20 synthesized Neolithic attack sounds), 4 filter types, 3 modulation slots per patch, spring/tomb/tank reverbs, tape & BBD delays, MAQ 16/3-style step sequencer, chord sequencer, and two-layer splits/zones running across both `pi32v2` cores.
      * **Installation:** In-browser WebMIDI installer via USB or flashing prebuilt `.fwsc` release packages.
 
-62. **[DIRGE by sinscum](https://sinscum.github.io/DIRGE/):**
+56. **[DIRGE by sinscum](https://sinscum.github.io/DIRGE/):**
      * **License:** Open Source. Built on Felucca HAL.
      * **Concept:** Darksynth, industrial noise, and drone performance firmware for the FM-1.
      * **Features:** Raw industrial drone synthesis engines, interactive noise layers, algorithm selection, built-in tape delay and drive effects, and complete MIDI CC control mapping (CC 20–27).
      * **Installation:** Browser WebMIDI flasher via USB directly from the web project page.
 
-63. **[Monohull by markterm](https://github.com/markterm/monohull) ([Releases](https://github.com/markterm/monohull/releases)):**
+57. **[Monohull by markterm](https://github.com/markterm/monohull) ([Releases](https://github.com/markterm/monohull/releases)):**
      * **License:** Open Source (GPL-3.0). C99 DSP core on Felucca HAL.
      * **Concept:** Uncompromising high-fidelity analogue-modeled monophonic synthesizer firmware for the FM-1.
      * **Features:**
