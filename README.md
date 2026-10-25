@@ -544,6 +544,17 @@ Firmwares centered around the **SLOOP** 4-track live groovebox workflow and its 
      * **Concept:** Generative ambient soundscape explorer featuring 4 evolving layers, 64 presets, 24 ambient acoustic worlds, and GROW generative scaling.
      * **Installation:** Flashing prebuilt `.fwsc` packages via WebMIDI.
 
+23. **[MASIF by thecemeterygates](https://github.com/thecemeterygates/masif-fm1) ([Website & Web Installer](https://thecemeterygates.github.io/masif-fm1/) | [Releases](https://github.com/thecemeterygates/masif-fm1/releases)):**
+     * **License:** Open Source (GPL-3.0-only). Built upon zp12, SLOOP, and Felucca.
+     * **Concept:** 4-track sample tracker and rack sampler firmware turning the FM-1 into a portable tracker and hardware sampling workstation.
+     * **Features:**
+       * **4-Track Tracker Engine:** 16 songs, 128 instruments with tables, groove controls, modulation envelopes, LFOs, sidechaining, resonant filter, overdrive, and per-instrument EQ.
+       * **Sample Storage:** 24 sample slots with ~730 KB flash sample memory (~19s at 26 kHz 12-bit or up to ~108s at 13 kHz 4-bit ADPCM).
+       * **Direct USB & Hardware Sampling:** On-device sampler page to record computer audio over bi-directional USB or sample MASIF's own master mix.
+       * **Effects & Master Section:** Send busses for stereo chorus, delay, and reverb alongside master mixer and project management pages.
+       * **Web Companion & Installer:** Companion WebMIDI browser interface to drop audio files, record live from microphone or line-in, trim/loop/fade slices, and sync pools directly to hardware flash.
+     * **Installation:** In-browser WebMIDI installer or Python CLI flasher (`tools/fm1_install.py`).
+
 #### 1.1.3. FoMni Family (Strumplate & Chord Instruments)
 
 Suzuki Omnichord and Japanese Shigin accompaniment instruments featuring strumplate and chord-shaping workflows:
@@ -1362,6 +1373,16 @@ Useful open-source tools, documentation, and SDK repositories:
 
  9. **[PIGEON WebAssembly Emulator](https://theshrimpblimp.github.io/pigeon-website/webapp/emu/) ([Project Page](https://theshrimpblimp.com/pigeon/)):**
     Firmware-based WebAssembly emulator with the 240 × 240 interface, user sample loading, chopping, sequencing, audio playback, screen-reader support and WAV/MP3 output recording. It runs in the browser without hardware; it does not emulate the physical USB sampling peripheral.
+
+ 10. **[FM-1 Grid by jasonbot](https://github.com/jasonbot/fm1-grid):**
+     * **License:** Open Source (GPL-3.0). Built in Rust with `gpui-kit`.
+     * **Platform:** Native desktop application (macOS / Linux / Windows).
+     * **Concept:** Multi-instance emulator running four virtual M-VAVE FM-1 units simultaneously in a 2×2 grid, each with its own independent firmware and screen.
+     * **Features:**
+       * **Four Independent Firmware Panes:** Ships loading SLOOP, Felucca, FM1 Open, and ChoralRoot out of the box; any pane can load arbitrary community `.fwsc` firmware binaries.
+       * **Interactive Front Panel:** Large mirrored FM-1 front panel mirroring the active unit's 240 × 240 display (with NTSC filter, hqx upscaling up to 4x, and dynamic dominant color palette backdrop), responsive keys, buttons, rotary encoders, and LEDs.
+       * **Hardware & MIDI Routing:** Devices tab with live USB hardware management and inter-unit MIDI node graph routing.
+       * **Resource Efficiency:** Inactive or unselected panes power down to zero CPU cost.
 
 ### 3.5. Web Editors, Patch Librarians & Companion Utilities
 
