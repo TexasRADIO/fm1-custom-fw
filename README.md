@@ -2081,6 +2081,8 @@ Community hardware companion projects and accessories:
    Ergonomic 18-degree tilted desktop stand providing optimal viewing angles for the 240 × 240 screen and comfortable finger access to the capacitive keyboard and rotary knobs.
 3. **[M-VAVE FM-1 3D CAD Chassis Reference Model by Zande Creates](https://grabcad.com/library/m-vave-fm-1-1):**
    High-precision dimensional CAD model (accurate to ~0.1 mm) for modeling custom faceplates, cases, desktop angled stands, and hardware attachments.
+4. **[M-Vave FM-1 Comfort Grip/Handle - 34g/70 minutes](https://makerworld.com/en/models/3490222-m-vave-fm-1-comfort-grip-handle-34g-70-minutes)**
+   Ergonomic, game controller-style grip, tight snap-fit thanks to Zande Creates's CAD model (5.1.3 above). Good for noodling on the couch or using game emulators.
 
 ---
 
