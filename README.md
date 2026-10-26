@@ -1533,10 +1533,10 @@ Community hubs, live directory dashboards, web-based flashers, and metadata regi
  2. **[FM-1 Online Editor & Firmware Directory](https://fm1-editor.com/) ([Firmware Catalog](https://fm1-editor.com/firmware/)):**
     Web-based configuration and patch editor / librarian for the M-VAVE FM1 synthesizer, along with a curated directory and status tracker for community firmwares.
 
- 3. **[Relay FM-1 Editor, Firmware Database & Manager by Stanley Gurvich (EmeraldMoonLabs)](https://github.com/stanleygurvich/fm1-firmware-database) ([Web Feed](https://stanleygurvich.github.io/fm1-firmware-database/) | [Reddit Announcement](https://www.reddit.com/r/MVaveFM1/comments/1x6gg0h/relay_fm1_editor_firmware_database_emulator/)):**
-    * **Concept:** Comprehensive FM-1 editor, firmware database, emulator host, and automated release feed service.
-    * **Automated Firmware Feed:** Runs a scheduled automated crawler tracking the [FM-1 Resource Hub](https://github.com/aroum/fm1-custom-fw) and upstream GitHub releases every 3 hours. Publishes a unified `feed.json` verifying firmware update packages (`.fwsc` SHA-256, `FELUCCA-LOADER-1` and `FM-1_` package markers, asset sizes, and web installer links) across 60+ projects.
-    * **Felucca Web App & Deep Editor:** Includes companion [UplinkFeluccaEditor-WebApp](https://github.com/stanleygurvich/UplinkFeluccaEditor-WebApp) with Web MIDI SysEx parameter control, custom package verification, backup tools, and in-browser mock testing.
+ 3. **[FMDB: FM-1 & SMK-37 Firmware Database / Relay by Stanley Gurvich (EmeraldMoonLabs)](https://stanleygurvich.github.io/FMDB_FM1_FirmwareDatabase/) ([Source & Tools](https://github.com/stanleygurvich/fm1-firmware-database) | [Reddit Announcement](https://www.reddit.com/r/MVaveFM1/comments/1x6gg0h/relay_fm1_editor_firmware_database_emulator/)):**
+    * **Concept:** Comprehensive FM-1 and SMK-37 firmware database, emulator host, ability matrix, and automated release crawler.
+    * **Automated Firmware Feed & Abilities:** Crawls the community ecosystem and upstream GitHub repositories, publishing `feed.json`, `fwinfo.json`, `abilities.json`, and `genes.json`. Tracks over 300 firmwares, mods, and tools across FM-1 and SMK-37 hardware targets with verified `.fwsc` SHA-256 signatures, star metrics, and install routes.
+    * **Companion Tools & Editor:** Includes interactive card filters, the Galaxy & Genome lineage visualizers, companion [UplinkFeluccaEditor-WebApp](https://github.com/stanleygurvich/UplinkFeluccaEditor-WebApp) with WebMIDI SysEx control, and in-browser testing harnesses.
 
  4. **[Octo-Vave by amacias (Artificial Music)](https://github.com/amacias/octo-vave) ([Web App & Directory](https://amacias.github.io/octo-vave/) | [Reddit Announcement](https://www.reddit.com/r/synthdiy/comments/1x9ptdn/octovave_taming_the_mvave_fm1_firmware_explosion/)):**
     * **License:** Open Source (MIT).
