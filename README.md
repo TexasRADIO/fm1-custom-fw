@@ -1182,10 +1182,11 @@ Firmwares featuring original sound engines, written-from-scratch architectures, 
      * **Installation:** Browser WebMIDI installer via project page or flashing `.fwsc` (`FM-1_906`).
 
 50. **[Mutable Dreams by Christoph Link (Kid Bunka / kidbee85-beep)](https://github.com/kidbee85-beep/mutable-dreams):**
-     * **License:** Open Source (GPL-3.0 / MIT components).
-     * **Concept:** Six-voice ambient instrument powered by Émilie Gillet's Mutable Instruments algorithms.
-     * **Features:** Six polyphonic voices running generative modular physical and harmonic models with integrated modulation and ambient spatial processing.
-     * **Installation:** Flashing prebuilt `.fwsc` release package (`FM-1_710010000`).
+     * **License:** Open Source (GPL-3.0-only combined distribution; original MIT/MPL-2.0 and other component notices retained).
+     * **Concept:** Six freely assignable tracks for generative ambient, rhythms and basslines, combining selected Mutable Instruments algorithms with custom engines.
+     * **Features:** Version 1.1 has 12 engines, 224 tones, 76 Biomes + Blank, 16 named User Biomes and 64 User Sound slots; editable 16-step phrases, a global mixer and shared granular/delay/room effects.
+     * **Browser & Source:** [Playable instrument and bidirectional live editor](https://mutable-dreams.sugarypixie10.chatgpt.site/), JSON live-patch transfer, full saved-bank backup/restore, illustrated English guide and directly browsable source.
+     * **Installation:** [Published 1.1 `.fwsc` release](https://github.com/kidbee85-beep/mutable-dreams/releases/tag/v1.1) (`FM-1_710010100`); follow the project's documented backup, direct 1.0 update and Stock V15 installation/return routes.
 
 51. **[Prysm by Nicholas Pratt](https://github.com/NicholasPratt/Prysm):**
      * **License:** Open Source (GPL-3.0).
