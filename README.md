@@ -523,6 +523,25 @@ Firmwares built upon or directly forked from the foundational open-source multi-
     * **Concept:** Enhanced Golana synthesizer with a 64-step sequencer, 32 program banks, song mode, and polyphonic USB-MIDI output.
     * **Installation:** Build and flash via CLI toolchain.
 
+68. **[Elixir by Dan Majka (dmajka)](https://github.com/dmajka/elixir) ([Website & Web Installer](https://dmajka.github.io/elixir/) | [Web Emulator / Try It](https://dmajka.github.io/elixir/try/) | [Kit Library & Manager](https://dmajka.github.io/elixir/library/) | [Manual](https://dmajka.github.io/elixir/manual/)):**
+    * **License:** Open Source (GPL-3.0-only). Built upon the Felucca hardware abstraction layer, USB stack, and reverb. Formerly known as *Kettle* (up to v0.13).
+    * **Polyphony & Architecture:** 6 voices across 7 tracks (3 drum parts, snare/clap, cymbal, closed and open hi-hats), with fixed-point DSP rewrite (tested to match original float calculations within 0.1 dB and 0.99–1.00 correlation).
+    * **Concept:** Port and substantial expansion of the **Erica Synths LXR-02** digital drum synthesizer and groovebox for the M-VAVE FM-1.
+    * **Sound Engines & Synthesis:**
+      * Every drum voice features dedicated oscillator, FM modulation, transient shaper, multi-mode filter, envelopes, and LFO.
+      * Drum voices 1–3 can route into a port of **Mutable Instruments Rings** physical modeling resonators (modal, string, FM).
+      * Per-voice waveshapers (5 curves), bit reducer, tilt EQ, random-per-hit variations, choke groups, and cross-modulation between voices.
+      * Complete compatibility with hardware Erica Synths LXR-02 `.SND` kits and project folders over USB.
+    * **Sequencing & Generative Engines:**
+      * 32 patterns of 4 bars (up to 64 steps) with parameter locks on any step, flams, shifts, rolls, ratchets, and step probability.
+      * Polymetric sequencing: independent per-track lengths, clock divisions (/4 to x4), and playback directions (forward, reverse, ping-pong, random, random walk).
+      * Integrated generative pattern generators: Euclidean rhythms (with dual pulses combined via boolean logic: OR, XOR, AND, SUB), Turing machine, Cellular automata, and Emilie Gillet's Mutable Instruments Grids drum mapping.
+      * **Cross-Track Links:** Conditional track modulation (e.g., when kick hits, closed-hat probability ducks by -60%).
+    * **Performance Mode (PERF) & Effects:**
+      * **16-Key PERF Mode:** Transforms the 16 white keys into momentary performance controls (rolls, fills, beat repeat, delay freeze, reverb throws, tape stop, filter sweeps, drill, half-time, sidechain pump, comb, crush, reverse).
+      * **FX Bus & Master Reverb:** Overdrive (tube, fold, rat), ring modulator, compressor, delay, phaser, flanger, and Felucca's room/spring/hall stereo reverbs.
+    * **Installation:** In-browser WebMIDI installer via USB directly from the project site (`FM-1_014.fwsc`).
+
 #### 1.1.2. SLOOP Ecosystem (Groovebox Core & Derived Firmwares)
 
 Firmwares centered around the **SLOOP** 4-track live groovebox workflow and its DX7/sampling expansion forks:
