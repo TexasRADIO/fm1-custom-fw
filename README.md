@@ -1684,6 +1684,11 @@ Useful open-source tools, documentation, and SDK repositories:
     * **Platform:** VST3 / AU audio plugin and standalone desktop application for DAW integration.
     * **Concept:** Compiles and runs JIANT's synthesis algorithms natively on host computers, allowing producers to compose in DAWs with identical sound engines.
 
+29. **[Pocket Six by NOKILL Pedal Co.](https://github.com/nokill-pedal-co/pocket-six) ([Play Web App](https://nokill-pedal-co.github.io/pocket-six/)):**
+    * **Concept:** Browser-based 6-operator FM synthesizer and DX7 sound design workstation inspired by the M-VAVE FM-1 pocket synthesizer and the Yamaha DX7. Runs with zero install on phones, tablets, or computers (`index.html` + `ps-dsp.js`).
+    * **Sound Engine & Library:** 6 operators, all 32 DX7 algorithms with feedback, 4-rate/4-level envelopes, pitch envelope, keyboard scaling, 6-wave LFO, and optional amp ADSR. Includes a built-in searchable DX7 library of 607 banks (10,494 distinct sounds, including original Yamaha factory ROMs) with support for loading custom `.syx` patch banks.
+    * **Performance Features:** Multi-touch keybed with glides, pitch bend/mod touch strips, laptop QWERTY/Z-row input, Web MIDI USB controller support, 16-step polyphonic chord sequencer (16 patterns with keyboard transposition), arpeggiator, and a 6-effect DSP chain (filter, distortion, phaser, chorus, delay, reverb).
+
 ### 3.6. Developer Frameworks, UI Designers & Curated Collections
 
  1. **[MvaveFM1-Designer by Quixotic7](https://github.com/Quixotic7/MvaveFM1-Designer) ([Web App](https://quixotic7.github.io/MvaveFM1-Designer/)):**
