@@ -34,8 +34,12 @@ Technical reference and reverse-engineering findings for the **M-VAVE FM1** synt
     * `AC7913A0_Datasheet_V1.2_20230303.pdf` (QFN-40 5×5 mm)
 
 * **Synthesizer Product Page:** [Cuvave / M-VAVE FM-1 Product Page](http://www.cuvave.com/product?id=fm-1)
-* **Latest Available Synthesizer Firmware:** [FM-1.fwsc (v15 2026-07-30)](https://yms-file-store.oss-cn-hongkong.aliyuncs.com/software/firmware/FM-1.fwsc)
-* **Firmware v15 Entropy Analysis:** ([Source Issue #1](https://github.com/aroum/fm1-custom-fw/issues/1))
+* **Latest Official Synthesizer Firmware:** [FM-1.fwsc (Version V16, 2026-10-21)](https://yms-file-store.oss-cn-hongkong.aliyuncs.com/software/firmware/FM-1.fwsc) (718,196 bytes, SHA-256: `a21368e070b534cdabfe69f43d5023fa...`)
+* **Official Firmware Version History:**
+  * **V14 (Initial Factory Release):** Single-timbral 12-voice polyphonic DX7 FM engine, 16-step sequencer, mono FX chain.
+  * **V15 (2026-07-30):** Bugfix update resolving oscillator detune calculations, MIDI clock drift, and reverb decay tails.
+  * **V16 (2026-10-21):** Major architectural upgrade introducing an **8-part multitimbral engine** (MIDI channels 1–8), expanded **20-voice shared polyphony**, an upgraded **64-step sequencer & live arranger matrix** (8 tracks × 8 columns), upgraded **true-stereo global FX chain** (Filter, Reverb, Delay, Distortion, Chorus, Phaser), independent per-part tuning ($\pm 100$ cents) / pan / glide controls, RGB display themes, and direct DX7 `.syx` bank import/export.
+* **Firmware Entropy Analysis (V15 Reference):** ([Source Issue #1](https://github.com/aroum/fm1-custom-fw/issues/1))
   
   ![Firmware v15 Entropy Analysis](photos/firmware_entropy.png)
 

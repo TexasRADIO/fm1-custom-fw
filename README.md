@@ -11,10 +11,10 @@ A curated directory and reference hub for the **M-VAVE FM1** synthesizer (powere
 > * **[fm1-to-smk37 Port Kit by genkigenki](https://github.com/genkigenki/fm1-to-smk37):** Board port patches and documentation for adapting FM-1 firmwares to SMK-37 hardware.
 
 > [!IMPORTANT]
-> **Official Open Source Firmware & SDK (M-VAVE):**  
-> In October 2026, M-VAVE officially open-sourced the FM-1 firmware and development toolkit under GPL-3.0:
->
-> * **Repository:** **[m-vave/fm1_open](https://github.com/m-vave/fm1_open)** (8 tracks, 8 sample slots, 16 demo FX, hardware C drivers, and WebAssembly simulator).
+> **Official Stock Firmware & Open Source SDK (M-VAVE):**  
+> * **Latest Stock Firmware:** **[FM-1.fwsc (Version V16, 2026-10-21)](https://yms-file-store.oss-cn-hongkong.aliyuncs.com/software/firmware/FM-1.fwsc)** (718 KB, SHA-256 verified) — major official release introducing an **8-part multitimbral engine** (MIDI channels 1–8), expanded **20-voice shared polyphony**, an upgraded **64-step sequencer & live arrangement matrix** (8 tracks × 8 columns), an upgraded **true-stereo global FX chain** (Filter, Reverb, Delay, Distortion, Chorus, Phaser), independent per-voice tuning ($\pm 100$ cents) / pan / glide, customizable TFT display RGB color themes, and DX7 standard `.syx` bank import/export.
+> * **Previous Official Releases:** V15 (2026-07-30, detune/reverb fixes), V14 (initial factory release).
+> * **Official Open Source Repository:** **[m-vave/fm1_open](https://github.com/m-vave/fm1_open)** (GPL-3.0, 8 tracks, 8 sample slots, 16 demo FX, hardware C drivers, and WebAssembly simulator).
 > * **Online Web Workbench:** **[open.m-vave.com/fm1-workbench](https://open.m-vave.com/fm1-workbench)** — provides in-browser WebAssembly simulation, testing, and direct USB firmware flashing.
 > * **Announcement & Discussion:** **[M-VAVE Official Forum Topic #4](https://forum.m-vave.com/topic/4)**.
 
@@ -1672,6 +1672,10 @@ Useful open-source tools, documentation, and SDK repositories:
    * **License:** Open Source.
    * **Concept:** Illustrated step-by-step recovery guide (PDF) for reviving soft-bricked or hard-bricked M-VAVE FM-1 units using a Raspberry Pi Pico (RP2040) as an SWD hardware programmer on Windows.
 
+18. **[fm1-flipper-recovery by highdrone](https://github.com/highdrone/fm1-flipper-recovery):**
+    * **License:** Open Source.
+    * **Concept:** Flipper Zero boot-key recovery utility and illustrated macOS / Windows connection manual for triggering JieLi mask-ROM USB download mode without disassembling hardware.
+
 ### 3.2. Reverse Engineering, Disassembly & Decompilation
 
  1. **[M-VAVE FM1 Hardware Architecture & Protocol Reference (Local)](REVERSE_ENGINEERING.md):**
@@ -1913,6 +1917,14 @@ Useful open-source tools, documentation, and SDK repositories:
     * **License:** Open Source.
     * **Concept:** DeepSeek Harness skills and specialized SysEx parameter control scripts for SLOOP 2.3 and Felucca firmware builds over Web MIDI.
 
+33. **[fm1-midi-converter by balancechiang](https://github.com/balancechiang/fm1-midi-converter):**
+    * **License:** Open Source.
+    * **Concept:** Single-page offline Web MIDI project converter that translates and parses sequence arrangements between standard Standard MIDI Files (`.mid`) and FM-1 project data structures.
+
+34. **[mwave-fm1-linux-vst by SpeakingColors](https://github.com/SpeakingColors/mwave-fm1-linux-vst):**
+    * **License:** Open Source.
+    * **Concept:** Native Linux VST controller plugin providing live parameter automation, patch librarianship, and bidirectional MIDI communication with physical FM-1 hardware.
+
 ### 3.6. Developer Frameworks, UI Designers & Curated Collections
 
  1. **[MvaveFM1-Designer by Quixotic7](https://github.com/Quixotic7/MvaveFM1-Designer) ([Web App](https://quixotic7.github.io/MvaveFM1-Designer/)):**
@@ -1948,6 +1960,12 @@ Useful open-source tools, documentation, and SDK repositories:
 
  9. **[FM-1 Learning Web by itoyohane](https://github.com/itoyohane/fm1-learning-web):**
     * **Concept:** Interactive web documentation and reference manual for exploring, learning, and comparing different M-VAVE FM-1 community firmwares, control layouts, and cheat sheets.
+
+10. **[fm1-dev-wiki by sbegueria](https://github.com/sbegueria/fm1-dev-wiki):**
+    * **Concept:** Comprehensive community developer wiki and technical reference documenting memory maps, register definitions, peripheral clocks, and compiler flags for the JieLi AC791N SoC on FM-1 and SMK-37.
+
+11. **[fm1-firmware-collection by 2bbb](https://github.com/2bbb/fm1-firmware-collection):**
+    * **Concept:** Automated aggregation repository linking all open-source community M-VAVE FM-1 firmwares as Git submodules with continuous integration matrix compilation.
 
 ### 3.7. Custom Soundbanks & Preset Collections
 
@@ -2022,8 +2040,9 @@ Community hardware companion projects and accessories:
    Arduino-based adapter converting a standard 1/4" sustain pedal into MIDI CC64 over the FM-1's 3.5 mm TRS MIDI input (includes full schematics).
 3. **[fm1-midi-voice-tuner by pfkellogg](https://github.com/pfkellogg/fm1-midi-voice-tuner):**
    Passive TRS MIDI splitter box with built-in microphone and OLED pitch display guiding singers on whether they match the FM-1's current note.
-4. **[ESP32-S3 Cartridge for M-VAVE FM-1](https://www.reddit.com/r/MVaveFM1/comments/1xdl20u/i_built_an_esp32s3_cartridge_for_the_mvave_fm1/):**
-   Custom DIY hardware expansion cartridge built on an ESP32-S3 microcontroller, interfacing with the FM-1 for extended wireless capabilities and auxiliary processing.
+4. **[fm1-cartridge by Andre Rezemini (andrerezemini)](https://github.com/andrerezemini/fm1-cartridge) ([Reddit Build Thread](https://www.reddit.com/r/MVaveFM1/comments/1xdl20u/i_built_an_esp32s3_cartridge_for_the_mvave_fm1/)):**
+   * **License:** Open Source.
+   * **Concept:** Custom DIY hardware expansion cartridge built on an ESP32-S3 microcontroller, interfacing with the FM-1 to enable portable cartridge swapping and fast flash deployment of Clipper, Melodee, and Felucca firmwares in the field.
 
 5. **[fm1buddy by konsumer](https://github.com/konsumer/fm1buddy) ([Web Installer](https://konsumer.js.org/fm1buddy/)):**
    * **License:** Open Source.
