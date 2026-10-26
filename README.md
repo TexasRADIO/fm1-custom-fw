@@ -555,6 +555,12 @@ Firmwares centered around the **SLOOP** 4-track live groovebox workflow and its 
        * **Web Companion & Installer:** Companion WebMIDI browser interface to drop audio files, record live from microphone or line-in, trim/loop/fade slices, and sync pools directly to hardware flash.
      * **Installation:** In-browser WebMIDI installer or Python CLI flasher (`tools/fm1_install.py`).
 
+24. **[Cut-A-Dor by Kid Bunka (kidbee85-beep)](https://github.com/kidbee85-beep/cut-a-dor-release) ([Browser Editor](https://cut-a-dor.sugarypixie10.chatgpt.site/dojo.html)):**
+     * **License:** Open Source (GPL-3.0). Built upon the SLOOP groovebox lineage.
+     * **Concept:** Dirty little beat dojo and gritty 8-track performance beat machine / sampler for the FM-1 (named as a tribute to the Matador of the crossfader).
+     * **Features:** Dusty drum processing, funky pocket swing, eight recordable punch-in performance FX, and an interactive browser-based sound/pattern editor.
+     * **Installation:** WebMIDI browser installer via USB directly from the project release page.
+
 #### 1.1.3. FoMni Family (Strumplate & Chord Instruments)
 
 Suzuki Omnichord and Japanese Shigin accompaniment instruments featuring strumplate and chord-shaping workflows:
@@ -1068,6 +1074,34 @@ Firmwares featuring original sound engines, written-from-scratch architectures, 
        * **Dual Engine Modes:** "High" mode (oversampled oscillators, non-linear filter equations solved per-sample, antialiased drive) and "Efficient" mode (optimized solvers for maximum battery life and headroom).
      * **Installation:** Flashing prebuilt `.fwsc` release package (`FM-1_928`) via WebMIDI / Python CLI installer (`tools/fm1_install.py`).
 
+64. **[MONO2K by Iñigo Hernández (InigoHernandez)](https://github.com/InigoHernandez/mono2k):**
+     * **License:** Open Source (GPL-3.0). Written in C99.
+     * **Concept:** Elektron Monomachine-inspired synthesizer and groovebox firmware for the M-VAVE FM-1.
+     * **Features:**
+       * **Six Mono Machines:** Six independent tracks, each hosting a selectable machine (SuperSaw, FM+, SID/Chiptune, Dynamic Noise, Vocal Formant, and Percussion).
+       * **Deep Sequencing:** 64-step sequencer with parameter locks (p-locks), trig conditions (probability, A:B fills), microtiming, and ratchets.
+       * **Lofi Bus & Effects:** Master degradation bus introducing gritty sample reduction, drive, filtered digital delay, and plate reverb.
+       * **Retro-Futuristic Visuals:** Custom 1-bit dithered typography, Swiss grid layout, and PS1-era CRT aesthetics on the 240 × 240 display.
+     * **Installation:** In-browser WebAssembly emulator and WebMIDI installer via USB.
+
+65. **[Bigorna by Nuno Zimas (nzimas)](https://github.com/nzimas/bigorna):**
+     * **License:** Open Source (GPL-3.0).
+     * **Concept:** Industrial, power noise, and IDM rhythmic groovebox firmware inspired by the Elektron Digitone II.
+     * **Features:**
+       * **6-Track Industrial Sound Architecture:** Multi-operator aggressive FM and wavetable machines designed specifically for crushing industrial rhythms, metallic clangs, rhythmic noise, and distorted percussion.
+       * **Non-Linear Modulation:** Chaos generators, multi-rate LFOs cross-modulating operator ratios, overdrive clipper, and resonant band-pass filtering.
+       * **Polymetric Grid:** Per-track polymetric sequence lengths (1–64 steps), probability trigs, and parameter automation.
+     * **Installation:** Flashing prebuilt `.fwsc` package via WebMIDI.
+
+66. **[FMER by Nacsez](https://github.com/Nacsez/FMER):**
+     * **License:** Open Source (GPL-3.0).
+     * **Concept:** 6-operator FM and Virtual Analog 4-track performance firmware with dedicated desktop companion software.
+     * **Features:**
+       * **Dual Hybrid Engine:** Combines full 6-operator DX7-compatible FM synthesis with an authentic Virtual Analog engine across four independent performance tracks.
+       * **Arranger & Pattern Sequencer:** Step sequencing, live motion recording, song arrangement, and real-time performance macros.
+       * **FMER Companion Tool:** Desktop companion application for managing instruments, patch banks, pattern projects, and backups locally, featuring an illustrated offline handbook and guided USB firmware installer.
+     * **Installation:** Guided web/desktop installer or flashing prebuilt release packages.
+
 ### 1.2. Modular Firmware Platforms & Builders
 
 1. **[fm1-rocket-os by cmlarsen](https://github.com/cmlarsen/fm1-rocket-os):**
@@ -1314,6 +1348,19 @@ Useful open-source tools, documentation, and SDK repositories:
       * **Built-in Safety Checks:** Blocks direct flashing over incompatible older firmwares (such as SLOOP or early Felucca betas) and disallows firmware packages that exceed the standard application partition size (such as Baud Girl, which requires returning to true stock V15 first).
       * **Direct Package Flashing:** Includes browser functionality to inspect the currently installed firmware or upload and flash any raw `.fwsc` package directly (including official stock `FM-1.fwsc`).
 
+14. **[M-Flasher by Julius Vitkauskas (jvitkauskas)](https://github.com/jvitkauskas/m-flasher):**
+    * **License:** Open Source (GPL-3.0). Cross-platform desktop utility (Windows, macOS, Linux).
+    * **Concept:** Low-level hardware backup, restore, and unbricking flashing tool for the M-VAVE FM-1 (and SMK-37). Communicates directly with the JieLi AC791N SoC's built-in USB download mode (`MASKROM` / recovery loader), enabling complete flash extraction, recovery, and re-flashing even when installed firmware is corrupted or unbootable. Automatically creates full flash backups before every write and installs `m-bootloader`.
+
+15. **[m-bootloader by Julius Vitkauskas (jvitkauskas)](https://github.com/jvitkauskas/m-bootloader):**
+    * **License:** Open Source (MIT).
+    * **Concept:** Open-source replacement bootloader for the JieLi AC791N SoC on the M-VAVE FM-1 and SMK-37.
+    * **Features:** Introduces hardware-key triggered USB download mode (holding **REC** on power-up) and an interactive on-device recovery menu, allowing bricked or unresponsive devices to re-enter flashing mode without disassembling hardware or opening cases. Fully compatible with stock firmware, Baud Girl, and custom open firmwares.
+
+16. **[FM-1 Swap by HyruleanHero1988](https://github.com/HyruleanHero1988/FM-1-Swap):**
+    * **Platform:** Native Android Application (Kotlin / Jetpack Compose).
+    * **Concept:** Portable USB-MIDI firmware manager and offline installer for Android smartphones and tablets. Bundles community firmware catalogues (The Firmware Hub, fm1-editor.com, RedtailWorks) with cached offline `.fwsc` packages (and official stock V15) for swapping firmwares on the go without computers. Automatically performs safety backups before flashing.
+
 ### 3.2. Reverse Engineering, Disassembly & Decompilation
 
  1. **[M-VAVE FM1 Hardware Architecture & Protocol Reference (Local)](REVERSE_ENGINEERING.md):**
@@ -1402,6 +1449,12 @@ Useful open-source tools, documentation, and SDK repositories:
        * **Interactive Front Panel:** Large mirrored FM-1 front panel mirroring the active unit's 240 × 240 display (with NTSC filter, hqx upscaling up to 4x, and dynamic dominant color palette backdrop), responsive keys, buttons, rotary encoders, and LEDs.
        * **Hardware & MIDI Routing:** Devices tab with live USB hardware management and inter-unit MIDI node graph routing.
        * **Resource Efficiency:** Inactive or unselected panes power down to zero CPU cost.
+
+ 11. **[Harbor by markterm](https://github.com/markterm/harbor):**
+     * **License:** Open Source (GPL-3.0).
+     * **Platform:** Native Android Application (phones and tablets).
+     * **Concept:** Android runner and emulator host that plays community M-VAVE FM-1 firmwares unchanged via the [fm1-emu](https://github.com/joakimeriksson/fm1-emu) engine.
+     * **Features:** Full touch UI mirroring the FM-1 panel; plays via USB-MIDI, Bluetooth LE MIDI, inter-app audio, and connected computers; acts as a standard system MIDI device for other music apps.
 
 ### 3.5. Web Editors, Patch Librarians & Companion Utilities
 
@@ -1494,6 +1547,14 @@ Useful open-source tools, documentation, and SDK repositories:
     * **Platform:** Native iPad / iOS companion application.
     * **Target Firmware:** [FORGE ONE](https://forge.kktp.net/one/) (4-track groovebox firmware).
     * **Features:** Full-screen touch control over FORGE ONE via USB-C: 4-track step pattern grid with touch-editing for notes, ties, accents, slides, ratchets, nudge, and drum lanes; sound design page with oversized virtual encoders for synth engines and presets; per-track mixer with delay/reverb/chorus sends; and real-time bidirectional synchronization with physical FM-1 knobs and keys.
+
+22. **[M-VAVE FM1 Editor & Librarian by Benny Sparra (benny-sparra)](https://github.com/benny-sparra/fm1-dx7-patch-importer) ([Web App](https://benny-sparra.github.io/fm1-dx7-patch-importer/)):**
+    * **Concept:** In-browser DX7 voice editor and patch librarian running entirely client-side via Web MIDI.
+    * **Features:** Full visual editing of every standard Yamaha DX7 voice parameter and internal FM-1 DSP effects (reverb, delay, chorus). Starts with the FM-1's four factory preset banks; allows building, reordering, and importing custom banks, with one-click single-patch or complete 32-voice bank transmission to hardware over SysEx.
+
+23. **[M-Wave FM-1 SysEx Patch Curator Pro by Grandsummoner](https://github.com/Grandsummoner/fm-1-helper) ([Web App](https://grandsummoner.github.io/fm-1-helper/FM-1%20Helper.html)):**
+    * **Concept:** Web-based DX7-compatible SysEx bank curator and compiler designed specifically for the M-VAVE FM-1.
+    * **Features:** Streamlines ingesting arbitrary DX7 `.syx` patch data, auditioning and managing voices, and compiling clean, stable, bank-ready SysEx packages for flawless transmission to FM-1 hardware.
 
 ### 3.6. Developer Frameworks, UI Designers & Curated Collections
 
