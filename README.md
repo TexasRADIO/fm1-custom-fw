@@ -235,7 +235,7 @@ Firmwares built upon or directly forked from the foundational open-source multi-
       * **Web & Accessibility:** Local sample editor, complete-session backups, screen-reader support, browser emulator and WAV/MP3 emulator recording.
     * **Provenance:** GitHub builds and attests the package through Firmware Hub's shared workflow; the maintainer reports hardware checks complete. Back up before installing; see the release's compatibility notes.
 
-25. **[NOIZ DEMONS by SPIKE the Percussionist](https://github.com/SPIKE-the-Percussionist/noiz_demons) ([Releases](https://github.com/SPIKE-the-Percussionist/noiz_demons/releases)):**
+25. **[NOIZ DEMONS by SPIKE the Percussionist](https://github.com/SPIKE-the-Percussionist/noiz_demons) ([Releases](https://github.com/SPIKE-the-Percussionist/noiz_demons/releases) | [Live Firmware Jam](https://youtube.com/watch?v=o4zknplU5RE)):**
     * **License:** Open Source. Built on Felucca by Hügelton Instruments.
     * **Concept:** Ritualistic noise and sound generator firmware where parameter randomization is framed as occult summoning.
     * **Features:** Generating a sound summons one of 30 demons of the Ars Goetia, rendering the demon's sigil across the 240 × 240 color screen while its demonic rank algorithmically drives the wildness and distortion of the sound synthesis engine.
@@ -475,6 +475,17 @@ Firmwares built upon or directly forked from the foundational open-source multi-
     * **Performance Mode (PERF) & Effects:**
       * **16-Key PERF Mode:** Transforms the 16 white keys into momentary performance controls (rolls, fills, beat repeat, delay freeze, reverb throws, tape stop, filter sweeps, drill, half-time, sidechain pump, comb, crush, reverse).
       * **FX Bus & Master Reverb:** Overdrive (tube, fold, rat), ring modulator, compressor, delay, phaser, flanger, and Felucca's room/spring/hall stereo reverbs.
+
+69. **[PALEOTONE by fantasmoslam](https://github.com/fantasmoslam/Paleotone) ([Web Installer](https://fantasmoslam.github.io/Paleotone/webapp/installer/) | [Web Emulator](https://fantasmoslam.github.io/Paleotone/webapp/emu/) | [USB Second-Screen App](https://fantasmoslam.github.io/Paleotone/webapp/screen/) | [Manual](https://fantasmoslam.github.io/Paleotone/manual/)):**
+    * **License:** Open Source (GPL-3.0-only). Built on GHOULBOX 2.3.2 by Jason Persinger and Felucca 1.4.1 by Hügelton Instruments. Formerly known as *DINOBOX*.
+    * **Polyphony:** 12 voices of polyphony across 4 tracks with drone latching.
+    * **Concept:** Generative ambient dinosaur and prehistoric soundscape synthesizer and groovebox featuring prehistoric creatures, war drums, jungle pads, and volcanic rumbles.
+    * **Features:**
+      * **1993 Park-Operations Terminal UI:** Share Tech Mono pixel typography, phosphor green and amber CRT glass palette with scanlines, electrical fence posts, Dilophosaurus boot splash, and T. rex icons.
+      * **SAURUS Creature Voice Engine (Engine 15):** Synthesized prehistoric throat modeling with adjustable CALL shapes (BELLOW, ROAR, BARK, HOOT, TRILL, CHIRP, MOAN, HISS, SNORT), animal SIZE (sauropod formants), SWOOP pitch glide, GROWL roughness, breath noise, and mouth openness. Includes 20 distinct creature profiles (Tyrant Roar, Brachio Call, Raptor Chat, Ptero Shriek, Titan Ape, Sea Monster, etc.).
+      * **ROAR Hurdy-Gurdy & EPOCH Generative Composer:** Evolved hurdy-gurdy engine with drone and call controls, plus algorithmic generative progression composer (EPOCH) across four tracks.
+      * **Prehistoric Sound Library & TRIBE Drums:** 119 original sounds across Analog, Voice, Wheel, Phys, Trio, and Lofi engines; custom synthesized prehistoric percussion kit (BOOM, SKIN, CLAP, SEEDS, RATTL, LOG, BONE, ROCK) and environmental samples (storm, lithophone, jungle ambience).
+      * **USB Second-Screen Companion:** Web-based display companion over USB-C translating MIDI and video render slices to mirror and control the synthesizer screen on an external smartphone, tablet, or cyberdeck monitor.
 
 #### 1.1.2. SLOOP Ecosystem (Groovebox Core & Derived Firmwares)
 
@@ -1224,7 +1235,31 @@ Firmwares featuring original sound engines, written-from-scratch architectures, 
        * **Star Sequencer & 8 Moon Voices:** A scanning line sweeps the screen every 16 seconds; crossing any visible star (magnitude < 3) triggers a melodic note (height = pitch, brightness = velocity, horizontal position = stereo pan). The timbre shifts across 8 moon phases (New Moon drops, Waxing Crescent kalimba, First Quarter harp, Waxing Gibbous celesta, Full Moon chimes, Waning Gibbous glass, Last Quarter music box, Waning Crescent flute).
        * **Planetary Chords & Cosmic Tuning:** Tracks visible planets (Sun, Moon, Mercury, Venus, Mars, Jupiter, Saturn) above the horizon; plays Cousto cosmic octave frequencies and 4-chord progressions cycling every 10 seconds. Musical mode shifts from Phrygian (night) through Dorian and Mixolydian to Lydian (solar noon).
        * **Geomagnetic Storm Modes (Kp Index):** Space weather activity alters the engine: Kp ≥ 4 triggers the STARGATE 112 BPM arpeggiator; Kp ≥ 5 (geomagnetic storm) triggers PULSAR 104 BPM gated sixteenths with ring modulation.
-       * **Hardware & Offline Controls:** Turning encoders in EDIT mode directly adjusts atmospheric parameters; HOME returns to live tracking. Operates offline with internal astronomical calculations and simulated weather.
+      * **Hardware & Offline Controls:** Turning encoders in EDIT mode directly adjusts atmospheric parameters; HOME returns to live tracking. Operates offline with internal astronomical calculations and simulated weather.
+
+81. **[MOPE-1 by slothpallas](https://github.com/slothpallas/mope-1) ([Website & Web Installer](https://slothpallas.github.io/mope-1/)):**
+    * **License:** Open Source (GPL-3.0-only). Fork of FiMba-1 by J. Adam Sowers (inheriting boot, safe mode, updater, and Dattorro plate reverb from FoMni, X0X, and Felucca).
+    * **Polyphony:** 6-voice wavetable synthesizer with detuned oscillators, sub-oscillator, analog drift, SVF filter, and backing band.
+    * **Concept:** A melancholic wavetable synthesizer and toy-keyboard groovebox featuring an animated expressive pixel "blob" character in a rainy room, backing auto-band that strictly plays minor-key progressions, and moody synthesized lo-fi drums.
+    * **Features:**
+      * **Interactive "Blob" Synthesis Visualization:** The central character is a lit pixel-art jelly blob floating in a sad room with a rainy window. Turning Table/Position reshapes its body from 8 boot-generated harmonic wavetables (Sigh, Moan, Pulse, Crush, Warble, Fold, Church, Sync with anti-aliasing mipmaps); Detune causes ghost echoes to drift; Sub fattens its base; Cutoff opens or closes its eyes; Resonance shrinks its pupils into laser eyes.
+      * **Live Schematic UI:** Editing parameters opens classic electronic schematics live on screen for ADSR envelopes, SVF curves, and LFOs.
+      * **Minor-Key Backing Band & Gunk:** Auto-bass engine strictly resolves to relative natural minor scales; Gunk generator layers dynamic room textures (rain on glass, vinyl crackle, low rumble) that swell when playing pauses.
+      * **13 Synthesized Sad Drum Styles:** Synthesized drum machine (808/gabber kick, snare, claps, hats, log drum, cowbell, sliding 808 bass) covering Grief drill, Empty city pop, Gloom gabber, Missed phonk call, Jersey cry club, Heartbreakcore, Amapia-no, Cold footwork, Dembow out, Vaporweep, Hyperflop, Funeral bossa, and Office ambivalent.
+      * **Built-in Tape Looper & Arpeggiator:** Overdub loop recording up to 192 notes across 1, 2, or 4 bars with step piano roll editing on white keys, velocity, swing, and humanization.
+      * **Level-Matched FX Chain:** Fry (drive, bitcrush, sample-rate reduction), 3-tap chorus, ping-pong delay, Dattorro plate reverb, and tape wow/flutter saturation.
+
+82. **[FIZZ by Quixotic7](https://github.com/Quixotic7/FIZZ) ([Web Emulator / Preview](https://quixotic7.github.io/FIZZ/) | [Web Installer](https://quixotic7.github.io/FIZZ/install/) | [Project & Preset Manager](https://quixotic7.github.io/FIZZ/manager/) | [Playing Guide](https://quixotic7.github.io/FIZZ/guide.html)):**
+    * **License:** Open Source (MPL-2.0). Engine and effects derived from ChoralRoot v0.25.1; clean-room UI rewrite with PlutoVG.
+    * **Polyphony:** 8 tracks sharing 16 polyphonic FM-Tone voices (advanced Elektron Digitone-inspired FM engine with chords up to 6 notes).
+    * **Concept:** Advanced FM-Tone groovebox and step sequencer inspired by the Elektron Digitone and OMX-27 Form sequencer, featuring deep parameter locks, generative rhythms, and live SysEx controller integration.
+    * **Features:**
+      * **FM-Tone Synthesis Engine:** Expanded FM engine featuring dedicated filter modes, unison detune, and full parameter lockability across every step.
+      * **Elektron-Style Step Sequencer:** 8 tracks sharing 16 voices, track defaults with per-step overrides, conditional trigs, probability/chance, micro-timing, ratchets, and polyphonic chords up to 6 notes.
+      * **Generative Engines & MIDI FX:** Integrated Euclidean rhythm generator and Mutable Instruments Grids drum mapping for algorithmic pattern generation, accompanied by creative MidiFX modulators.
+      * **Dynamic Contextual SysEx UI & Accelerating Knobs:** Hardware encoders accelerate dynamically for precision vs. full sweeps; live SysEx label streaming sends real-time parameter definitions to web companions and remote controllers.
+      * **Preset & Sound Pool Librarianship:** On-device 128-sound pool; web manager supports backing up projects, managing sound banks, and importing native Elektron Digitone (`.dnsnd`) and Digitone II (`.dn2pst`) FM patches.
+      * **Cross-Platform Architecture:** Operates both as standalone hardware firmware and as an FM1VST core module on Mac/PC with RemoteFM1 physical hardware integration.
 
 ### 1.2. Modular Firmware Platforms & Builders
 
@@ -1389,6 +1424,10 @@ Firmwares featuring original sound engines, written-from-scratch architectures, 
 17. **[Doom FM-1 / SMK by Chance The Maker](https://github.com/ChanceTheMaker/doom-fm1-smk) ([Web Installer & Compiler](https://chancethemaker.github.io/doom-fm1-smk/) | [Simulator](https://chancethemaker.github.io/doom-fm1-smk/simulator.html)):**
      * **License:** Open Source (GPL-2.0).
      * **Concept:** Browser firmware builder, ROM compiler, and WebMIDI installer for running Doom on the M-VAVE FM-1 and SMK-37 hardware.
+
+18. **[Dungeon Tracker by Better-Hyena-8716](https://www.reddit.com/r/MVaveFM1/comments/1xgtupf/dungeon_tracker/):**
+     * **Status:** In active development (preview announced on r/MVaveFM1).
+     * **Concept:** First-person retro grid-based dungeon crawler game (*Eye of the Beholder* style) running natively on the FM-1 hardware with integrated audio tracking.
 
 ### 1.4. Stock Firmware Patchers & Binary Mods
 
@@ -1770,7 +1809,12 @@ Useful open-source tools, documentation, and SDK repositories:
     * **License:** Open Source.
     * **Concept:** Native Linux VST controller plugin providing live parameter automation, patch librarianship, and bidirectional MIDI communication with physical FM-1 hardware.
 
+35. **[Jexed (JSFX Port of Dexed)](https://www.reddit.com/r/MVaveFM1/comments/1xgre3k/jexed_a_jsfx_port_of_dexed/):**
+    * **Platform:** Cockos REAPER JSFX script / instrument plugin.
+    * **Concept:** Modern JSFX port of the Dexed Yamaha DX7 synthesizer engine for Cockos REAPER, featuring a modernized UI, clear functional visualizations of 8-stage rate and level envelope behaviors, and built-in preset collections for sound design.
+
 ### 3.6. Developer Frameworks, UI Designers & Curated Collections
+
 
  1. **[MvaveFM1-Designer by Quixotic7](https://github.com/Quixotic7/MvaveFM1-Designer) ([Web App](https://quixotic7.github.io/MvaveFM1-Designer/)):**
     Visual UI and panel state designer for FM-1 custom developers (mapping key/button LED states, knob functions, and OLED/TFT screen layouts).
@@ -1909,6 +1953,8 @@ Community hardware companion projects and accessories:
    High-precision dimensional CAD model (accurate to ~0.1 mm) for modeling custom faceplates, cases, desktop angled stands, and hardware attachments.
 4. **[M-Vave FM-1 Comfort Grip/Handle - 34g/70 minutes](https://makerworld.com/en/models/3490222-m-vave-fm-1-comfort-grip-handle-34g-70-minutes)**
    Ergonomic, game controller-style grip, tight snap-fit thanks to Zande Creates's CAD model (5.1.3 above). Good for noodling on the couch or using game emulators.
+5. **[Triple-Screen Cyberdeck Folding Laptop Enclosure by fantasmoslam](https://www.reddit.com/r/MVaveFM1/comments/1xgp82y/triple_screen_cyberdeck_fm1_running_ny_custom/):**
+   Cassette-futurism folding laptop enclosure holding an M-VAVE FM-1 alongside an external smartphone (Galaxy S22 Ultra / Pixel 5) as a secondary display running Paleotone's USB second-screen companion app.
 
 ---
 
