@@ -1213,6 +1213,19 @@ Firmwares featuring original sound engines, written-from-scratch architectures, 
      * **License:** Open Source. Built on FM1 Open V13.
      * **Concept:** Real Betis football club-themed firmware: stadium crowd rhythms, club dashboard visuals, and a Phrygian-dominant Spanish scale generator.
 
+80. **[COSMOS by Gadlele](https://github.com/Gadlele/COSMOS) ([Website](https://gadlele.github.io/COSMOS/) | [Web Installer](https://gadlele.github.io/COSMOS/install/) | [Reddit Announcement](https://www.reddit.com/r/MVaveFM1/comments/1xg9h4g/cosmos_let_the_planet_play_the_synth_for_you_via/)):**
+     * **License:** Open Source (GPL-3.0-or-later). Built upon `fm1-base` (with Wi-Fi networking and BearSSL HTTPS stack adapted from `fm1-radio`).
+     * **Polyphony:** Continuous stereo drone + 16 weather-driven atmospheric pads + 8 moon-phase star voices + planetary chord progression generator.
+     * **Concept:** Generative ambient/drone synthesizer played autonomously by the sky: connects to Wi-Fi to fetch real-time atmospheric, astronomical, and space weather data based on your exact coordinates, turning the FM-1 into an evolving window on the cosmos.
+     * **Features:**
+       * **Astronomical Night/Day Sky UI:** On-device 240 × 240 display renders the live sky over your location (stars, moon, and visible planets rendered at real astronomical positions, obscured dynamically by daylight and cloud cover).
+       * **Continuous FM Drone:** Dual stereo FM drone pairs with gentle beating, pink noise, and sub-octave oscillator; filter brightness directly modulated by the sun's altitude.
+       * **16 Weather Pads (Day & Night):** Weather condition (fetched from Open-Meteo or estimated from barometric pressure/clouds) chooses the active pad on every chord cycle: NEBULA/AURORA (clear sky, saws & shimmer reverb), STRINGS/QUASAR (partly cloudy, chorus ensemble & sine grains), ORGAN/VOYAGER (overcast, drawbars & vocal formants), BACKGROUND/HORIZON (fog, harmonic veil & reverse FM), TAPE/DEEP FIELD (drizzle, saturation & wavefolding), CRYSTAL/RINGS (rain, inharmonic FM & resonators), SOLAR WIND (snow, bandpass noise), SUPERNOVA/GRAVITY (thunderstorm, brass & sub bass).
+       * **Star Sequencer & 8 Moon Voices:** A scanning line sweeps the screen every 16 seconds; crossing any visible star (magnitude < 3) triggers a melodic note (height = pitch, brightness = velocity, horizontal position = stereo pan). The timbre shifts across 8 moon phases (New Moon drops, Waxing Crescent kalimba, First Quarter harp, Waxing Gibbous celesta, Full Moon chimes, Waning Gibbous glass, Last Quarter music box, Waning Crescent flute).
+       * **Planetary Chords & Cosmic Tuning:** Tracks visible planets (Sun, Moon, Mercury, Venus, Mars, Jupiter, Saturn) above the horizon; plays Cousto cosmic octave frequencies and 4-chord progressions cycling every 10 seconds. Musical mode shifts from Phrygian (night) through Dorian and Mixolydian to Lydian (solar noon).
+       * **Geomagnetic Storm Modes (Kp Index):** Space weather activity alters the engine: Kp ≥ 4 triggers the STARGATE 112 BPM arpeggiator; Kp ≥ 5 (geomagnetic storm) triggers PULSAR 104 BPM gated sixteenths with ring modulation.
+       * **Hardware & Offline Controls:** Turning encoders in EDIT mode directly adjusts atmospheric parameters; HOME returns to live tracking. Operates offline with internal astronomical calculations and simulated weather.
+
 ### 1.2. Modular Firmware Platforms & Builders
 
 1. **[fm1-rocket-os by cmlarsen](https://github.com/cmlarsen/fm1-rocket-os):**
