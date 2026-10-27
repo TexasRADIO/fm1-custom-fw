@@ -1549,8 +1549,22 @@ Useful open-source tools, documentation, and SDK repositories:
       * **Responsive Ergonomics:** Adaptive portrait and landscape touch layouts, multi-touch keys with glides, encoder drag controls, button latching ("Hold" mode for SEL combos), and computer keyboard shortcuts.
       * **Persistent Storage:** Browser local storage isolates and preserves patterns, projects, and custom loops separately across each firmware switch.
 
- 5. **[Virtual-FM-1 by jbschooley](https://github.com/jbschooley/Virtual-FM-1):**
-    Software replica of the M-VAVE FM-1: standalone FM synthesizer application and VST3/AU audio plugin featuring bidirectional preset and pattern synchronization with hardware over the Baud Girl (FM-1+VA) firmware.
+ 5. **[Virtual-FM-1 by Bockage (jbschooley)](https://github.com/jbschooley/Virtual-FM-1) ([Releases](https://github.com/jbschooley/Virtual-FM-1/releases) | [Video Demo](https://www.youtube.com/watch?v=HEgBhuk4VSM) | [Reddit Discussion](https://www.reddit.com/r/MVaveFM1/comments/1xga9x0/vibe_fm_plugin/)):**
+    * **Formats:** Standalone application, VST3, AU, LV2, and AUv3 audio plugin for macOS (Apple Silicon / Intel), Windows (10/11 64-bit), Linux (x86-64), and iOS/iPadOS.
+    * **Concept:** Comprehensive software replica and DAW plugin host for the M-VAVE FM-1 (often referred to in community videos as the "Vibe FM Plugin"). Functions as an Expanded Softsynth Plugin (ESP) that runs real FM-1 firmware engines compiled directly from source, renders the physical device's 240 × 240 screen and front panel, and bidirectionally synchronizes presets, sequences, and live knob tweaks with physical hardware.
+    * **Multi-Firmware Engine Support:**
+      * **Felucca 1.6.1:** 13 synthesis engines (ANALOG, FM6, PHASE, LOFI, SAMPLE, VOICE, TRIO, WHEEL, GRAIN, PHYS, NOISE, SLICE, DRUM), 4 parts, step conditions (1:2–4:4, FILL), 292 DAW automation parameters, Device front panel tab, and Pull/Send/Live sync.
+      * **SLOOP 2.7:** 4-track groovebox with 15 arp modes, 3 synth tracks + 1 programmable drum kit, live punch-in FX, themes, Section A–D, and Live synchronization.
+      * **Melodee 1.4.1:** Prophet-5, Casio CZ-1, 6-op FM6, and Commodore 64 SID synthesis engines, SID drum kits, shared U001–U384 preset library, and Live sync.
+      * **ChoralRoot 0.23:** Quixotic7's Monome/Orchid chord engine, DX7/CZ-1 SysEx import/export, and complete backup synchronization.
+      * **FM1 Open V12:** M-VAVE's official open firmware built from source, featuring 8 tracks, 6 sound engines, 16 demo projects, and direct sample bank / project transfers.
+      * **baud girl FM-1+VA 101:** Virtual Analog + FM synthesis, 128-preset library editing, and pattern transfers.
+      * **Stock V15:** Authentic Yamaha DX7-compatible FM engine editing and preset playback.
+    * **Key Features & Hardware Integration:**
+      * **Hardware Character Aliasing:** When running in DAW projects at sample rates other than 44.1 kHz, the engine runs internally at the FM-1's native 44.1 kHz rate with downsampling to reproduce authentic hardware DAC aliasing and grit (with sub-millisecond host latency reporting).
+      * **Device Tab Screen & Panel:** Faithful on-screen reproduction of the 240 × 240 display, encoders, buttons, and piano keys for all supported firmwares.
+      * **Bidirectional Hardware Sync:** Pull presets/projects from physical hardware, Send edits to hardware without saving, or engage `Live` mode for instant two-way knob and step editing over USB-C or Bluetooth MIDI.
+      * **Modern Library Management:** Stores shared presets as human-readable JSON files in `Documents/Virtual FM-1/Banks`, with `.trash` recovery and DAW project-isolated sound states.
 
  6. **[FM1VST by Quixotic7](https://github.com/Quixotic7/FM1VST):**
     DAW plugin host (VST3, AU, and standalone) running Felucca-family firmwares (ChoralRoot, Felucca, Melodee) compiled directly from source and switchable on the fly.
