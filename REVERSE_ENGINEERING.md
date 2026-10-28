@@ -128,6 +128,12 @@ The FM-1 does **not** feature an external 8-pin SOIC Flash chip on the PCB. Inst
 * **Pin 47 (`FUSBDM`):** USB Full-Speed D- (connected to USB-C port; also supports alternate `UART1_RXD`).
 * **Pin 48 (`FUSBDP`):** USB Full-Speed D+ (connected to USB-C port, with software 1.5 kΩ pull-up attach; also supports alternate `UART1_TXD`).
 * **Pin 24 (`WFRF`):** 2.4 GHz RF Antenna pin (soldered directly to the internal insulated red wire antenna on PCB marked `天线`).
+  * **RF Front-End:** Onboard 802.11b/g/n Wi-Fi and Bluetooth 5.0 (BLE) baseband integrated into the AC7911B SoC.
+  * **Software Stack:** Supported in vendor SDK (`fw-AC79_AIoT_SDK`) via LwIP TCP/IP stack and mbedTLS / BearSSL.
+  * **Community Implementations & Research:**
+    * **Internet Streaming:** [fm1-radio by Charles Vestal](README.md#13-gaming-emulators--non-audio-ports-games--experiments) streams live Icecast/Shoutcast stations over Wi-Fi with on-device station browsing.
+    * **Live Space & Weather Telemetry:** [COSMOS by Gadlele](README.md#114-independent--original-engine-firmwares) fetches real-time meteorological and astronomical APIs over HTTPS via BearSSL to drive generative synthesis.
+    * **Real-Time Sensor & Gyro Control:** Community experiments demonstrate controlling synthesis parameters (e.g., resonant filter cutoff/resonance) with smartphone gyroscopes and sensors over local Wi-Fi web sockets, as well as collaborative distributed synth concepts.
 
 #### 7. Power & System Pins
 * **Pin 44 (`VBAT`):** Battery power input (3.0 V – 5.5 V).

@@ -1261,7 +1261,19 @@ Firmwares featuring original sound engines, written-from-scratch architectures, 
       * **Preset & Sound Pool Librarianship:** On-device 128-sound pool; web manager supports backing up projects, managing sound banks, and importing native Elektron Digitone (`.dnsnd`) and Digitone II (`.dn2pst`) FM patches.
       * **Cross-Platform Architecture:** Operates both as standalone hardware firmware and as an FM1VST core module on Mac/PC with RemoteFM1 physical hardware integration.
 
+83. **[S1Vave by Andrew GG (AndrewGG88)](https://github.com/AndrewGG88/S1Vave) ([Website & Web Flasher](https://andrewgg.one/s1vave/) | [Browser Simulator](https://andrewgg.one/s1vave/sim/) | [The Firmware Hub](https://thefirmwarehub.com/)):**
+    * **License:** Open Source (GPL-3.0-only). Derived from OberVave (zvenson), Dinghy, and Felucca base platform.
+    * **Polyphony & Voicing:** 8 voices with 4 voicing modes: `MONO` (true SH-101 monosynth with legato glide), `UNISON` (8-voice stacked analog unison for massive leads and basses), `POLY` (8-voice dynamic polyphony for lush chords and pads), and `CHORD` (programmable chord memory with per-voice semitone offsets from -12 to +12).
+    * **Concept:** 8-voice virtual analog tweak synthesizer modeled after the classic Roland SH-101 and AIRA Compact S-1 architecture, featuring complete sound engine parity, cascaded 4-pole self-oscillating filter, and unique oscillator drawing/chopping tools.
+    * **Features:**
+      * **Oscillator Core & Tweak Innovations:** PolyBLEP anti-aliased saw, square/pulse with manual/envelope/LFO pulse-width modulation (50% to 5% needle pulse), calibrated sub-oscillator with 3 octave types (`-2o.A` asymmetric growl, `-2oc`, `-1oc`), and calibrated analog pink/white noise generators.
+      * **OSC DRAW & OSC CHOP:** 16-step user-drawn wavetables (`STEP` or smooth interpolated `SLOPE` with 1.0x–32.0x multiplier) and harmonic comb slicing (1.0–32.0 repetitions with 0–200 overtone depth) for metallic overtones and bell textures; built-in performance Riser/Downer transition generator.
+      * **Cascaded 4-Pole Filter & Calibrated Envelopes:** 24 dB/oct state-variable low-pass filter calibrated across 20 Hz – 20 kHz with self-oscillation and bass retention, dual filter character modes (**S-1 Clean ACB** and **Warm Midnight** soft-knee drive), and hardware-measured exponential ADSR curves.
+      * **LFO & Stereo Effects:** 6-waveform LFO ranging from 0.05 Hz up to ~100 Hz in Fast audio-rate mode with 31 tempo-sync divisions; 4-type stereo chorus, analog-slewing tempo-synced ping-pong delay, and 44.1 kHz Dattorro plate reverb (7 room algorithms).
+      * **Dual-Track Sequencer & Factory Soundbank:** Two polyphonic tracks (A & B) sharing 256 steps with independent track lengths, clock divisions, ratchets (1–4), and probability; 64 factory presets + 35 user slots; class-compliant 44.1 kHz / 16-bit USB stereo audio and 1:1 MIDI CC control.
+
 ### 1.2. Modular Firmware Platforms & Builders
+
 
 1. **[fm1-rocket-os by cmlarsen](https://github.com/cmlarsen/fm1-rocket-os):**
     * **License:** Open Source (GPL-3.0). Forked from X0X and Felucca.
