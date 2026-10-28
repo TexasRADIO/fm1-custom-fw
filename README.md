@@ -1568,6 +1568,16 @@ Useful open-source tools, documentation, and SDK repositories:
     * **Concept:** Standalone mobile backup and full-flash snapshot utility for the M-VAVE FM-1.
     * **Features:** Takes complete byte-for-byte snapshots of device flash (firmware, settings, projects, songs) straight from an Android phone over USB-C (safely leaving the protected bootloader untouched) to enable instant factory rollback, disaster recovery, and seamless on-the-go firmware hopping without data contamination. Includes custom FM-1 styled themes.
 
+20. **[Sloop Pocket by tar_anton](https://testflight.apple.com/join/2TTUuEGd) ([Reddit Announcement](https://www.reddit.com/r/MVaveFM1/comments/1xh3c2f/i_made_an_iphone_companion_app_for_the_fm1/)):**
+    * **Platform:** Native iOS Application (iPhone, iOS 17+, available via Apple TestFlight).
+    * **Concept:** Standalone iPhone companion and librarian app for the M-VAVE FM-1 running SLOOP firmware, offering project management, offline song previewing, DAW stem export, and a live performance mixer.
+    * **Features:**
+      * **Project Backup & Library:** Full project save and restore over USB-C/Lightning (including current loop, sections A–D, user sounds, and drum samples), with project sharing and clean project initiation.
+      * **Offline Project Previewer:** Audio and 4-track visual note/drum roll playback with mute controls without needing hardware connected.
+      * **Multi-Track DAW Stem Export:** Exports projects to standard MIDI files, master stereo WAV, or individual 4-track isolated audio WAV stems directly into GarageBand and other mobile/desktop DAWs.
+      * **Live Assistant Screen (v0.13.1):** 4-track mixer with vertical faders, mute/solo, track filters, effect sends, master Duck and Dust controls, momentary FX latching, scene memory with smooth transitions, bidirectional knob feedback, and full Undo/Redo.
+      * **OTA Firmware Updates:** Checks for and flashes SLOOP firmware updates directly to the FM-1 over USB.
+
 ### 3.2. Reverse Engineering, Disassembly & Decompilation
 
 
@@ -2004,6 +2014,7 @@ Articles and press coverage detailing community custom firmwares and feature ove
 * **[Piano & Synth Magazine: Custom Firmware Collection](https://pianoandsynth.com/m-vave-fm-1-custom-firmware-collection/):** Side-by-side comparison matrix of major FM-1 custom firmwares.
 * **[Sonicstate: Free Custom Firmware for M-VAVE FM-1](https://sonicstate.com/news/2026/09/29/free-custom-firmware-for-mvave-fm-1-/):** News coverage of third-party firmware development.
 * **[Synth Anatomy: Xfer Records Shrub (Serum for FM-1)](https://synthanatomy.com/2026/10/xfer-records-shrub-serum-for-m-vave-fm-1-before-gta-6.html):** Coverage of Steve Duda / Xfer Records' upcoming free wavetable synthesizer firmware *Shrub* (a stripped-down "mini Serum" port tailored for the M-VAVE FM-1).
+* **[Ars Technica: From impulse purchase to pocket studio: The M-Vave FM-1](https://arstechnica.com/gadgets/2026/10/from-impulse-purchase-to-pocket-studio-the-m-vave-fm-1/) ([Reddit Discussion](https://www.reddit.com/r/MVaveFM1/comments/1xh2c3z/arstechnica_from_impulse_purchase_to_pocket/)):** In-depth feature article by Nick Indge exploring how M-VAVE's $60 FM synth evolved into a vibrant hacker playground. Covers the official FM1 Open workbench, safe flashing tips (citing this repository's TransitFM1 advice), running *Doom*, and field testing Melodee, Felucca, and SLOOP for standalone beatmaking and DAW recording.
 
 ---
 
