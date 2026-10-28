@@ -487,6 +487,17 @@ Firmwares built upon or directly forked from the foundational open-source multi-
       * **Prehistoric Sound Library & TRIBE Drums:** 119 original sounds across Analog, Voice, Wheel, Phys, Trio, and Lofi engines; custom synthesized prehistoric percussion kit (BOOM, SKIN, CLAP, SEEDS, RATTL, LOG, BONE, ROCK) and environmental samples (storm, lithophone, jungle ambience).
       * **USB Second-Screen Companion:** Web-based display companion over USB-C translating MIDI and video render slices to mirror and control the synthesizer screen on an external smartphone, tablet, or cyberdeck monitor.
 
+70. **[BB1 by Texas Radio & The Big Beat](https://github.com/TexasRADIO/bb1-firmware) ([Web Installer](https://thebigbeat.app/fm1/install/) | [Web Emulator](https://thebigbeat.app/fm1/emulator/) | [Guide](https://thebigbeat.app/fm1/guide/)):**
+    * **License:** Open Source (GPL-3.0-only). Felucca-family firmware.
+    * **Polyphony & Engines:** Two independent drum machines (KIT A + KIT B) running simultaneously, with the 808 synthesised live plus sampled LinnDrum, DrumTraks and DMX kits; **Dillo**, a monophonic bass synth with eight presets; a shared three-head tape echo and spring reverb. Drum B renders on the FM-1's second core.
+    * **Concept:** A two-beat rhythm machine: stack two drum machines from different eras and let the bass ride on top.
+    * **Features:**
+      * **Library:** 67 songs (drum patterns in the style of the records, section by section), 21 eras of Big Beat originals each with its own Dillo line, and 138 classic preset rhythms from four vintage rhythm boxes.
+      * **On the beat:** kit and pattern changes queue for the next bar, with the screen showing NEXT until they land.
+      * **Performance:** REC + FX dub throw, live tempo/swing/A-B balance/transpose, and four knobs that always follow the screen.
+      * **Install:** one-click browser installer: the firmware and the sound library over USB-MIDI, checked by read-back. The same page returns the FM-1 to the official V15.
+      * **Browser player:** the real BB1 firmware in the browser, with all four machines.
+
 #### 1.1.2. SLOOP Ecosystem (Groovebox Core & Derived Firmwares)
 
 Firmwares centered around the **SLOOP** 4-track live groovebox workflow and its DX7/sampling expansion forks:
