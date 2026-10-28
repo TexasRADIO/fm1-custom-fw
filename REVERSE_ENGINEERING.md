@@ -79,6 +79,7 @@ Verified from bare-metal SLOOP/Felucca HAL drivers (`fm1_gpio.h`, `fm1_lcd_hw.h`
 * **Pin 31 (`PC8`):** GPIO OUT — LCD Data/Command select (`D/C`: Low = Command, High = Data).
 * **Pin 32 (`PC7`):** GPIO OUT — LCD Chip Select (`CS`, active low).
 * **Pin 10 (`PA2`):** GPIO OUT — LCD Backlight power control (`BL`, active low / low = ON).
+* **Hardware SPI Bus Sharing (MicroSD Mod):** The display's SPI1 bus (`PC10` MOSI, `PC9` SCK) can be shared with an external SPI peripheral (such as a microSD card reader) by using an inverted chip-select line (`/CS`), allowing the MCU to alternate between updating display frames and reading flash/sample data from external storage without requiring extra GPIO pins.
 
 #### 2. Key Matrix, Rotary Encoders & LEDs
 Because the AC7911B in QFN-48 has limited GPIO lines, the FM-1 board uses an **11-column × 6-row diode-isolated matrix** driven by a cascaded dual shift register chain:

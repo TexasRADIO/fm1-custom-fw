@@ -1319,10 +1319,15 @@ Firmwares featuring original sound engines, written-from-scratch architectures, 
       * **Assemblies, Presets & Patch Library:** Prebuilt multi-module sound assemblies (Pluck, Hat, etc.), library manager with offline and hardware syncing.
       * **Integrated Hardware Emulation & Installer:** Built-in hardware emulator and one-click WebMIDI flasher with safe stock restoration workflows.
 
-8. **[FORGE ONE by Khantipol Kasemsant](https://forge.kktp.net/) ([Guide & Install](https://forge.kktp.net/one/)):**
+8. **[FORGE ONE & Forge Phoenix by Khantipol Kasemsant (kktp)](https://forge.kktp.net/) ([Guide & Install](https://forge.kktp.net/one/) | [Reddit Announcement](https://www.reddit.com/r/MVaveFM1/comments/1xhk0yw/forge_phoenix_update_generative_groovebox/)):**
     * **License:** Open Source (GPL-3.0-only).
-    * **Concept:** Standalone 4-track groovebox and generative music platform for the M-VAVE FM-1.
-    * **Features:** Four independent generative tracks (Bass, Lead, Pad, and Drums) synthesized directly on the device with an interactive live Song Mode.
+    * **Concept:** Standalone 4-track groovebox and live generative electronic music platform for the M-VAVE FM-1 with optional companion iPad app (*Forge Remote*).
+    * **Features & Phoenix Generative Mode:**
+      * **Phoenix Algorithmic Mode:** Instant generative song starter across 8 electronic styles (acid house, acid techno, electro, goa acid, dub techno, acid breaks, hard acid, acid downtempo) with 4 unique starters per style (32 starters total selectable on black keys).
+      * **Live Pattern Sculpting:** `SEED` reshapes patterns, `DENSITY` adds or subtracts notes, and `EVOLVE` allows phrases to slowly drift over time.
+      * **Part-Selective Regeneration & Track Lock:** Perform `NEW NOTES`, `NEW RHYTHM`, or `NEW GROOVE` to rewrite one part synchronized to the next bar boundary. Tracks can be `LOCK`ed to protect desired parts, with dedicated `FILL`, `UNDO`, and `KEEP` commands.
+      * **Full Sequencer & Performance:** Kept grooves become regular 4-track patterns with full step editing, parameter locks, automation, live overdubbing, 4 project slots, and a 16-section Song Mode (each section repeating 1–16 times). `SET` mode transforms keys into momentary performance FX (filter breakdowns, build-ups).
+      * **Forge Remote iPad Companion:** Optional tablet app mirroring the hardware display at crisp whole-number scale (Full and Fast modes), offering touch Pattern, Sound, Mix, and Phoenix pages to ride levels, sends, and filter envelopes in real time alongside physical hardware knobs.
 
 9. **[fm1-dock by Joakim Eriksson](https://github.com/joakimeriksson/fm1-dock) ([Project Page & Web Console](https://joakimeriksson.github.io/fm1-dock/) | [Releases](https://github.com/joakimeriksson/fm1-dock/releases)):**
     * **License:** Open Source (GPL-3.0).
@@ -1558,7 +1563,13 @@ Useful open-source tools, documentation, and SDK repositories:
     * **License:** Open Source.
     * **Concept:** Flipper Zero boot-key recovery utility and illustrated macOS / Windows connection manual for triggering JieLi mask-ROM USB download mode without disassembling hardware.
 
+19. **[FM-1 Backup & Restore for Android by workeffortwaste](https://github.com/workeffortwaste/fm1-backup-restore) ([Releases / APK](https://github.com/workeffortwaste/fm1-backup-restore/releases)):**
+    * **Platform:** Native Android Application (Material 3 Expressive & Material You design).
+    * **Concept:** Standalone mobile backup and full-flash snapshot utility for the M-VAVE FM-1.
+    * **Features:** Takes complete byte-for-byte snapshots of device flash (firmware, settings, projects, songs) straight from an Android phone over USB-C (safely leaving the protected bootloader untouched) to enable instant factory rollback, disaster recovery, and seamless on-the-go firmware hopping without data contamination. Includes custom FM-1 styled themes.
+
 ### 3.2. Reverse Engineering, Disassembly & Decompilation
+
 
  1. **[M-VAVE FM1 Hardware Architecture & Protocol Reference (Local)](REVERSE_ENGINEERING.md):**
     In-depth local technical reverse-engineering documentation: JieLi AC791N hardware overview, UBOOT memory map, Qt container analysis, verified two-step device-pull SysEx OTA protocol, and flasher implementation.
@@ -1868,7 +1879,13 @@ Useful open-source tools, documentation, and SDK repositories:
 11. **[fm1-firmware-collection by 2bbb](https://github.com/2bbb/fm1-firmware-collection):**
     * **Concept:** Automated aggregation repository linking all open-source community M-VAVE FM-1 firmwares as Git submodules with continuous integration matrix compilation.
 
+12. **[mvave-fm1 Claude Skills & Podman Build Container by Max Fridbe (maxfridbe)](https://github.com/maxfridbe/mvave-fm1):**
+    * **License:** Open Source.
+    * **Concept:** Ready-to-use AI agent skills for Claude Code alongside an automated Podman/Docker build environment for the M-VAVE FM-1.
+    * **Features:** Bundles two modular Claude skills (`mvave-fm1-firmware` for backing up, flashing, restoring, and recovery; `mvave-fm1-software-development` for writing firmware with JieLi AC791N hardware APIs, memory maps, and safety rules), complemented by a hash-pinned Podman container image compiling Dinghy, Felucca, and ORBIT in headless CI without local toolchain pollution.
+
 ### 3.7. Custom Soundbanks & Preset Collections
+
 
 Dedicated sound banks, commercial patches, and SysEx preset packs tailored for the M-VAVE FM-1:
 
@@ -1953,7 +1970,12 @@ Community hardware companion projects and accessories:
      * **USB & Bluetooth MIDI Hub:** Hosts up to 4 USB-MIDI devices simultaneously (via USB hub) alongside Bluetooth LE MIDI controllers, bridging them directly to the FM-1 even when running firmwares that only support USB.
      * **Touchscreen Interface:** Color touchscreen displaying firmware selector, battery diagnostics, and customizable UI themes.
 
+6. **[Display SPI Bus MicroSD Card Mod by mobiliakas1](https://www.reddit.com/r/MVaveFM1/comments/1xhiryu/loading_firmware_from_sd_card/):**
+   * **Concept:** Hardware modification tapping directly into the AC7911B's hardware SPI1 display bus (`PC10` MOSI, `PC9` SCK) with an inverted chip-select line (`/CS`) to interface a microSD card reader without requiring free dedicated microcontroller pins.
+   * **Applications:** Allows loading and swapping `.fwsc` firmware binaries on the go directly from a memory card without computer connection, opening future architectural possibilities for streaming offline sample banks and sound libraries into device RAM.
+
 ### 5.1. 3D-Printed Accessories, Enclosures & Desktop Mounts
+
 
 3D-printable cases, faceplates, and stands designed specifically for the FM-1 form factor:
 
